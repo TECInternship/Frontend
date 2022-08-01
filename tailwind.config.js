@@ -6,7 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: { fontFamily: { Willywonka: "'Willywonka'" } },
+    extend: {
+      fontFamily: {
+        Willywonka: "'Willywonka'",
+        WorkSans: "'Work Sans', sans-serif",
+      },
+    },
   },
   plugins: [],
 };
