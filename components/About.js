@@ -1,9 +1,10 @@
 import React from "react";
+import SwiperCard from "../components/SwiperCard";
 
 const About = () => {
   return (
     <>
-      <section className="mb-20">
+      <section className="mb-32">
         <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
           TEC{"\u00a0\u00a0"}Internship
         </h1>
@@ -17,19 +18,20 @@ const About = () => {
         </p>
       </section>
 
-      <section className="flex flex-col items-center mb-20">
+      <section className="flex flex-col items-center mb-32">
         <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
           What{"\u00a0\u00a0"}We{"\u00a0\u00a0"}Do?
         </h1>
+        <SwiperCard />
       </section>
 
-      <section className="flex flex-col items-center mb-20">
+      <section className="flex flex-col items-center mb-32">
         <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
           What{"\u00a0\u00a0"}You{"\u00a0\u00a0"}Will{"\u00a0\u00a0"}Get?
         </h1>
       </section>
 
-      <section className="flex flex-col items-center mb-20">
+      <section className="flex flex-col items-center mb-32">
         <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
           TEC{"\u00a0\u00a0"}Alumni
         </h1>
