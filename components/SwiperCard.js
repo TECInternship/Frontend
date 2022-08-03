@@ -16,15 +16,15 @@ import Card from "./Card";
 export default function App() {
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex justify-center md:w-3/4">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
           breakpoints={{
-            1024: {
-              slidesPerView: 3,
+            1350: {
+              slidesPerView: 2,
             },
           }}
           coverflowEffect={{
@@ -39,15 +39,15 @@ export default function App() {
           className="mySwiper"
         >
           <SwiperSlide className="flex flex-col items-center ">
-            <h2 className="text-3xl">Gatau</h2>
+            <h2 className="text-3xl font-bold text-center mb-5">Gatau</h2>
             <Card Content={<img src="/zoom.png" width={800} />} />
           </SwiperSlide>
           <SwiperSlide className="flex flex-col items-center ">
-            <h2 className="text-3xl">Gatau</h2>
+            <h2 className="text-3xl font-bold text-center mb-5">Gatau</h2>
             <Card Content={<img src="/zoom.png" width={800} />} />
           </SwiperSlide>
           <SwiperSlide className="flex flex-col items-center ">
-            <h2 className="text-3xl">Gatau</h2>
+            <h2 className="text-3xl font-bold text-center mb-5">Gatau</h2>
             <Card Content={<img src="/zoom.png" width={800} />} />
           </SwiperSlide>
         </Swiper>
