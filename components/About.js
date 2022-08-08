@@ -1,5 +1,6 @@
 import React from "react";
 import SwiperCard from "../components/SwiperCard";
+import Alumni from "../components/Alumni";
 import Card from "./Card";
 
 const About = () => {
@@ -50,6 +51,7 @@ const About = () => {
         <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
           TEC{"\u00a0\u00a0"}Alumni
         </h1>
+        <Alumni />
       </section>
     </>
   );

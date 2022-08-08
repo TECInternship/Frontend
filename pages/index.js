@@ -22,9 +22,9 @@ export default function Home() {
         </div>
       </main>
 
-      {/* <footer className={styles.footer}>
+      <footer className={styles.footer}>
         <p>TEC Internship 2022 </p>
-      </footer> */}
+      </footer>
     </div>
   );
 }
