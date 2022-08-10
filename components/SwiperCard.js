@@ -42,17 +42,17 @@ export default function App() {
             <h2 className="text-3xl font-bold text-center mb-5">
               Business Challenge
             </h2>
-            <Card Content={<img src="/panenco.png"  />} />
+            <Card Content={<img src="/panenco.png" width={700} />} />
           </SwiperSlide>
           <SwiperSlide className="flex flex-col items-center ">
             <h2 className="text-3xl font-bold text-center mb-5">
               Company Visit
             </h2>
-            <Card Content={<img src="/grab.jpg"  />} />
+            <Card Content={<img src="/grab.jpg" width={700} />} />
           </SwiperSlide>
           <SwiperSlide className="flex flex-col items-center ">
             <h2 className="text-3xl font-bold text-center mb-5">TEC Night</h2>
-            <Card Content={<img src="/tecnight.jpg"  />} />
+            <Card Content={<img src="/tecnight.jpg"  width={700}/>} />
           </SwiperSlide>
         </Swiper>
       </div>
