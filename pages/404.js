@@ -29,7 +29,10 @@ const NotFound = () => {
             </div>
             <div className="font-Willywonka text-6xl">
               <h1>Ooops..</h1>
-              <h2>Page can&apos;t be found</h2>
+              <h2>Page is under construction</h2>
+              <div className="font-Willywonka text-3xl">
+              <h6>Heading back to Homepage..</h6>
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -18,7 +19,7 @@ const Hero = () => {
         </div>
         <div className="flex justify-center">
           <button className="bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] sm:rounded-3xl px-4 py-2 md:text-xl lg:text-3xl border hover:shadow-2xl">
-            Join Us!
+            <Link href="/register">Join Us!</Link>
           </button>
         </div>
       </div>

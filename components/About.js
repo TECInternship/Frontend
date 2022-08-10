@@ -10,13 +10,8 @@ const About = () => {
         <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
           Who{"\u00a0\u00a0"}Are{"\u00a0\u00a0"}We?
         </h1>
-        <p className="lg:text-2xl px-3 py-5 justify-center relative z-10 bg-gradient bg-gradient-to-br from-gray-300 to-transparent bg-opacity-20 rounded-lg shadow-2xl card border md:w-3/4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          fermentum ex nibh, sed varius turpis pellentesque viverra. Praesent
-          sollicitudin finibus odio, nec aliquet nunc sagittis sed. Mauris
-          venenatis ante et dolor facilisis, vel sagittis metus vulputate.
-          Pellentesque at fermentum purus. Donec rhoncus lectus nec leo
-          imperdiet consequat.
+        <p className="lg:text-2xl px-3 py-5 justify-center relative z-10 bg-gradient bg-gradient-to-br from-gray-300 to-transparent bg-opacity-20 rounded-lg shadow-2xl card border md:w-3/4 text-justify">
+          <b>TEC</b>, abreviasi dari <b>Techno Entrepreneur Club</b>, merupakan <b>satu-satunya unit bisnis </b>yang menghimpun mahasiswa ITB yang memiliki minat <b>kewirausahaan</b>. TEC ITB menjadi wadah pembinaan karakter dan jiwa entrepreneurship bagi anggotanya serta memberikan pengaruh di bidang entrepreneurship untuk massa kampus dan masyarakat sekitar. Unit ini didirikan pada tanggal <b>19 Desember 2007.</b>
         </p>
       </section>
 
