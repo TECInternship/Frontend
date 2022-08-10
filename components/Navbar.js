@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -12,7 +13,7 @@ const Navbar = () => {
         alt="logo"
       />
       <button className="sticky top-0 z-50 h-[50px] flex items-center backdrop-blur-sm shadow-lg sm:rounded-3xl px-6 bg-clip-padding border border-gray-200 bg-gradient bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] bg-opacity-20">
-        Register
+        <Link href="/register">Register </Link>
       </button>
     </div>
   );
