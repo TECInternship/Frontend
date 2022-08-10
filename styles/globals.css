@@ -32,20 +32,3 @@ a {
         background: linear-gradient(45deg, rgba(80, 9, 11, 0), #702222, #B75056);
     }
 }
-
-.transition-fade {
-    opacity: 1;
-    transition: 500ms;
-    transform: translateX(0);
-    transform-origin: left;
-}
-
-.is-animating .transition-fade {
-    opacity: 1;
-    transform: translateX(100%);
-}
-
-.is-leaving .transition-fade {
-    opacity: 0;
-    transform: translateX(0);
-}

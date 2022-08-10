@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import Image from "next/image";
-import clsx from 'clsx';
 
 const dataAlumni = [
   {
@@ -49,7 +48,7 @@ const Alumni = () => {
       {/* Profile */}
       <div className="flex justify-center">
         {dataAlumni.map((alumnus, id) => (
-          <div 
+          <div
             key={id}
             className={
               active === alumnus.nama
@@ -57,14 +56,14 @@ const Alumni = () => {
                 : "hidden"
             }
           >
-            <div className="animate-pulse flex flex-col items-center justify-center">
-              <img 
+            <div className="animate-fade flex flex-col items-center justify-center">
+              <img
                 src={alumnus.image}
                 className="max-w-[150px] rounded-full"
                 alt=""
               />
             </div>
-            <div className="animate-pulse bg-gradient bg-gradient-to-br from-gray-300 to-transparent bg-opacity-20 rounded-lg shadow-2xl card border px-5 py-5">
+            <div className="animate-fade bg-gradient bg-gradient-to-br from-gray-300 to-transparent bg-opacity-20 rounded-lg shadow-2xl card border px-5 py-5">
               <h1 className="md:text-3xl font-bold text-xl">{alumnus.nama}</h1>
               <p className="text-[12px] md:text-base">{alumnus.description}</p>
             </div>
@@ -75,7 +74,11 @@ const Alumni = () => {
       {/* Navigation */}
       <div className="flex md:flex-row items-center justify-center lg:space-x-4 lg:mt-8 space-x-2 mt-4">
         {dataAlumni.map((alumnus, id) => (
-          <button class=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" key={id} onClick={() => setActive(alumnus.nama)}>
+          <button
+            className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            key={id}
+            onClick={() => setActive(alumnus.nama)}
+          >
             <img
               src={alumnus.image}
               className="max-w-[50px] md:max-w-[75px] rounded-full hover:border"
