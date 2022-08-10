@@ -39,16 +39,20 @@ export default function App() {
           className="mySwiper"
         >
           <SwiperSlide className="flex flex-col items-center ">
-            <h2 className="text-3xl font-bold text-center mb-5">Gojek Company Visit</h2>
-            <Card Content={<img src="/gojek.jpg" width={500} />} />
-          </SwiperSlide>
-          <SwiperSlide className="flex flex-col items-center ">
-            <h2 className="text-3xl font-bold text-center mb-5">Unilever Company Visit</h2>
-            <Card Content={<img src="/unilever.jpg" width={500} />} />
-          </SwiperSlide>
-          <SwiperSlide className="flex flex-col items-center ">
-            <h2 className="text-3xl font-bold text-center mb-5">Business Challenge</h2>
+            <h2 className="text-3xl font-bold text-center mb-5">
+              Business Challenge
+            </h2>
             <Card Content={<img src="/panenco.png" width={800} />} />
+          </SwiperSlide>
+          <SwiperSlide className="flex flex-col items-center ">
+            <h2 className="text-3xl font-bold text-center mb-5">
+              Company Visit
+            </h2>
+            <Card Content={<img src="/grab.jpg" width={500} />} />
+          </SwiperSlide>
+          <SwiperSlide className="flex flex-col items-center ">
+            <h2 className="text-3xl font-bold text-center mb-5">TEC Night</h2>
+            <Card Content={<img src="/tecnight.jpg" width={500} />} />
           </SwiperSlide>
         </Swiper>
       </div>
