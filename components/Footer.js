@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
         
       </div>
-      <div className="flex flex-col justify-center items-center space-y-3">&copy; Copyright TEC Internship 2022</div>
+      <div className="flex flex-col justify-center items-center space-y-3">&copy; Copyright OHU TEC 2022</div>
     </div>
   );
 };
