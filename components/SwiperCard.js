@@ -40,15 +40,15 @@ export default function App() {
         >
           <SwiperSlide className="flex flex-col items-center ">
             <h2 className="text-3xl font-bold text-center mb-5">
-              Business Challenge
+            Company Visit
             </h2>
-            <Card Content={<img src="/panenco.png" width={700} />} />
+            <Card Content={<img src="/grab.jpg" width={700} />} />
           </SwiperSlide>
           <SwiperSlide className="flex flex-col items-center ">
             <h2 className="text-3xl font-bold text-center mb-5">
-              Company Visit
+            Business Challenge
             </h2>
-            <Card Content={<img src="/grab.jpg" width={700} />} />
+            <Card Content={<img src="/panenco.png" width={700} />} />
           </SwiperSlide>
           <SwiperSlide className="flex flex-col items-center ">
             <h2 className="text-3xl font-bold text-center mb-5">TEC Night</h2>
