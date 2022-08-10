@@ -3,9 +3,9 @@ import { FaTiktok, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col justify-center items-center space-y-2">
+    <div className="flex flex-col justify-center items-center space-y-3">
       <div className="text-sm md:text-xl">Find us at</div>
-      <div className="text-base md:text-xl">
+      <div className="text-base md:text-3xl">
         <div className="flex space-x-2">
           <a href="https://instagram.com/tec.ohu" target="blank">
             <FaInstagram />
@@ -17,7 +17,9 @@ const Footer = () => {
             <FaTiktok />
           </a>
         </div>
+        
       </div>
+      <div className="flex flex-col justify-center items-center space-y-3">&copy; Copyright TEC Internship 2022</div>
     </div>
   );
 };
