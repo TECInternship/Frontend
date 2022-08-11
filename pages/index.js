@@ -4,6 +4,7 @@ import About from "../components/About";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
+import PreEvent from "../components/PreEvent";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <Navbar />
         <div className="max-w-7xl md:w-xl lg:w-5xl">
           <Hero />
+          <PreEvent />
           <About />
         </div>
       </main>
