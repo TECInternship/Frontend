@@ -7,12 +7,17 @@ import PreEvent from "./PreEvent";
 const About = () => {
   return (
     <>
-      <section className="flex flex-col items-center mb-32">
+      <section className="flex flex-col items-center mb-32 px-8 sm:px-0">
         <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
           Who{"\u00a0\u00a0"}We{"\u00a0\u00a0"}Are
         </h1>
-        <p className="lg:text-2xl px-3 py-5 justify-center relative z-10 bg-gradient bg-gradient-to-br from-gray-300 to-transparent bg-opacity-20 rounded-lg shadow-2xl card border md:w-3/4 text-justify">
-          <b>TEC</b>, abreviasi dari <b>Techno Entrepreneur Club</b>, merupakan <b>satu-satunya unit bisnis </b>yang menghimpun mahasiswa ITB yang memiliki minat <b>kewirausahaan</b>. TEC ITB menjadi wadah pembinaan karakter dan jiwa entrepreneurship bagi anggotanya serta memberikan pengaruh di bidang entrepreneurship untuk massa kampus dan masyarakat sekitar. Unit ini didirikan pada tanggal <b>19 Desember 2007.</b>
+        <p className="lg:text-2xl px-8 py-6 justify-center relative z-10 bg-gradient bg-gradient-to-br from-gray-300 to-transparent bg-opacity-20 rounded-lg shadow-2xl card md:w-3/4 text-justify">
+          <b>TEC</b>, abreviasi dari <b>Techno Entrepreneur Club</b>, merupakan{" "}
+          <b>satu-satunya unit bisnis </b>yang menghimpun mahasiswa ITB yang
+          memiliki minat <b>kewirausahaan</b>. TEC ITB menjadi wadah pembinaan
+          karakter dan jiwa entrepreneurship bagi anggotanya serta memberikan
+          pengaruh di bidang entrepreneurship untuk massa kampus dan masyarakat
+          sekitar. Unit ini didirikan pada tanggal <b>19 Desember 2007.</b>
         </p>
       </section>
 
@@ -41,16 +46,6 @@ const About = () => {
             <h2 className="">Networking</h2>
           </div>
         </div>
-      </section>
-
-      <section className="flex flex-col items-center mb-32">
-        <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
-          Pre{"\u00a0\u00a0"}Event
-        </h1>
-        <h1 className="text-xl lg:text-5xl mb-5 font-Willywonka">
-        Click the Poster to RSVP
-        </h1>
-        <PreEvent />
       </section>
 
       <section className="flex flex-col items-center mb-32">

@@ -44,7 +44,7 @@ const dataAlumni = [
 const Alumni = () => {
   const [active, setActive] = useState("Achmad Zaky");
   return (
-    <div className="md:w-3/4 flex flex-col md:h-[450px] mt-10">
+    <div className="md:w-3/4 flex flex-col md:h-[450px] mt-10 px-8 sm:px-0">
       {/* Profile */}
       <div className="flex justify-center">
         {dataAlumni.map((alumnus, id) => (
@@ -63,7 +63,7 @@ const Alumni = () => {
                 alt=""
               />
             </div>
-            <div className="animate-fade bg-gradient bg-gradient-to-br from-gray-300 to-transparent bg-opacity-20 rounded-lg shadow-2xl card border px-5 py-5">
+            <div className="animate-fade bg-gradient bg-gradient-to-br from-gray-300 to-transparent bg-opacity-20 rounded-lg shadow-2xl px-5 py-5">
               <h1 className="md:text-3xl font-bold text-xl">{alumnus.nama}</h1>
               <p className="text-[12px] md:text-base">{alumnus.description}</p>
             </div>
