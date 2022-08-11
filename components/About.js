@@ -2,6 +2,7 @@ import React from "react";
 import SwiperCard from "../components/SwiperCard";
 import Alumni from "../components/Alumni";
 import Card from "./Card";
+import PreEvent from "./PreEvent";
 
 const About = () => {
   return (
@@ -40,6 +41,13 @@ const About = () => {
             <h2 className="">Networking</h2>
           </div>
         </div>
+      </section>
+
+      <section className="flex flex-col items-center mb-32">
+        <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
+          Pre{"\u00a0\u00a0"}Event
+        </h1>
+        <PreEvent />
       </section>
 
       <section className="flex flex-col items-center mb-32">
