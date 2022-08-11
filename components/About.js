@@ -47,6 +47,9 @@ const About = () => {
         <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
           Pre{"\u00a0\u00a0"}Event
         </h1>
+        <h1 className="text-xl lg:text-5xl mb-5 font-Willywonka">
+        Click the Poster to RSVP
+        </h1>
         <PreEvent />
       </section>
 
