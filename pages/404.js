@@ -31,7 +31,7 @@ const NotFound = () => {
             <div className="font-Willywonka text-6xl">
               <h1>Coming Soon..</h1>
               <div className="font-Willywonka text-4xl space-y-2">
-                <h1>Stay tune on our Social Media</h1>
+                <h1>Stay tuned on our Social Media</h1>
               </div>
 
               <div className="flex space-x-2 items-center space-y-2">
