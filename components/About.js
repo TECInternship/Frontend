@@ -17,14 +17,14 @@ const About = () => {
 
       <section className="flex flex-col items-center mb-32">
         <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
-          What{"\u00a0\u00a0"}We{"\u00a0\u00a0"}Do?
+          What{"\u00a0\u00a0"}Do{"\u00a0\u00a0"}We{"\u00a0\u00a0"}Do?
         </h1>
         <SwiperCard />
       </section>
 
       <section className="flex flex-col items-center justify-center mb-32">
         <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
-          What{"\u00a0\u00a0"}You{"\u00a0\u00a0"}Will{"\u00a0\u00a0"}Get?
+          What{"\u00a0\u00a0"}Will{"\u00a0\u00a0"}You{"\u00a0\u00a0"}Get?
         </h1>
         <div className="flex flex-col gap-4 sm:flex-row w-2/5 md:gap-20 sm:w-2/3 lg:w-1/2 justify-items-center text-base italic text-center lg:text-xl">
           <div className="">
