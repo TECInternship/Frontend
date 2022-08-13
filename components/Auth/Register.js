@@ -1,9 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import axios from "axios";
 
 const Register = ({ onClick }) => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [konfirmasi, setKonfirmasi] = useState("");
+  // const [nomortec, setNomorTec] = useState(0);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:4000/api/get-all-users")
+  //     .then((res) => {
+  //       setNomorTec(res.data.length + 1);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (konfirmasi === password) {
+      axios
+        .post("http://localhost:4000/api/register", {
+          // nomortec,
+          username,
+          password,
+        })
+        .then((res) => {
+          localStorage.setItem("user", JSON.stringify(res.data));
+          window.location.reload();
+        })
+        .catch((err) => console.log(err));
+    } else {
+      alert("Password confirmation wrong!");
+    }
+  };
+
   return (
-    <div className="space-y-4">
+    <form className="space-y-4" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="" className="text-gray-100 text-xl font-semibold ml-1">
           Username
@@ -12,6 +47,7 @@ const Register = ({ onClick }) => {
           type="text"
           placeholder="Masukkan username"
           className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+          onChange={(e) => setUsername(e.target.value)}
         />
       </div>
       <div className="">
@@ -22,16 +58,18 @@ const Register = ({ onClick }) => {
           type="password"
           placeholder="Masukkan password"
           className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+          onChange={(e) => setPassword(e.target.value)}
         />
       </div>
       <div className="">
         <label htmlFor="" className="text-gray-100 text-xl font-semibold ml-1">
-          Konfirmasi
+          Konfirmasi Password
         </label>
         <input
           type="password"
           placeholder="Konfirmasi password"
           className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+          onChange={(e) => setKonfirmasi(e.target.value)}
         />
       </div>
       <div>
@@ -45,7 +83,7 @@ const Register = ({ onClick }) => {
           </span>
         </p>
       </div>
-      <div className="text-space py-6 mb-6 space-x-2">
+      <div className="text-center py-6 mb-6 space-x-2">
         <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer">
           <Link href="/">Back</Link>
         </button>
@@ -53,7 +91,7 @@ const Register = ({ onClick }) => {
           REGISTER
         </button>
       </div>
-    </div>
+    </form>
   );
 };
 
