@@ -16,11 +16,13 @@ const Login = ({ onClick }) => {
       .then((res) => {
         localStorage.setItem("user", JSON.stringify(res.data));
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
-    <form className="space-y-4" onSubmit>
+    <form className="space-y-4" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="" className="text-gray-100 text-xl font-semibold ml-1">
           Username
@@ -29,6 +31,7 @@ const Login = ({ onClick }) => {
           type="text"
           placeholder="Masukkan username"
           className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+          onChange={(e) => setUsername(e.target.value)}
         />
       </div>
       <div className="">
@@ -39,6 +42,7 @@ const Login = ({ onClick }) => {
           type="password"
           placeholder="Masukkan password"
           className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+          onChange={(e) => setPassword(e.target.value)}
         />
       </div>
       <div>
