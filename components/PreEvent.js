@@ -11,7 +11,7 @@ const PreEvent = () => {
         <div className="sm:w-1/3 mb-4">
           <img src="/pre.jpg" alt="logo" />
         </div>
-        <div className="text-center md:w-1/2 space-y-4 lg:text-2xl px-3 py-5 justify-center relative z-10 bg-gradient bg-gradient-to-br from-gray-300 to-transparent bg-opacity-20 rounded-lg shadow-2xl">
+        <div className="text-center md:w-1/2 space-y-4 lg:text-2xl px-3 py-5 justify-center relative z-10 bg-opacity-20 bg-white/30 backdrop-blur-xl rounded-3xl shadow-2xl">
           <div className="flex flex-col">
             <h1 className="text-2xl md:text-2xl lg:text-3xl mb-5 font-Willywonka">
               Attend{"\u00a0\u00a0"}Our{"\u00a0\u00a0"}First{"\u00a0\u00a0"}
