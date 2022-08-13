@@ -14,6 +14,9 @@ module.exports = {
       animation: {
         fade: "pulse 0.5s ease-in-out 1",
       },
+      backgroundImage: {
+        'bg': "url('../public/assets/bg.png')"
+      }
     },
   },
   plugins: [],
