@@ -1,8 +1,9 @@
 import React from "react";
+import Link from "next/link";
 
 const Register = ({ onClick }) => {
   return (
-    <>
+    <div className="space-y-4">
       <div>
         <label htmlFor="" className="text-gray-100 text-xl font-semibold ml-1">
           Username
@@ -13,7 +14,7 @@ const Register = ({ onClick }) => {
           className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
         />
       </div>
-      <div className="my-4">
+      <div className="">
         <label htmlFor="" className="text-gray-100 text-xl font-semibold ml-1">
           Password
         </label>
@@ -23,7 +24,7 @@ const Register = ({ onClick }) => {
           className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
         />
       </div>
-      <div className="mb-4">
+      <div className="">
         <label htmlFor="" className="text-gray-100 text-xl font-semibold ml-1">
           Konfirmasi
         </label>
@@ -44,13 +45,16 @@ const Register = ({ onClick }) => {
           </span>
         </p>
       </div>
-      <div className="text-right py-6 mb-6">
-        <button className="px-12 py-2 bg-white rounded-xl text-red-700 text-md font-bold hover:bg-red-700 hover:text-gray-100">
+      <div className="text-space py-6 mb-6 space-x-2">
+        <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer">
+          <Link href="/">Back</Link>
+        </button>
+        <button className="px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685]">
           REGISTER
         </button>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Register
+export default Register;

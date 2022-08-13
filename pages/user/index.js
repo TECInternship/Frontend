@@ -1,20 +1,20 @@
-import React from "react"
-import Login from "../../components/Auth/Login"
-import Register from "../../components/Auth/Register"
-import Icon from "../../public/assets/User_fill.png"
-import Card from "../../components/Card.js"
-import { useState } from "react"
+import React from "react";
+import Login from "../../components/Auth/Login";
+import Register from "../../components/Auth/Register";
+import Icon from "../../public/assets/User_fill.png";
+import Card from "../../components/Card.js";
+import { useState } from "react";
 
 const Home = () => {
-  const [activeButton, setActiveButton] = useState("login")
+  const [activeButton, setActiveButton] = useState("login");
 
   return (
     <>
       <main className="h-screen w-screen bg-scroll bg-bg bg-no-repeat bg-cover max-h-screen flex">
         <div className="h-screen basis-2/5"></div>
         <div className="h-screen basis-3/5 flex items-center">
-          <div className="mx-auto">
-            <Card Content={<img className="mx-auto" src={Icon.src}/>} />
+          <div className="mx-auto space-y-8">
+            <Card Content={<img className="mx-auto" src={Icon.src} />} />
             <div className="bg-white/30 backdrop-blur-xl rounded-3xl shadow-2xl">
               <div className="text-center text-gray-100 pt-4">
                 <button
@@ -50,7 +50,7 @@ const Home = () => {
         </div>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
