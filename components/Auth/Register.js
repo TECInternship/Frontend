@@ -38,60 +38,75 @@ const Register = ({ onClick }) => {
   };
 
   return (
-    <form className="space-y-4" onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="" className="text-gray-100 text-xl font-semibold ml-1">
-          Username
-        </label>
-        <input
-          type="text"
-          placeholder="Masukkan username"
-          className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </div>
-      <div className="">
-        <label htmlFor="" className="text-gray-100 text-xl font-semibold ml-1">
-          Password
-        </label>
-        <input
-          type="password"
-          placeholder="Masukkan password"
-          className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <div className="">
-        <label htmlFor="" className="text-gray-100 text-xl font-semibold ml-1">
-          Konfirmasi Password
-        </label>
-        <input
-          type="password"
-          placeholder="Konfirmasi password"
-          className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
-          onChange={(e) => setKonfirmasi(e.target.value)}
-        />
-      </div>
-      <div>
-        <p className="text-gray-100">
-          Sudah punya akun?{" "}
-          <span
-            className="underline hover:text-gray-200 hover:cursor-pointer"
-            onClick={onClick}
+    <>
+      <form className="space-y-4" onSubmit={handleSubmit}>
+        <div>
+          <label
+            htmlFor=""
+            className="text-gray-100 text-xl font-semibold ml-1"
           >
-            Login di sini
-          </span>
-        </p>
-      </div>
+            Username
+          </label>
+          <input
+            type="text"
+            placeholder="Masukkan username"
+            className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div className="">
+          <label
+            htmlFor=""
+            className="text-gray-100 text-xl font-semibold ml-1"
+          >
+            Password
+          </label>
+          <input
+            type="password"
+            placeholder="Masukkan password"
+            className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div className="">
+          <label
+            htmlFor=""
+            className="text-gray-100 text-xl font-semibold ml-1"
+          >
+            Konfirmasi Password
+          </label>
+          <input
+            type="password"
+            placeholder="Konfirmasi password"
+            className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+            onChange={(e) => setKonfirmasi(e.target.value)}
+          />
+        </div>
+        <div>
+          <p className="text-gray-100">
+            Sudah punya akun?{" "}
+            <span
+              className="underline hover:text-gray-200 hover:cursor-pointer"
+              onClick={onClick}
+            >
+              Login di sini
+            </span>
+          </p>
+        </div>
+      </form>
       <div className="text-center py-6 mb-6 space-x-2">
-        <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer">
-          <Link href="/">Back</Link>
-        </button>
-        <button className="px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685]">
-          REGISTER
-        </button>
+        <Link href="/">
+          <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer">
+            Back
+          </button>
+        </Link>
+        <Link href="/auth/registration">
+          <button className="px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685]">
+            REGISTER
+          </button>
+        </Link>
       </div>
-    </form>
+    </>
   );
 };
 
