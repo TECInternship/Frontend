@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Login = ({ onClick }) => {
-  const [username, setUsername] = useState("");
+  const router = useRouter();
+
+  const [route, setRoute] = useState();
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
@@ -11,13 +15,14 @@ const Login = ({ onClick }) => {
 
     axios
       .get(
-        `http://localhost:4000/api/login/?username=${username}&password=${password}`
+        `http://localhost:4000/api/login/?email=${email}&password=${password}`
       )
       .then((res) => {
         localStorage.setItem("user", JSON.stringify(res.data));
+        router.push("/");
       })
       .catch((err) => {
-        console.log(err);
+        alert(err.response.data.msg);
       });
   };
 
@@ -25,13 +30,13 @@ const Login = ({ onClick }) => {
     <form className="space-y-4" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="" className="text-gray-100 text-xl font-semibold ml-1">
-          Username
+          Email
         </label>
         <input
-          type="text"
-          placeholder="Masukkan username"
+          type="email"
+          placeholder="Masukkan email"
           className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
       </div>
       <div className="">
@@ -57,9 +62,11 @@ const Login = ({ onClick }) => {
         </p>
       </div>
       <div className="text-center py-6 mb-6 space-x-2">
-        <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer">
-          <Link href="/">Back</Link>
-        </button>
+        <Link href="/">
+          <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer">
+            Back
+          </button>
+        </Link>
         <input
           type="submit"
           value="LOGIN"
