@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Register1({ setActive }) {
   return (
     <>
-      <div className="pt-10 ml-12">
+      <div className="pt-10 ml-12 mr-20">
         <div className="text-2xl font-semibold">Lengkapi Data Dirimu</div>
         <div className="mt-2">
           Lengkapi data diri untuk melakukan finalisasi akunmu.
@@ -13,30 +13,18 @@ export default function Register1({ setActive }) {
         <div className="mt-10">Nama Lengkap</div>
         <input
           type="text"
-          className="mt-2 w-[535px] h-[52px] rounded-2xl bg-white/20 backdrop-blur-none px-3"
+          className="mt-2 w-2/3 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
         />
 
         <div className="mt-10">Fakultas</div>
-        <div className="mb-3 xl:w-96">
+        <div className="mb-3 block w-1/2 mt-2 -p-3 pr-3 bg-white/20 backdrop-blur-none rounded-2xl transition ease-in-out outline-none group-focus:bg-white">
           <select
-            className="form-select appearance-none
-                block
-                mt-2
-                w-[535px]
-                h-[52px]
-                px-3
-                py-1.5
-
-                text-white
-                bg-white/20 backdrop-blur-none
-                rounded-2xl
-                transition
-                ease-in-out
-                m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            className="bg-transparent w-full outline-none p-3 rounded-2xl group"
             aria-label="Default select example"
           >
-            <option selected>Pilih Fakultas</option>
+            <option className="" selected>
+              Pilih Fakultas
+            </option>
             <option value="FITB">FITB</option>
             <option value="FMIPA">FMIPA</option>
             <option value="FSRD">FSRD</option>
@@ -56,7 +44,7 @@ export default function Register1({ setActive }) {
         <div className="text-xs font-extralight">Jika sudah penjurusan</div>
         <input
           type="text"
-          className="mt-2 w-[535px] h-[52px] px-3 rounded-2xl bg-white/20 backdrop-blur-none"
+          className="mt-2 w-1/2 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
         />
       </div>
 

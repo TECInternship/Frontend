@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Register1 from "../../../components/Auth/Register1";
-import Register2 from "../../../components/Auth/Register2";
-import Register3 from "../../../components/Auth/Register3";
-import Circle from "../../../components/Circle";
+import Register1 from "../../components/Auth/Register1";
+import Register2 from "../../components/Auth/Register2";
+import Register3 from "../../components/Auth/Register3";
+import Circle from "../../components/Circle";
 
-const Registration = () => {
+const PersonalData = () => {
   const [active, setActive] = useState("1");
   return (
     <div className="flex justify-center min-h-screen">
@@ -46,4 +46,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default PersonalData;
