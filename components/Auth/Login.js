@@ -18,7 +18,7 @@ const Login = ({ onClick }) => {
         `http://localhost:4000/api/login/?email=${email}&password=${password}`
       )
       .then((res) => {
-        localStorage.setItem("user", JSON.stringify(res.data));
+        localStorage.setItem("user", res.data._id);
         router.push("/");
       })
       .catch((err) => {
@@ -61,17 +61,17 @@ const Login = ({ onClick }) => {
           </span>
         </p>
       </div>
-      <div className="text-center py-6 mb-6 space-x-2">
-        <Link href="/">
-          <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer">
-            Back
-          </button>
-        </Link>
+      <div className="flex flex-row-reverse text-center py-6 mb-6 gap-2">
         <input
           type="submit"
           value="LOGIN"
           className="px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"
         />
+        <Link href="/">
+          <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer">
+            Back
+          </button>
+        </Link>
       </div>
     </form>
   );

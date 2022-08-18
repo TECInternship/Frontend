@@ -7,14 +7,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PersonalData = () => {
-  const [active, setActive] = useState("2");
   const [name, setName] = useState("");
-  const [fakultas, setFakultas] = useState("");
-  const [jurusan, setJurusan] = useState("");
-  const [tahunMasuk, setTahunMasuk] = useState("");
-  const [teman, setTeman] = useState([]);
-  const [method, setMethod] = useState("");
-  const [file, setFile] = useState("");
+  const [active, setActive] = useState("1");
+  const [bukti, setBukti] = useState("");
 
   return (
     <div className="flex justify-center min-h-screen">
@@ -63,27 +58,15 @@ const PersonalData = () => {
 
           <div className="bg-white/10 backdrop-blur-lg rounded-xl shadow-xl">
             {active === "1" ? (
-              <Register1
-                setActive={setActive}
-                setName={setName}
-                name={name}
-                fakultas={fakultas}
-                setFakultas={setFakultas}
-                jurusan={jurusan}
-                setJurusan={setJurusan}
-                tahunMasuk={tahunMasuk}
-                setTahunMasuk={setTahunMasuk}
-              />
+              <Register1 setActive={setActive} name={name} setName={setName} />
             ) : active === "2" ? (
-              <Register2
-                setActive={setActive}
-                teman={teman}
-                setTeman={setTeman}
-                method={method}
-                setMethod={setMethod}
-              />
+              <Register2 setActive={setActive} name={name} />
             ) : (
-              <Register3 setActive={setActive} file={file} setFile={setFile} />
+              <Register3
+                setActive={setActive}
+                bukti={bukti}
+                setBukti={setBukti}
+              />
             )}
           </div>
         </div>
