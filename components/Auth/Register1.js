@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Register1({ setActive }) {
   return (
-    <>
-      <div className="pt-10 ml-12 mr-20">
+    <div className="py-10">
+      <div className="mx-12">
         <div className="text-2xl font-semibold">Lengkapi Data Dirimu</div>
         <div className="mt-2">
           Lengkapi data diri untuk melakukan finalisasi akunmu.
@@ -47,7 +47,6 @@ export default function Register1({ setActive }) {
           className="mt-2 w-1/2 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
         />
       </div>
-
       <div className="container px-16 mt-24 flex justify-end">
         <Link href="/auth">
           <button className="px-12 py-2 rounded-xl text-md font-bold border">
@@ -61,6 +60,6 @@ export default function Register1({ setActive }) {
           NEXT
         </button>
       </div>
-    </>
+    </div>
   );
 }

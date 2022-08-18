@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Register2({ setActive }) {
   return (
-    <>
-      <div className="pt-10 ml-12">
+    <div className="py-10">
+      <div className="mx-12">
         <div className="text-2xl font-semibold">Lakukan Pembayaran</div>
         <div className="mt-2">
           Untuk menjadi intern resmi, kamu diharuskan membayar biaya registrasi.
@@ -60,6 +60,6 @@ export default function Register2({ setActive }) {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
