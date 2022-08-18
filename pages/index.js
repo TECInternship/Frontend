@@ -16,7 +16,7 @@ export default function Home() {
   const [route, setRoute] = useState();
 
   useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem("user")));
+    setUser(localStorage.getItem("user"));
   }, []);
 
   const logout = () => {

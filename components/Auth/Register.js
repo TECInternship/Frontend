@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 const Register = ({ onClick }) => {
   const router = useRouter();
 
-  const [route, setRoute] = useState();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [konfirmasi, setKonfirmasi] = useState("");
@@ -33,7 +32,7 @@ const Register = ({ onClick }) => {
             password,
           })
           .then((res) => {
-            localStorage.setItem("user", JSON.stringify(res.data));
+            localStorage.setItem("user", res.data._id);
             router.push("/personal-data");
             // window.location.reload();
           })
