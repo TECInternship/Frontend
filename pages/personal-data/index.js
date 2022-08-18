@@ -3,15 +3,37 @@ import Register1 from "../../components/Auth/Register1";
 import Register2 from "../../components/Auth/Register2";
 import Register3 from "../../components/Auth/Register3";
 import Circle from "../../components/Circle";
+import Image from "next/image";
+import Link from "next/link";
 
 const PersonalData = () => {
   const [active, setActive] = useState("1");
   return (
     <div className="flex justify-center min-h-screen">
-      <div className="flex">
-        <div className="bg-white/10 backdrop-blur-lg h-[707px] w-[325px] rounded-xl mt-[105px] ml-[56px] shadow-xl">
-          <div className="pt-10">
-            <div className="ml-12 text-2xl font-semibold">Registration</div>
+      <div className="w-full">
+        <div className="flex justify-start gap-2 cursor-pointer px-8 py-10">
+          <Link href={"/"}>
+            <Image
+              className=""
+              src="/tecputih.png"
+              width={50}
+              height={50}
+              alt="logo"
+            />
+          </Link>
+          <Link href={"/"}>
+            <Image
+              className=""
+              src="/text-logo.png"
+              width={140}
+              height={50}
+              alt="logo"
+            />
+          </Link>
+        </div>
+        <div className="flex gap-2 justify-center">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl shadow-xl py-10">
+            <h1 className="text-center text-2xl font-semibold">Registration</h1>
 
             <div className="p-12 flex">
               <div className="flex relative gap-4">
@@ -30,16 +52,16 @@ const PersonalData = () => {
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-white/10 backdrop-blur-lg  h-[707px] w-[897px] rounded-xl mt-[105px] ml-[56px] shadow-xl">
-          {active === "1" ? (
-            <Register1 setActive={setActive} />
-          ) : active === "2" ? (
-            <Register2 setActive={setActive} />
-          ) : (
-            <Register3 setActive={setActive} />
-          )}
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl shadow-xl">
+            {active === "1" ? (
+              <Register1 setActive={setActive} />
+            ) : active === "2" ? (
+              <Register2 setActive={setActive} />
+            ) : (
+              <Register3 setActive={setActive} />
+            )}
+          </div>
         </div>
       </div>
     </div>
