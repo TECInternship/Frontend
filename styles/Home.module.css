@@ -126,3 +126,8 @@
         filter: invert(1);
     }
 }
+
+.landingImage {
+    height: 500px;
+    z-index: 0;
+}
