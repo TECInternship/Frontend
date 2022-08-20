@@ -60,7 +60,7 @@ export default function Register2({ setActive, name }) {
       {/* Tipe Pembayaran */}
       <h2 className="mt-10">Tipe Pembayaran</h2>
       <select
-        className="block mt-2 w-full p-3 text-white bg-white/20 backdrop-blur-none rounded-2xl transition ease-in-out focus:outline-none"
+        className="block mt-2 w-full md:w-4/5 p-3 text-white bg-white/20 backdrop-blur-none rounded-2xl transition ease-in-out focus:outline-none"
         required
         onChange={handleChange}
       >
@@ -81,7 +81,7 @@ export default function Register2({ setActive, name }) {
           <h2 className="mt-4">Nama Teman 1</h2>
           <input
             type="text"
-            className="mt-2 w-3/4 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
+            className="mt-2 w-full md:w-4/5 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
             value={teman1}
             onChange={(e) => setTeman1(e.target.value)}
             required
@@ -91,7 +91,7 @@ export default function Register2({ setActive, name }) {
           <h2 className="mt-4">Email Teman 1</h2>
           <input
             type="text"
-            className="mt-2 w-3/4 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
+            className="mt-2 w-full md:w-4/5 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
             value={email1}
             onChange={(e) => setEmail1(e.target.value)}
             required
@@ -104,7 +104,7 @@ export default function Register2({ setActive, name }) {
           <h2 className="mt-4">Nama Teman 2</h2>
           <input
             type="text"
-            className="mt-2 w-3/4 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
+            className="mt-2 w-full md:w-4/5 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
             value={teman2}
             onChange={(e) => setTeman2(e.target.value)}
             required
@@ -114,7 +114,7 @@ export default function Register2({ setActive, name }) {
           <h2 className="mt-4">Email Teman 2</h2>
           <input
             type="text"
-            className="mt-2 w-3/4 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
+            className="mt-2 w-full md:w-4/5 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
             value={email2}
             onChange={(e) => setEmail2(e.target.value)}
             required
@@ -126,10 +126,10 @@ export default function Register2({ setActive, name }) {
         <input
           type={"submit"}
           value="NEXT"
-          className="px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"
+          className="px-8 md:px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"
         />
         <button
-          className="px-12 py-2 rounded-xl text-md font-bold border"
+          className="px-8 md:px-12 py-2 rounded-xl text-md font-bold border"
           onClick={() => setActive("1")}
         >
           BACK
