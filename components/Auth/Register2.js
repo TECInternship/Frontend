@@ -4,6 +4,7 @@ import axios from "axios";
 
 export default function Register2({ setActive, name }) {
   const [method, setMethod] = useState("");
+  const [opsi, setOpsi] = useState("");
   const [teman1, setTeman1] = useState("");
   const [email1, setEmail1] = useState("");
   const [teman2, setTeman2] = useState("");
@@ -22,6 +23,7 @@ export default function Register2({ setActive, name }) {
       .get(`http://localhost:4000/api/get-payment/?pembayar=${name}`)
       .then((res) => {
         setMethod(res.data.method);
+        setOpsi(res.data.opsi);
         setTeman1(res.data.teman[0].name);
         setEmail1(res.data.teman[0].email);
         setTeman2(res.data.teman[1].name);
@@ -37,6 +39,7 @@ export default function Register2({ setActive, name }) {
       .post("http://localhost:4000/api/payment", {
         pembayar: name,
         method,
+        opsi,
         teman: [
           { name: teman1, email: email1 },
           { name: teman2, email: email2 },
@@ -64,14 +67,54 @@ export default function Register2({ setActive, name }) {
         required
         onChange={handleChange}
       >
-        <option selected={method === "1"} value={1} className="text-black">
+        <option selected={method === 1} value={1} className="text-black">
           Single Rp50.000/orang
         </option>
-        <option selected={method === "2"} value={2} className="text-black">
-          Double Rp40.000/orang{" "}
+        <option selected={method === 2} value={2} className="text-black">
+          Double Rp40.000/orang
         </option>
-        <option selected={method === "3"} value={3} className="text-black">
+        <option selected={method === 3} value={3} className="text-black">
           Triple Rp35.000/orang
+        </option>
+        <option selected={method === 0} value={0} className="text-black">
+          Paket SBE Rp130.000/orang
+        </option>
+      </select>
+
+      {/* Metode Pembayaran */}
+      <h2 className="mt-4">Metode Pembayaran</h2>
+      <select
+        className="block mt-2 w-full md:w-4/5 p-3 text-white bg-white/20 backdrop-blur-none rounded-2xl transition ease-in-out focus:outline-none"
+        required
+        onChange={(e) => setOpsi(e.target.value)}
+      >
+        <option
+          selected={method === "dana"}
+          value={"dana"}
+          className="text-black"
+        >
+          Dana
+        </option>
+        <option
+          selected={method === "shopeepay"}
+          value={"shopeepay"}
+          className="text-black"
+        >
+          Shopeepay{" "}
+        </option>
+        <option
+          selected={method === "gopay"}
+          value={"gopay"}
+          className="text-black"
+        >
+          GoPay
+        </option>
+        <option
+          selected={method === "bca"}
+          value={"bca"}
+          className="text-black"
+        >
+          BCA
         </option>
       </select>
 

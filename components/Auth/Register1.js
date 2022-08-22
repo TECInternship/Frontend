@@ -9,6 +9,7 @@ export default function Register1({ setActive, name, setName }) {
   const [tahunMasuk, setTahunMasuk] = useState("");
   const [userId, setUserId] = useState("");
   const [user, setUser] = useState("");
+  const [idline, setIdLine] = useState("");
 
   useEffect(() => {
     setUserId(localStorage.getItem("user"));
@@ -28,6 +29,7 @@ export default function Register1({ setActive, name, setName }) {
           setFakultas(res.data.fakultas);
           setJurusan(res.data.jurusan);
           setTahunMasuk(res.data.tahunMasuk);
+          setIdLine(res.data.idline);
         })
         .catch((err) => console.log(err));
     }
@@ -43,6 +45,7 @@ export default function Register1({ setActive, name, setName }) {
         fakultas,
         jurusan,
         tahunMasuk,
+        idline,
       })
       .then((res) => {
         setActive("2");
@@ -97,6 +100,15 @@ export default function Register1({ setActive, name, setName }) {
         className="mt-2 w-full md:w-4/5 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
         value={tahunMasuk}
         onChange={(e) => setTahunMasuk(e.target.value)}
+        required
+      />
+      {/* ID LINE */}
+      <h1 className="mt-4">ID LINE</h1>
+      <input
+        type="text"
+        className="mt-2 w-full md:w-4/5 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
+        value={idline}
+        onChange={(e) => setIdLine(e.target.value)}
         required
       />
       <div className="mt-16 flex flex-row-reverse justify-end gap-2">
