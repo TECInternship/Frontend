@@ -29,7 +29,7 @@ const Login = ({ onClick }) => {
   return (
     <form className="space-y-4" onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="" className="text-gray-100 text-xl font-semibold ml-1">
+        <label htmlFor="" className="text-gray-100 md:text-xl font-semibold ml-1">
           Email
         </label>
         <input
@@ -40,7 +40,7 @@ const Login = ({ onClick }) => {
         />
       </div>
       <div className="">
-        <label htmlFor="" className="text-gray-100 text-xl font-semibold ml-1">
+        <label htmlFor="" className="text-gray-100 md:text-xl font-semibold ml-1">
           Password
         </label>
         <input

@@ -51,7 +51,7 @@ const Register = ({ onClick }) => {
         <div>
           <label
             htmlFor=""
-            className="text-gray-100 text-xl font-semibold ml-1"
+            className="text-gray-100 md:text-xl font-semibold ml-1"
           >
             Email
           </label>
@@ -59,14 +59,14 @@ const Register = ({ onClick }) => {
             type="text"
             required
             placeholder="Masukkan email"
-            className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+            className="w-full h-8 md:h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="">
           <label
             htmlFor=""
-            className="text-gray-100 text-xl font-semibold ml-1"
+            className="text-gray-100 md:text-xl font-semibold ml-1"
           >
             Password
           </label>
@@ -78,10 +78,10 @@ const Register = ({ onClick }) => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <div className="">
+        <div className="flex flex-col">
           <label
             htmlFor=""
-            className="text-gray-100 text-xl font-semibold ml-1"
+            className="text-gray-100 md:text-xl font-semibold ml-1"
           >
             Konfirmasi Password
           </label>
@@ -106,14 +106,14 @@ const Register = ({ onClick }) => {
         </div>
         <div className="text-center py-6 mb-6 space-x-2">
           <Link href="/">
-            <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer">
+            <button className="px-12 py-2 my-4 lg:my-0 rounded-xl text-md font-bold border cursor-pointer">
               Back
             </button>
           </Link>
           <input
             disabled={email.length < 8}
             type={"submit"}
-            className="px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"
+            className="px-10 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"
             value={"REGISTER"}
           />
         </div>
