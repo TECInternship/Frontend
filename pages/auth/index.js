@@ -12,8 +12,8 @@ const Home = () => {
 
   return (
     <>
-      <main className="h-screen w-screen bg-scroll bg-bg bg-no-repeat bg-cover max-h-screen flex">
-        <div className="flex justify-between absolute w-full px-8 py-10">
+      <main className="h-screen w-screen bg-red bg-cover justify-center max-h-screen flex relative">
+        <div className="absolute left-2 top-2 px-8 py-10 z-10">
           <div className="flex gap-2 cursor-pointer">
             <Link href={"/"}>
               <Image
@@ -35,14 +35,14 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div className="h-screen basis-2/5"></div>
-        <div className="h-screen basis-3/5 flex items-center">
+        <div className="h-screen basis-0 hidden md:block md:basis-2/5"></div>
+        <div className="h-screen basis-full md:basis-3/5 flex items-center">
           <div className="mx-auto space-y-8">
-            <Card Content={<img className="mx-auto" src={Icon.src} />} />
-            <div className="bg-white/30 backdrop-blur-xl rounded-3xl shadow-2xl">
+            <Card Content={<img className="mx-auto hidden sm:flex" src={Icon.src} />} />
+            <div className="bg-white/30 backdrop-blur-xl rounded-3xl w-auto max-w-full shadow-2xl">
               <div className="text-center text-gray-100 pt-4">
                 <button
-                  className={`text-2xl font-extrabold px-6 py-2 mx-2 ${
+                  className={`text-xl md:text-2xl font-extrabold px-6 py-2 mx-2 ${
                     activeButton === "login"
                       ? "border-b-white border-b-[3px] border-solid"
                       : ""
@@ -52,7 +52,7 @@ const Home = () => {
                   Login
                 </button>
                 <button
-                  className={`text-2xl font-extrabold px-6 py-2 mx-2 ${
+                  className={`text-xl md:text-2xl font-extrabold px-6 py-2 mx-2 ${
                     activeButton === "register"
                       ? "border-b-white border-b-[3px] border-solid"
                       : ""
