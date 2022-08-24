@@ -36,7 +36,7 @@ const Login = ({ onClick }) => {
         <input
           type="email"
           placeholder="Masukkan email"
-          className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+          className="mt-1 w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
@@ -47,7 +47,7 @@ const Login = ({ onClick }) => {
         <input
           type="password"
           placeholder="Masukkan password"
-          className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+          className="mt-1 w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
@@ -55,7 +55,7 @@ const Login = ({ onClick }) => {
         <p className="text-gray-100">
           Belum punya akun?{" "}
           <span
-            className="underline hover:text-gray-200 hover:cursor-pointer"
+            className="underline hover:cursor-pointer hover:text-blue-300"
             onClick={onClick}
           >
             Buat di sini
@@ -66,10 +66,11 @@ const Login = ({ onClick }) => {
         <input
           type="submit"
           value="LOGIN"
-          className="px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"
+            className="px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:from-[#3ec4ae] 
+          hover:to-[#1c6458] duration-300 border"
         />
         <Link href="/">
-          <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer">
+          <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 hover:bg-gray-600 duration-300">
             Back
           </button>
         </Link>

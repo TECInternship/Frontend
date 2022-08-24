@@ -98,23 +98,24 @@ const Register = ({ onClick }) => {
           <p className="text-gray-100">
             Sudah punya akun?{" "}
             <span
-              className="underline hover:text-gray-200 hover:cursor-pointer"
+              className="underline hover:text-blue-300 hover:cursor-pointer"
               onClick={onClick}
             >
               Login di sini
             </span>
           </p>
         </div>
-        <div className="text-center py-6 mb-6 space-x-2">
+        <div className="text-center md:mb-6 space-x-2">
           <Link href="/">
-            <button className="px-12 py-2 my-4 lg:my-0 rounded-xl text-md font-bold border cursor-pointer">
+            <button className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 hover:bg-gray-600 duration-300 px-12 py-2 my-4 lg:my-0 rounded-xl text-md font-bold border cursor-pointer">
               Back
             </button>
           </Link>
           <input
             disabled={email.length < 8}
             type={"submit"}
-            className="px-10 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"
+            className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 hover:from-[#3ec4ae] 
+            hover:to-[#1c6458] duration-300 px-10 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"
             value={"REGISTER"}
           />
         </div>
