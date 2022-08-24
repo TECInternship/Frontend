@@ -3,6 +3,7 @@ import Link from "next/link";
 
 const Register3 = (props) => {
   return (
+    <div className="animate-fade">
     <form className="px-12 py-10" onSubmit={() => props.setActive("3")}>
       <div className="text-2xl font-semibold">Lakukan Pembayaran</div>
       <div className="mt-2">
@@ -34,7 +35,8 @@ const Register3 = (props) => {
           BACK
         </button>
       </div>
-    </form>
+      </form>
+      </div>
   );
 };
 

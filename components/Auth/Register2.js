@@ -54,6 +54,7 @@ export default function Register2({ setActive, name }) {
   };
 
   return (
+    <div className="animate-fade">
     <form className="px-12 py-10" onSubmit={handleSubmit}>
       <h1 className="text-2xl font-semibold">Lakukan Pembayaran</h1>
       <h2 className="mt-2">
@@ -178,6 +179,7 @@ export default function Register2({ setActive, name }) {
           BACK
         </button>
       </div>
-    </form>
+      </form>
+      </div>
   );
 }

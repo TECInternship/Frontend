@@ -47,6 +47,7 @@ const Register = ({ onClick }) => {
 
   return (
     <>
+      <div className="animate-fade">
       <form className="space-y-4" onSubmit={handleSubmit}>
         <div>
           <label
@@ -117,7 +118,8 @@ const Register = ({ onClick }) => {
             value={"REGISTER"}
           />
         </div>
-      </form>
+        </form>
+        </div>
     </>
   );
 };
