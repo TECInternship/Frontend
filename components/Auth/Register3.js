@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Register1 from "./Register1";
 
 const Register3 = (props) => {
   return (
@@ -29,7 +29,7 @@ const Register3 = (props) => {
           />
         <button
           className="px-8 md:px-12 py-2 rounded-xl text-md font-bold border"
-          onClick={() => props.setActive("2")}
+          onClick={() => props.setActive(!Register1.Perwakilan)}
         >
           BACK
         </button>

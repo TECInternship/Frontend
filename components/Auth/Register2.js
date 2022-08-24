@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import axios from "axios";
 
 export default function Register2({ setActive, name }) {
