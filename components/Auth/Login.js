@@ -27,6 +27,7 @@ const Login = ({ onClick }) => {
   };
 
   return (
+    <div className="animate-fade">
     <form className="space-y-4" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="" className="text-gray-100 md:text-xl font-semibold ml-1">
@@ -73,7 +74,8 @@ const Login = ({ onClick }) => {
           </button>
         </Link>
       </div>
-    </form>
+      </form>
+      </div>
   );
 };
 

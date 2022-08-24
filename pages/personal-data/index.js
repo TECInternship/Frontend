@@ -36,7 +36,7 @@ const PersonalData = () => {
             </Link>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4 lg:gap-10 px-6 sm:px-10 justify-center">
+          <div className="animate-fade flex flex-col md:flex-row gap-4 lg:gap-10 px-6 sm:px-10 justify-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl shadow-xl py-10 md:w-1/3 md:max-w-sm">
               <h1 className="text-center text-2xl font-semibold">
                 Registration
@@ -73,7 +73,7 @@ const PersonalData = () => {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl shadow-xl  md:w-3/5 md:max-w-3xl">
+            <div className="animate-fade bg-white/10 backdrop-blur-lg rounded-xl shadow-xl  md:w-3/5 md:max-w-3xl">
               {active === "1" ? (
                 <Register1
                   setActive={setActive}
@@ -81,7 +81,7 @@ const PersonalData = () => {
                   setName={setName}
                 />
               ) : active === "2" ? (
-                <Register2 setActive={setActive} name={name} />
+                  <Register2 setActive={setActive} name={name}  />
               ) : (
                 <Register3
                   setActive={setActive}
