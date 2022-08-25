@@ -131,3 +131,11 @@
     height: 500px;
     z-index: 0;
 }
+
+.mySwiper-button-prev {
+    color: red;
+}
+
+.mySwiper-button-next {
+    color: #000;
+}
