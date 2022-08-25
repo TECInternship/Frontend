@@ -2,18 +2,22 @@ import React, { useRef, useState } from "react";
 import Image from "next/image";
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/autoplay";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
+import styles from "../styles/Home.module.css";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper";
+import { EffectCoverflow, Pagination, Autoplay, Navigation } from "swiper";
 import Card from "./Card";
 
 export default function App() {
+  
   return (
     <>
       <div className="flex justify-center md:w-3/4">
@@ -22,6 +26,9 @@ export default function App() {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
+          modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+          autoplay={{ delay: 5000 }}
+          navigation
           breakpoints={{
             1350: {
               slidesPerView: 2,
@@ -35,10 +42,9 @@ export default function App() {
             slideShadows: true,
           }}
           pagination={true}
-          modules={[EffectCoverflow, Pagination]}
-          className="mySwiper"
+          className="mySwiper mySwiper-button-prev mySwiper-button-next"
         >
-          <SwiperSlide className="flex flex-col items-center ">
+          <SwiperSlide className="flex flex-col items-center mb-9">
             <h2 className="text-3xl font-bold text-center mb-5">
             Company Visit
             </h2>
