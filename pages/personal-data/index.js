@@ -8,8 +8,9 @@ import Link from "next/link";
 
 const PersonalData = () => {
   const [name, setName] = useState("");
-  const [active, setActive] = useState("2");
+  const [active, setActive] = useState("1");
   const [bukti, setBukti] = useState("");
+  const [checked, setChecked] = useState(false);
 
   return (
     <div className="bg-[url('../public/assets/bg.png')] bg-no-repeat bg-cover bg-left-bottom bg-fixed">
@@ -36,7 +37,7 @@ const PersonalData = () => {
             </Link>
           </div>
 
-          <div className="animate-fade flex flex-col md:flex-row gap-4 lg:gap-10 px-6 sm:px-10 justify-center">
+          <div className="animate-fade flex flex-col md:flex-row gap-4 lg:gap-10 px-6 sm:px-10 justify-center pb-10">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl shadow-xl py-10 md:w-1/3 md:max-w-sm">
               <h1 className="text-center text-2xl font-semibold">
                 Registration
@@ -79,14 +80,19 @@ const PersonalData = () => {
                   setActive={setActive}
                   name={name}
                   setName={setName}
+                  checked={checked}
+                  setChecked={setChecked}
                 />
               ) : active === "2" ? (
-                  <Register2 setActive={setActive} name={name}  />
+                  <Register2 setActive={setActive} name={name}
+                  bukti={bukti}
+                  setBukti={setBukti}  />
               ) : (
                 <Register3
                   setActive={setActive}
                   bukti={bukti}
                   setBukti={setBukti}
+                  checked={checked}
                 />
               )}
             </div>
