@@ -84,9 +84,12 @@ const PersonalData = () => {
                   setChecked={setChecked}
                 />
               ) : active === "2" ? (
-                  <Register2 setActive={setActive} name={name}
+                <Register2
+                  setActive={setActive}
+                  name={name}
                   bukti={bukti}
-                  setBukti={setBukti}  />
+                  setBukti={setBukti}
+                />
               ) : (
                 <Register3
                   setActive={setActive}
