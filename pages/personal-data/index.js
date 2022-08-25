@@ -9,8 +9,8 @@ import Link from "next/link";
 const PersonalData = () => {
   const [name, setName] = useState("");
   const [active, setActive] = useState("1");
-  const [bukti, setBukti] = useState("");
   const [checked, setChecked] = useState(false);
+  const [email, setEmail] = useState("");
 
   return (
     <div className="bg-[url('../public/assets/bg.png')] bg-no-repeat bg-cover bg-left-bottom bg-fixed">
@@ -82,19 +82,15 @@ const PersonalData = () => {
                   setName={setName}
                   checked={checked}
                   setChecked={setChecked}
+                  email={email}
+                  setEmail={setEmail}
                 />
               ) : active === "2" ? (
-                <Register2
-                  setActive={setActive}
-                  name={name}
-                  bukti={bukti}
-                  setBukti={setBukti}
-                />
+                <Register2 setActive={setActive} email={email} />
               ) : (
                 <Register3
                   setActive={setActive}
-                  bukti={bukti}
-                  setBukti={setBukti}
+                  email={email}
                   checked={checked}
                 />
               )}
