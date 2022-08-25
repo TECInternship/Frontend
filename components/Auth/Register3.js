@@ -1,15 +1,24 @@
-import React from "react";
-import Register1 from "./Register1";
+import React, { useState, useEffect } from "react";
 
 const Register3 = (props) => {
+  const [Link, setLink]=useState("");
   return (
     <div className="animate-fade">
     <form className="px-12 py-10" onSubmit={() => props.setActive("3")}>
       <div className="text-2xl font-semibold">Konfirmasi</div>
       <div className="mt-2">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi tempore ab, eum dolor quisquam facilis rerum. Architecto ullam quidem, eveniet consectetur magnam nesciunt maxime mollitia nulla
+        Sebagai bukti kelengkapan persyaratan, kamu diharuskan menyertakan bukti yang dikumpulkan dalam folder Google Drive.
       </div>
 
+      {/* Nama */}
+      <h1 className="mt-10">Link Google Drive</h1>
+      <input
+        type="text"
+        className="mt-2 w-full md:w-4/5 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
+        value={Link}
+        onChange={(e) => setLink(e.target.value)}
+        required
+      />
       <div className="mt-16 flex flex-row-reverse justify-end gap-2">
         <input
             type={"submit"}
