@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import axios from "axios";
 
-export default function Register2({ setActive, name }) {
+const Register2 = ({ setActive, name}, props) => {
   const [method, setMethod] = useState("");
   const [opsi, setOpsi] = useState("");
   const [teman1, setTeman1] = useState("");
@@ -50,7 +49,7 @@ export default function Register2({ setActive, name }) {
         setMethod(res.data.method);
         // window.location.reload();
       })
-      .catch((err) => alert("Invalid email!"));
+      .catch((err) => alert(err));
   };
 
   return (
@@ -166,6 +165,18 @@ export default function Register2({ setActive, name }) {
         </>
       )}
 
+      <div className="mt-4">Bukti Pembayaran</div>
+      <div className="text-xs font-extralight">
+        kirim ke XXXXXXXX a.n. Willy Wonka
+      </div>
+      <input
+        className="mt-2 w-full md:w-4/5 max-w-sm px-3 py-1.5 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
+        type="file"
+        // required
+        value={props.bukti}
+        onChange={(e) => props.setBukti(e.target.value)}
+      />
+
       <div className="mt-16 flex flex-row-reverse justify-end gap-2">
         <input
           type={"submit"}
@@ -183,3 +194,5 @@ export default function Register2({ setActive, name }) {
       </div>
   );
 }
+
+export default Register2;

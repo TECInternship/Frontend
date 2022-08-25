@@ -60,7 +60,7 @@ const Register = ({ onClick }) => {
             type="text"
             required
             placeholder="Masukkan email"
-            className="w-full h-8 md:h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+            className="w-full h-8 h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -105,7 +105,7 @@ const Register = ({ onClick }) => {
             </span>
           </p>
         </div>
-        <div className="text-center md:mb-6 space-x-2">
+        <div className="text-center lg:mb-6 space-x-2 lg:py-6 ">
           <Link href="/">
             <button className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 hover:bg-gray-600 duration-300 px-12 py-2 my-4 lg:my-0 rounded-xl text-md font-bold border cursor-pointer">
               Back

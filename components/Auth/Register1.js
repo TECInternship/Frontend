@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from "react";
-import Card from "../Card";
 import Link from "next/link";
 import axios from "axios";
 
-export default function Register1({ setActive, name, setName }) {
+export default function Register1({ setActive, name, setName, checked, setChecked }) {
   const [fakultas, setFakultas] = useState("");
   const [jurusan, setJurusan] = useState("");
   const [tahunMasuk, setTahunMasuk] = useState("");
   const [userId, setUserId] = useState("");
   const [user, setUser] = useState("");
   const [idline, setIdLine] = useState("");
+  const [Perwakilan, setPerwakilan]=useState("3");
+
+  const handleChange = () => {
+    setChecked(!checked);
+    if(!checked == true) {setPerwakilan("2")}
+    else {setPerwakilan("3")};
+  };
+
 
   useEffect(() => {
     setUserId(localStorage.getItem("user"));
@@ -103,6 +110,7 @@ export default function Register1({ setActive, name, setName }) {
         onChange={(e) => setTahunMasuk(e.target.value)}
         required
       />
+
       {/* ID LINE */}
       <h1 className="mt-4">ID LINE</h1>
       <input
@@ -112,10 +120,18 @@ export default function Register1({ setActive, name, setName }) {
         onChange={(e) => setIdLine(e.target.value)}
         required
       />
-      <div className="mt-16 flex flex-row-reverse justify-end gap-2">
+
+      {/* Check box */}
+      <div className="flex items-center mt-8">
+        <input id="default-checkbox" type="checkbox" value={checked} onChange= {()=>handleChange()} className="w-4 h-4 bg-gray-100 rounded border-gray-300 focus:[#2F9685]"/>
+        <label for="default-checkbox" class="ml-2">Saya merupakan perwakilan pembayaran</label>
+      </div>
+
+      <div className="mt-8 flex flex-row-reverse justify-end gap-2">
         <input
           type={"submit"}
           value="NEXT"
+          onClick={() => setActive(Perwakilan)}
           className="px-8 md:px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"
         />
         <Link href="/auth">
