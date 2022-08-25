@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { red } from "@mui/material/colors";
 
-const Register2 = ({ setActive, name, bukti, setBukti }) => {
+const Register2 = ({ setActive, email }) => {
   const [method, setMethod] = useState("");
   const [opsi, setOpsi] = useState("");
   const [teman1, setTeman1] = useState("");
   const [email1, setEmail1] = useState("");
   const [teman2, setTeman2] = useState("");
   const [email2, setEmail2] = useState("");
+  const [bukti, setBukti] = useState("");
 
   const handleChange = (e) => {
     setMethod(e.target.value);
@@ -20,7 +21,7 @@ const Register2 = ({ setActive, name, bukti, setBukti }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/get-payment/?pembayar=${name}`)
+      .get(`http://localhost:4000/api/get-payment/?pembayar=${email}`)
       .then((res) => {
         setMethod(res.data.method);
         setOpsi(res.data.opsi);
@@ -28,6 +29,7 @@ const Register2 = ({ setActive, name, bukti, setBukti }) => {
         setEmail1(res.data.teman[0].email);
         setTeman2(res.data.teman[1].name);
         setEmail2(res.data.teman[1].email);
+        setBukti(res.data.buktiPembayaran);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -35,46 +37,51 @@ const Register2 = ({ setActive, name, bukti, setBukti }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios
-      .get(`http://localhost:4000/api/get-payment/?pembayar=${name}`)
-      .then((res) => {
-        if (res.data) {
-          axios
-            .post("http://localhost:4000/api/edit-payment", {
-              pembayar: name,
-              method,
-              opsi,
-              teman: [
-                { name: teman1, email: email1 },
-                { name: teman2, email: email2 },
-              ],
-            })
-            .then((res) => {
-              setActive("3");
-              // console.log(res);
-              // window.location.reload();
-            })
-            .catch((err) => alert(err));
-        } else {
-          axios
-            .post("http://localhost:4000/api/payment", {
-              pembayar: name,
-              method,
-              opsi,
-              teman: [
-                { name: teman1, email: email1 },
-                { name: teman2, email: email2 },
-              ],
-            })
-            .then((res) => {
-              setActive("3");
-              // console.log(res);
-              // window.location.reload();
-            })
-            .catch((err) => alert(err));
-        }
-      })
-      .catch((err) => console.log(err));
+    if (opsi && method) {
+      axios
+        .get(`http://localhost:4000/api/get-payment/?pembayar=${email}`)
+        .then((res) => {
+          console.log(res.data);
+          if (res.data) {
+            axios
+              .post("http://localhost:4000/api/edit-payment", {
+                pembayar: email,
+                method,
+                opsi,
+                teman: [
+                  { name: teman1, email: email1 },
+                  { name: teman2, email: email2 },
+                ],
+                buktiPembayaran: bukti,
+              })
+              .then((res) => {
+                setActive("3");
+                // console.log(res);
+                // window.location.reload();
+              })
+              .catch((err) => console.log(err));
+          } else {
+            axios
+              .post("http://localhost:4000/api/payment", {
+                pembayar: email,
+                method,
+                opsi,
+                teman: [
+                  { name: teman1, email: email1 },
+                  { name: teman2, email: email2 },
+                ],
+                buktiPembayaran: bukti,
+              })
+              .then((res) => {
+                setActive("3");
+                // console.log(res);
+                // window.location.reload();
+              })
+              .catch((err) => alert(err));
+          }
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   return (
@@ -131,7 +138,7 @@ const Register2 = ({ setActive, name, bukti, setBukti }) => {
             value={"shopeepay"}
             className="text-black"
           >
-            Shopeepay{" "}
+            ShopeePay
           </option>
           <option
             selected={opsi === "gopay"}
@@ -201,16 +208,17 @@ const Register2 = ({ setActive, name, bukti, setBukti }) => {
           kirim ke XXXXXXXX a.n. Willy Wonka
         </div>
         <input
-          className="mt-2 w-full md:w-4/5 max-w-sm px-3 py-1.5 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
-          type="file"
-          // required
+          type="text"
+          placeholder="https://drive.google.com/drive/file/..."
+          className="mt-2 w-full md:w-4/5 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
           value={bukti}
           onChange={(e) => setBukti(e.target.value)}
+          required
         />
 
         <div className="mt-16 flex flex-row-reverse justify-end gap-2">
           <input
-            type={"submit"}
+            type="submit"
             value="NEXT"
             className="px-8 md:px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"
           />

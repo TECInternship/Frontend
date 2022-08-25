@@ -49,14 +49,14 @@ const Profile = () => {
               Tahun Masuk ITB
               <div className="font-semibold mb-3">2022</div>
             </div>
-            <div className=" flex flex-col object-right pl-10 space-y-60 py-0">
-              <Image
+            <div className=" flex flex-col justify-end object-right pl-10 space-y-60 py-0">
+              {/* <Image
                 className=""
                 src="/icon_profile.png"
                 width={75}
                 height={75}
                 alt="logo"
-              />
+              /> */}
               <div className="flex justify-between">
                 <Image
                   className=""

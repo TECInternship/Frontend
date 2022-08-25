@@ -8,12 +8,14 @@ export default function Register1({
   setName,
   checked,
   setChecked,
+  email,
+  setEmail,
 }) {
   const [fakultas, setFakultas] = useState("");
   const [jurusan, setJurusan] = useState("");
   const [tahunMasuk, setTahunMasuk] = useState("");
   const [userId, setUserId] = useState("");
-  const [user, setUser] = useState("");
+  // const [user, setUser] = useState("");
   const [idline, setIdLine] = useState("");
 
   useEffect(() => {
@@ -29,8 +31,9 @@ export default function Register1({
           )}`
         )
         .then((res) => {
-          setUser(res.data);
+          // setUser(res.data);
           setName(res.data.name);
+          setEmail(res.data.email);
           setFakultas(res.data.fakultas);
           setJurusan(res.data.jurusan);
           setTahunMasuk(res.data.tahunMasuk);
@@ -58,6 +61,21 @@ export default function Register1({
         if (checked) {
           setActive("2");
         } else {
+          axios
+            .post("http://localhost:4000/api/edit-payment", {
+              pembayar: email,
+              method: "",
+              opsi: "",
+              teman: [
+                { name: "", email: "" },
+                { name: "", email: "" },
+              ],
+              buktiPembayaran: "",
+            })
+            .then(() => {
+              setActive("2");
+            })
+            .catch((err) => console.log(err));
           setActive("3");
         }
       })
@@ -133,7 +151,6 @@ export default function Register1({
             checked={checked}
             onChange={() => {
               setChecked(!checked);
-              // alert(checked);
             }}
             className="w-4 h-4 bg-gray-100 rounded border-gray-300 focus:[#2F9685]"
           />
