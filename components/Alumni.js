@@ -63,7 +63,7 @@ const Alumni = () => {
                 alt=""
               />
             </div>
-            <div className="animate-fade space-y-4 lg:text-2xl relative z-10 bg-opacity-20 bg-white/30 backdrop-blur-xl rounded-3xl shadow-2xl px-5 py-5">
+            <div className="animate-fade space-y-4 lg:text-2xl relative z-10 bg-opacity-20 bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl px-5 py-5">
               <h1 className="md:text-3xl font-bold text-xl">{alumnus.nama}</h1>
               <p className="text-[12px] md:text-base">{alumnus.description}</p>
             </div>
