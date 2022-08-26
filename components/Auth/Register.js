@@ -33,7 +33,7 @@ const Register = ({ onClick }) => {
           })
           .then((res) => {
             localStorage.setItem("user", res.data._id);
-            router.push("/registration");
+            router.push("/personal-data");
             // window.location.reload();
           })
           .catch((err) => alert("Invalid email!"));
