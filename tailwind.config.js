@@ -12,23 +12,28 @@ module.exports = {
         WorkSans: "'Work Sans', sans-serif",
       },
       keyframes: {
-        'fade': {
-          '0%': {
-            opacity: '0',
-            transform: 'translateX(-10px)'
+        fade: {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-10px)",
           },
-          '100%': {
-            opacity: '1',
-            transform: 'translateX(0)'
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
           },
         },
       },
       animation: {
-        fade: 'fade 0.5s ease-out',
+        fade: "fade 0.5s ease-out",
       },
       backgroundImage: {
-        'red': "url('../public/assets/bg2.png')"
-      }
+        red: "url('../public/assets/bg2.png')",
+      },
+      transitionProperty: {
+        height: "height",
+        background: "background",
+        filter: "filter",
+      },
     },
   },
   plugins: [],

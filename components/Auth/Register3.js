@@ -13,7 +13,11 @@ const Register3 = ({ email, setActive, checked }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/get-payment/?pembayar=${email}`)
+      .get(
+        `http://localhost:4000/api/get-user/?_id=${localStorage.getItem(
+          "user"
+        )}`
+      )
       .then((res) => {
         setLink(res.data.buktiPersyaratan);
       })
@@ -28,11 +32,12 @@ const Register3 = ({ email, setActive, checked }) => {
         _id: userId,
         buktiPersyaratan: link,
       })
-      .then((res) => {
+      .then(() => {
         router.push("/");
       })
       .catch((err) => console.log(err));
   };
+
   return (
     <div className="animate-fade">
       <form className="px-12 py-10" onSubmit={handleSubmit}>
