@@ -36,8 +36,9 @@ export default function Home() {
       <main className="flex flex-col items-center">
         <Navbar user={user} logout={logout} />
         <div className="max-w-7xl md:w-xl lg:w-5xl">
-          <Hero user={user} />
-          <PreEvent />
+          <span className="motion-safe: animate-fade flex-col translate-x-10">
+            <Hero user={user} />
+          </span>
           <About />
         </div>
       </main>
