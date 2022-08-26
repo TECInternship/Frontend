@@ -22,7 +22,7 @@ const Register2 = ({ setActive, email }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/get-payment/?pembayar=${email}`)
+      .get(`http://206.189.199.207:4000/api/get-payment/?pembayar=${email}`)
       .then((res) => {
         setMethod(res.data.method);
         setOpsi(res.data.opsi);
@@ -40,11 +40,11 @@ const Register2 = ({ setActive, email }) => {
 
     if (opsi && method) {
       axios
-        .get(`http://localhost:4000/api/get-payment/?pembayar=${email}`)
+        .get(`http://206.189.199.207:4000/api/get-payment/?pembayar=${email}`)
         .then((res) => {
           if (res.data) {
             axios
-              .post("http://localhost:4000/api/edit-payment", {
+              .post("http://206.189.199.207:4000/api/edit-payment", {
                 pembayar: email,
                 method,
                 opsi,
@@ -62,7 +62,7 @@ const Register2 = ({ setActive, email }) => {
               .catch((err) => console.log(err));
           } else {
             axios
-              .post("http://localhost:4000/api/payment", {
+              .post("http://206.189.199.207:4000/api/payment", {
                 pembayar: email,
                 method,
                 opsi,
