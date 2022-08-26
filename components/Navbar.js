@@ -14,7 +14,7 @@ const Navbar = ({ user, logout }) => {
     if (localStorage.getItem("user")) {
       axios
         .get(
-          `http://localhost:4000/api/get-user/?_id=${localStorage.getItem(
+          `http://206.189.199.207:4000/api/get-user/?_id=${localStorage.getItem(
             "user"
           )}`
         )
