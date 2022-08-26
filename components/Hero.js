@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Hero = () => {
+const Hero = ({ user }) => {
   return (
     <div className="flex justify-center items-center sm:space-x-8 lg:space-x-0 h-screen flex-col sm:flex-row lg:flex-col lg:space-y-4 mb-10">
       <div className="sm:w-1/3 w-2/3">
@@ -18,11 +18,13 @@ const Hero = () => {
           </h2>
         </div>
         <div className="flex justify-center">
-          <Link href="/auth">
-            <button className="bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] sm:rounded-3xl px-4 py-2 hover:shadow-2xl font-bold text-xl md:text-2xl lg:text-3xl md:px-6 md:py-3 md:rounded-full">
-              Join Us!
-            </button>
-          </Link>
+          {!user && (
+            <Link href="/auth">
+              <button className="bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] sm:rounded-3xl px-4 py-2 hover:shadow-2xl font-bold text-xl md:text-2xl lg:text-3xl md:px-6 md:py-3 md:rounded-full">
+                Join Us!
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

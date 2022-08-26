@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { red } from "@mui/material/colors";
+import { useRouter } from "next/router";
 
 const Register2 = ({ setActive, email }) => {
   const [method, setMethod] = useState("");
@@ -10,6 +10,7 @@ const Register2 = ({ setActive, email }) => {
   const [teman2, setTeman2] = useState("");
   const [email2, setEmail2] = useState("");
   const [bukti, setBukti] = useState("");
+  const router = useRouter();
 
   const handleChange = (e) => {
     setMethod(e.target.value);
@@ -41,7 +42,6 @@ const Register2 = ({ setActive, email }) => {
       axios
         .get(`http://localhost:4000/api/get-payment/?pembayar=${email}`)
         .then((res) => {
-          console.log(res.data);
           if (res.data) {
             axios
               .post("http://localhost:4000/api/edit-payment", {
@@ -54,7 +54,7 @@ const Register2 = ({ setActive, email }) => {
                 ],
                 buktiPembayaran: bukti,
               })
-              .then((res) => {
+              .then(() => {
                 setActive("3");
                 // console.log(res);
                 // window.location.reload();
@@ -102,16 +102,32 @@ const Register2 = ({ setActive, email }) => {
           <option selected value={null} className="text-black">
             Pilih Tipe Pembayaran
           </option>
-          <option selected={method === "1"} value={1} className="text-black">
+          <option
+            selected={method === "Single"}
+            value={"Single"}
+            className="text-black"
+          >
             Single Rp50.000/orang
           </option>
-          <option selected={method === "2"} value={2} className="text-black">
+          <option
+            selected={method === "Double"}
+            value={"Double"}
+            className="text-black"
+          >
             Double Rp40.000/orang
           </option>
-          <option selected={method === "3"} value={3} className="text-black">
+          <option
+            selected={method === "Triple"}
+            value={"Triple"}
+            className="text-black"
+          >
             Triple Rp35.000/orang
           </option>
-          <option selected={method === "0"} value={0} className="text-black">
+          <option
+            selected={method === "SBE"}
+            value={"SBE"}
+            className="text-black"
+          >
             Paket SBE Rp130.000/orang
           </option>
         </select>
@@ -156,7 +172,7 @@ const Register2 = ({ setActive, email }) => {
           </option>
         </select>
 
-        {method > 1 && (
+        {(method === "Double" || method === "Triple") && (
           <>
             {/* Nama Teman 1 */}
             <h2 className="mt-4">Nama Teman 1</h2>
@@ -179,7 +195,7 @@ const Register2 = ({ setActive, email }) => {
             />
           </>
         )}
-        {method > 2 && (
+        {method === "Triple" && (
           <>
             {/* Nama Teman 2 */}
             <h2 className="mt-4">Nama Teman 2</h2>
@@ -224,7 +240,7 @@ const Register2 = ({ setActive, email }) => {
           />
           <button
             className="px-8 md:px-12 py-2 rounded-xl text-md font-bold border"
-            onClick={() => setActive("1")}
+            onClick={() => router.push("/personal-data")}
           >
             BACK
           </button>
