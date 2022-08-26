@@ -22,7 +22,7 @@ const Login = ({ onClick }) => {
         router.push("/");
       })
       .catch((err) => {
-        alert(err.response.data.msg);
+        console.log(err);
       });
   };
 
