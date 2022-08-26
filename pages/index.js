@@ -39,6 +39,7 @@ export default function Home() {
           <span className="motion-safe: animate-fade flex-col translate-x-10">
             <Hero user={user} />
           </span>
+          <PreEvent />
           <About />
         </div>
       </main>
