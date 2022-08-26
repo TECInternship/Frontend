@@ -1,8 +1,34 @@
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../../styles/Home.module.css";
+import axios from "axios";
 
 const Profile = () => {
+  const [name, setName] = useState("");
+  const [fakultas, setFakultas] = useState("");
+  const [jurusan, setJurusan] = useState("");
+  const [tahunMasuk, setTahunMasuk] = useState("");
+  const [nomortec, setNomorTEC] = useState("TECXXX");
+
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      axios
+        .get(
+          `http://localhost:4000/api/get-user/?_id=${localStorage.getItem(
+            "user"
+          )}`
+        )
+        .then((res) => {
+          // setUser(res.data);
+          setName(res.data.name);
+          setFakultas(res.data.fakultas);
+          setJurusan(res.data.jurusan);
+          setTahunMasuk(res.data.tahunMasuk);
+          // setNomorTEC(res.data.nomortec);
+        })
+        .catch((err) => console.log(err));
+    }
+  }, []);
   return (
     <main className="h-screen w-screen bg-scroll bg-no-repeat bg-cover max-h-screen flex">
       <Image
@@ -41,13 +67,15 @@ const Profile = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-4 lg:p-6 2xl:p-10 flex flex-row">
             <div className="flex flex-col gap-2 font-thin text-[#F8F4EE] font-WorkSans text-xl lg:text-2xl p-2">
               Nama
-              <div className="font-semibold mb-3">Alexander Jason</div>
+              <div className="font-semibold mb-3">{name}</div>
               Fakultas
-              <div className="font-semibold mb-3">STEI</div>
+              <div className="font-semibold mb-3">
+                {fakultas}/{jurusan}
+              </div>
               Nomor TEC
-              <div className="font-semibold mb-3">TEC010</div>
+              <div className="font-semibold mb-3">{nomortec}</div>
               Tahun Masuk ITB
-              <div className="font-semibold mb-3">2022</div>
+              <div className="font-semibold mb-3">{tahunMasuk}</div>
             </div>
             <div className=" flex flex-col justify-end object-right pl-10 space-y-60 py-0">
               {/* <Image
