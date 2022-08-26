@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Cookies from "js-cookie";
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -6,7 +7,6 @@ import { useRouter } from "next/router";
 const Login = ({ onClick }) => {
   const router = useRouter();
 
-  const [route, setRoute] = useState();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,11 +18,19 @@ const Login = ({ onClick }) => {
         `http://206.189.199.207:4000/api/login/?email=${email}&password=${password}`
       )
       .then((res) => {
-        localStorage.setItem("user", res.data._id);
+        // localStorage.setItem("user", res.data._id);
+        fetch("/api/login", {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ token: res.data._id }),
+        });
         router.push("/");
+        alert("Login success!");
       })
       .catch((err) => {
-        console.log(err);
+        alert("Wrong password!");
       });
   };
 

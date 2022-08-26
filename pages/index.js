@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import Cookies from "js-cookie";
 import Image from "next/image";
 import About from "../components/About";
 import Footer from "../components/Footer";
@@ -9,21 +10,8 @@ import PreEvent from "../components/PreEvent";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 
-export default function Home() {
+export default function Home({ token }) {
   const router = useRouter();
-
-  const [user, setUser] = useState(null);
-  const [route, setRoute] = useState();
-
-  useEffect(() => {
-    setUser(localStorage.getItem("user"));
-  }, []);
-
-  const logout = () => {
-    localStorage.setItem("user", null);
-    setUser(null);
-    router.push("/");
-  };
 
   return (
     <div className="py-10 px-16 lg:px-20">
@@ -34,10 +22,10 @@ export default function Home() {
       </Head>
 
       <main className="flex flex-col items-center">
-        <Navbar user={user} logout={logout} />
+        <Navbar token={token} />
         <div className="max-w-7xl md:w-xl lg:w-5xl">
           <span className="motion-safe: animate-fade flex-col translate-x-10">
-            <Hero user={user} />
+            <Hero token={token} />
           </span>
           <PreEvent />
           <About />
@@ -48,4 +36,8 @@ export default function Home() {
       </footer>
     </div>
   );
+}
+
+export function getServerSideProps({ req, res }) {
+  return { props: { token: req.cookies.token || "" } };
 }

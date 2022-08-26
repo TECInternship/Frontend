@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 
-const Profile = () => {
+export default function Profile({ token }) {
   const [name, setName] = useState("");
   const [fakultas, setFakultas] = useState("");
   const [jurusan, setJurusan] = useState("");
@@ -11,23 +11,22 @@ const Profile = () => {
   const [nomortec, setNomorTEC] = useState("TECXXX");
 
   useEffect(() => {
-    if (localStorage.getItem("user")) {
-      axios
-        .get(
-          `http://206.189.199.207:4000/api/get-user/?_id=${localStorage.getItem(
-            "user"
-          )}`
-        )
-        .then((res) => {
-          // setUser(res.data);
-          setName(res.data.name);
-          setFakultas(res.data.fakultas);
-          setJurusan(res.data.jurusan);
-          setTahunMasuk(res.data.tahunMasuk);
-          // setNomorTEC(res.data.nomortec);
-        })
-        .catch((err) => console.log(err));
-    }
+    const doFetch = async () => {
+      if (token) {
+        await axios
+          .get(`http://206.189.199.207:4000/api/get-user/?_id=${token}`)
+          .then((res) => {
+            // setUser(res.data);
+            setName(res.data.name);
+            setFakultas(res.data.fakultas);
+            setJurusan(res.data.jurusan);
+            setTahunMasuk(res.data.tahunMasuk);
+            // setNomorTEC(res.data.nomortec);
+          })
+          .catch((err) => console.log(err));
+      }
+    };
+    doFetch();
   }, []);
   return (
     <main className="h-screen w-screen bg-scroll bg-no-repeat bg-cover max-h-screen flex">
@@ -101,6 +100,8 @@ const Profile = () => {
       <div></div>
     </main>
   );
-};
+}
 
-export default Profile;
+export function getServerSideProps({ req, res }) {
+  return { props: { token: req.cookies.token || "" } };
+}
