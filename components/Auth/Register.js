@@ -32,7 +32,14 @@ const Register = ({ onClick }) => {
             password,
           })
           .then((res) => {
-            localStorage.setItem("user", res.data._id);
+            // localStorage.setItem("user", res.data._id);
+            fetch("/api/login", {
+              method: "post",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ token: res.data._id }),
+            });
             router.push("/personal-data");
             // window.location.reload();
           })
