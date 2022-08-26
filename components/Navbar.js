@@ -57,7 +57,7 @@ const Navbar = ({ user, logout }) => {
               className={open ? "transition -rotate-180" : "transition"}
             />
           </button>
-          {open && <DropdownMenu logout={logout} />}
+          {open && <DropdownMenu logout={logout} name={name} />}
         </div>
       ) : (
         <Link href="/auth">

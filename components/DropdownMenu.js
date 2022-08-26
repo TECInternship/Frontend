@@ -9,7 +9,7 @@ import { FiLogOut } from "react-icons/fi";
 import { useRouter } from "next/router";
 import { AiOutlineProfile } from "react-icons/ai";
 
-function DropdownMenu({ logout }) {
+function DropdownMenu({ logout, name }) {
   const [activeMenu, setActiveMenu] = useState("main");
   const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
@@ -43,7 +43,7 @@ function DropdownMenu({ logout }) {
 
   return (
     <div
-      className="absolute top-[60px] w-[195px] border rounded-xl overflow-hidden transition-height cursor-pointer backdrop-blur-sm shadow-lg bg-opacity-20"
+      className="absolute top-[60px] right-0 mr-8 w-[195px] border rounded-xl overflow-hidden transition-height cursor-pointer backdrop-blur-sm shadow-lg bg-opacity-20"
       style={{ height: menuHeight }}
       ref={dropdownRef}
     >
@@ -56,7 +56,13 @@ function DropdownMenu({ logout }) {
       >
         <div className="w-full">
           <DropdownItem
-            onClick={() => router.push("/profile")}
+            onClick={() => {
+              if (name) {
+                router.push("/profile");
+              } else {
+                router.push("/personal-data");
+              }
+            }}
             leftIcon={<CgProfile className="text-2xl" />}
           >
             My Profile
