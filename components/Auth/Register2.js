@@ -9,6 +9,8 @@ const Register2 = ({ setActive, email }) => {
   const [email1, setEmail1] = useState("");
   const [teman2, setTeman2] = useState("");
   const [email2, setEmail2] = useState("");
+  const [teman3, setTeman3] = useState("");
+  const [email3, setEmail3] = useState("");
   const [bukti, setBukti] = useState("");
   const router = useRouter();
 
@@ -18,6 +20,8 @@ const Register2 = ({ setActive, email }) => {
     setEmail1("");
     setTeman2("");
     setEmail2("");
+    setTeman3("");
+    setEmail3("");
   };
 
   useEffect(() => {
@@ -30,6 +34,8 @@ const Register2 = ({ setActive, email }) => {
         setEmail1(res.data.teman[0].email);
         setTeman2(res.data.teman[1].name);
         setEmail2(res.data.teman[1].email);
+        setTeman3(res.data.teman[2].name);
+        setEmail3(res.data.teman[2].email);
         setBukti(res.data.buktiPembayaran);
       })
       .catch((err) => console.log(err));
@@ -51,6 +57,7 @@ const Register2 = ({ setActive, email }) => {
                 teman: [
                   { name: teman1, email: email1 },
                   { name: teman2, email: email2 },
+                  { name: teman3, email: email3 },
                 ],
                 buktiPembayaran: bukti,
               })
@@ -69,6 +76,7 @@ const Register2 = ({ setActive, email }) => {
                 teman: [
                   { name: teman1, email: email1 },
                   { name: teman2, email: email2 },
+                  { name: teman3, email: email3 },
                 ],
                 buktiPembayaran: bukti,
               })
@@ -88,10 +96,11 @@ const Register2 = ({ setActive, email }) => {
     <div className="animate-fade">
       <form className="px-12 py-10" onSubmit={handleSubmit}>
         <h1 className="text-2xl font-semibold">Lakukan Pembayaran</h1>
-        <h2 className="mt-2">
+        <h2 className="mt-2 text-justify">
           Untuk menjadi intern resmi, kamu diharuskan membayar biaya registrasi.
+          <br></br>Setiap nominal yang akan dibayarkan harus menambahkan kode unik yang disesuaikan dengan platform pembayaran yang digunakan
+          Contoh : Memilih paket 1 dan melakukan transfer melalui DANA maka nominal transfer yaitu Rp50.001,00
         </h2>
-
         {/* Tipe Pembayaran */}
         <h2 className="mt-10">Tipe Pembayaran</h2>
         <select
@@ -114,14 +123,21 @@ const Register2 = ({ setActive, email }) => {
             value={"Double"}
             className="text-black"
           >
-            Double Rp40.000/orang
+            Double Rp45.000/orang
           </option>
           <option
             selected={method === "Triple"}
             value={"Triple"}
             className="text-black"
           >
-            Triple Rp35.000/orang
+            Triple Rp40.000/orang
+          </option>
+          <option
+            selected={method === "Quadruple"}
+            value={"Quadruple"}
+            className="text-black"
+          >
+            Quadruple Rp35.000/orang
           </option>
           <option
             selected={method === "SBE"}
@@ -147,32 +163,39 @@ const Register2 = ({ setActive, email }) => {
             value={"dana"}
             className="text-black"
           >
-            Dana
+            Dana 082240108604 a.n. Putri Adelia, kode: 001
           </option>
           <option
-            selected={opsi === "shopeepay"}
-            value={"shopeepay"}
+            selected={opsi === "ovo"}
+            value={"ovo"}
             className="text-black"
           >
-            ShopeePay
+            OVO 082240108604 a.n. Putri Adelia, kode: 002
           </option>
           <option
-            selected={opsi === "gopay"}
-            value={"gopay"}
+            selected={opsi === "bni"}
+            value={"bni"}
             className="text-black"
           >
-            GoPay
+            BNI 1223116685 a.n. Annisa Risty, kode: 004
           </option>
           <option
             selected={opsi === "bca"}
             value={"bca"}
             className="text-black"
           >
-            BCA
+            BCA 0322386441 a.n. Afiz Ahzariyusa, kode: 003
+          </option>
+          <option
+            selected={opsi === "mandiri"}
+            value={"mandiri"}
+            className="text-black"
+          >
+            Mandiri 1110018697322 a.n. Devina Ar Raudah, kode: 005
           </option>
         </select>
 
-        {(method === "Double" || method === "Triple") && (
+        {(method === "Double" || method === "Triple" || method === "Quadruple") && (
           <>
             {/* Nama Teman 1 */}
             <h2 className="mt-4">Nama Teman 1</h2>
@@ -195,7 +218,7 @@ const Register2 = ({ setActive, email }) => {
             />
           </>
         )}
-        {method === "Triple" && (
+        {(method === "Triple" || method === "Quadruple") && (
           <>
             {/* Nama Teman 2 */}
             <h2 className="mt-4">Nama Teman 2</h2>
@@ -218,11 +241,31 @@ const Register2 = ({ setActive, email }) => {
             />
           </>
         )}
+        {method === "Quadruple" && (
+          <>
+            {/* Nama Teman 3 */}
+            <h2 className="mt-4">Nama Teman 3</h2>
+            <input
+              type="text"
+              className="mt-2 w-full md:w-4/5 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
+              value={teman3}
+              onChange={(e) => setTeman3(e.target.value)}
+              required
+            />
+
+            {/* Email Teman 3 */}
+            <h2 className="mt-4">Email Teman 3</h2>
+            <input
+              type="text"
+              className="mt-2 w-full md:w-4/5 p-3 rounded-2xl bg-white/20 backdrop-blur-none outline-none"
+              value={email3}
+              onChange={(e) => setEmail3(e.target.value)}
+              required
+            />
+          </>
+        )}
 
         <div className="mt-4">Bukti Pembayaran</div>
-        <div className="text-xs font-extralight">
-          kirim ke XXXXXXXX a.n. Willy Wonka
-        </div>
         <input
           type="text"
           placeholder="https://drive.google.com/drive/file/..."
