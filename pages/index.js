@@ -22,7 +22,7 @@ export default function Home({ token }) {
       </Head>
 
       <main className="flex flex-col items-center">
-        <Navbar token={token} />
+        {/* <Navbar token={token} /> */}
         <div className="max-w-7xl md:w-xl lg:w-5xl">
           <span className="motion-safe: animate-fade flex-col translate-x-10">
             <Hero token={token} />
