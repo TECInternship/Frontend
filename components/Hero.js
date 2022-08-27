@@ -20,7 +20,7 @@ const Hero = ({ token }) => {
         <div className="flex justify-center">
           {!token && (
             <Link href="https://forms.gle/ZZKfhNcZYEpCWPpb8">
-              <button className="bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] sm:rounded-3xl px-4 py-2 hover:shadow-2xl font-bold text-xl md:text-2xl lg:text-3xl md:px-6 md:py-3 md:rounded-full">
+              <button className="bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] rounded-3xl px-4 py-2 hover:shadow-2xl font-bold text-xl md:text-2xl lg:text-3xl md:px-6 md:py-3 md:rounded-full">
                 Join Us!
               </button>
             </Link>

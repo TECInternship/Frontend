@@ -2,22 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-const Register3 = ({ email, setActive, checked }) => {
+const Register3 = ({ token, setActive, checked }) => {
   const [link, setLink] = useState("");
   const router = useRouter();
-  const [userId, setUserId] = useState("");
-
-  useEffect(() => {
-    setUserId(localStorage.getItem("user"));
-  }, []);
 
   useEffect(() => {
     axios
-      .get(
-        `https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${localStorage.getItem(
-          "user"
-        )}`
-      )
+      .get(`https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${token}`)
       .then((res) => {
         setLink(res.data.buktiPersyaratan);
       })
@@ -29,7 +20,7 @@ const Register3 = ({ email, setActive, checked }) => {
 
     axios
       .post("https://api-tec-ohu.herokuapp.com/api/edit-user", {
-        _id: userId,
+        _id: token,
         buktiPersyaratan: link,
       })
       .then(() => {

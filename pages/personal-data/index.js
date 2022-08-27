@@ -5,7 +5,7 @@ import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-const PersonalData = () => {
+export default function PersonalData({ token }) {
   const [name, setName] = useState("");
   const [checked, setChecked] = useState(false);
   const [email, setEmail] = useState("");
@@ -18,17 +18,9 @@ const PersonalData = () => {
   const router = useRouter();
 
   useEffect(() => {
-    setUserId(localStorage.getItem("user"));
-  }, []);
-
-  useEffect(() => {
-    if (localStorage.getItem("user")) {
+    if (token) {
       axios
-        .get(
-          `https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${localStorage.getItem(
-            "user"
-          )}`
-        )
+        .get(`https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${token}`)
         .then((res) => {
           setName(res.data.name);
           setEmail(res.data.email);
@@ -71,10 +63,10 @@ const PersonalData = () => {
               buktiPembayaran: "",
             })
             .then(() => {
-              setActive("2");
+              router.push("/registration");
             })
             .catch((err) => console.log(err));
-          setActive("3");
+          // setActive("3");
         }
       })
       .catch((err) => console.log(err));
@@ -229,6 +221,8 @@ const PersonalData = () => {
       </div>
     </div>
   );
-};
+}
 
-export default PersonalData;
+export function getServerSideProps({ req, res }) {
+  return { props: { token: req.cookies.token || "" } };
+}
