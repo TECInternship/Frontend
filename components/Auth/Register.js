@@ -13,7 +13,7 @@ const Register = ({ onClick }) => {
 
   // useEffect(() => {
   //   axios
-  //     .get("https://api-tec-ohu.herokuapp.com/api/get-all-users")
+  //     .get("https://api-tecinternship.herokuapp.com/api/get-all-users")
   //     .then((res) => {
   //       setNomorTec(res.data.length + 1);
   //     })
@@ -26,7 +26,7 @@ const Register = ({ onClick }) => {
     if (password.length >= 8) {
       if (konfirmasi === password) {
         axios
-          .post("https://api-tec-ohu.herokuapp.com/api/register", {
+          .post("https://api-tecinternship.herokuapp.com/api/register", {
             // nomortec,
             email,
             password,
@@ -43,7 +43,8 @@ const Register = ({ onClick }) => {
             router.push("/personal-data");
             // window.location.reload();
           })
-//           .catch((err) => alert("Invalid email!"));
+          // .catch((err) => alert("Invalid email!"));
+          .catch((err) => console.log(err));
       } else {
         alert("Passwords did not match!");
       }
@@ -119,7 +120,7 @@ const Register = ({ onClick }) => {
               </button>
             </Link>
             <input
-              disabled={email.length < 8}
+              // disabled={email.length < 8}
               type={"submit"}
               className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 hover:from-[#3ec4ae] 
             hover:to-[#1c6458] duration-300 px-10 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"

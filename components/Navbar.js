@@ -30,7 +30,9 @@ const Navbar = ({ token }) => {
     const doFetch = async () => {
       if (token) {
         await axios
-          .get(`https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${token}`)
+          .get(
+            `https://api-tecinternship.herokuapp.com/api/get-user/?_id=${token}`
+          )
           .then((res) => {
             setName(res.data.name);
           })

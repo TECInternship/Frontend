@@ -19,7 +19,9 @@ export default function PersonalData({ token }) {
   useEffect(() => {
     if (token) {
       axios
-        .get(`https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${token}`)
+        .get(
+          `https://api-tecinternship.herokuapp.com/api/get-user/?_id=${token}`
+        )
         .then((res) => {
           setName(res.data.name);
           setEmail(res.data.email);
@@ -37,7 +39,7 @@ export default function PersonalData({ token }) {
     e.preventDefault();
 
     axios
-      .post("https://api-tec-ohu.herokuapp.com/api/edit-user", {
+      .post("https://api-tecinternship.herokuapp.com/api/edit-user", {
         _id: token,
         name,
         fakultas,
@@ -51,7 +53,7 @@ export default function PersonalData({ token }) {
           router.push("/registration");
         } else {
           axios
-            .post("https://api-tec-ohu.herokuapp.com/api/edit-payment", {
+            .post("https://api-tecinternship.herokuapp.com/api/edit-payment", {
               pembayar: email,
               method: "",
               opsi: "",

@@ -15,7 +15,7 @@ const Login = ({ onClick }) => {
 
     axios
       .get(
-        `https://api-tec-ohu.herokuapp.com/api/login/?email=${email}&password=${password}`
+        `https://api-tecinternship.herokuapp.com/api/login/?email=${email}&password=${password}`
       )
       .then((res) => {
         // localStorage.setItem("user", res.data._id);
