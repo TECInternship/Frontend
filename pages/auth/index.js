@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Login from "../../components/Auth/Login";
 import Register from "../../components/Auth/Register";
 import Icon from "../../public/assets/User_fill.png";
@@ -6,9 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Card from "../../components/Card.js";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
-const Home = () => {
+export default function Home({ token }) {
   const [activeButton, setActiveButton] = useState("login");
+  const router = useRouter();
 
   return (
     <div className="">
@@ -35,8 +37,8 @@ const Home = () => {
               />
             </Link>
           </div>
-          </div>
-          {/* </div> */}
+        </div>
+        {/* </div> */}
         <div className="h-screen basis-0 hidden md:block md:basis-2/5"></div>
         <div className="h-screen basis-full md:basis-3/5 flex items-center">
           <div className="mx-auto space-y-8 sm:mt-0 ">
@@ -77,6 +79,8 @@ const Home = () => {
       </main>
     </div>
   );
-};
+}
 
-export default Home;
+export function getServerSideProps({ req, res }) {
+  return { props: { token: req.cookies.token || "" } };
+}
