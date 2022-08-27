@@ -8,7 +8,7 @@ const Register3 = ({ token, setActive, checked }) => {
 
   useEffect(() => {
     axios
-      .get(`https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${token}`)
+      .get(`https://api-tecinternship.herokuapp.com/api/get-user/?_id=${token}`)
       .then((res) => {
         setLink(res.data.buktiPersyaratan);
       })
@@ -19,7 +19,7 @@ const Register3 = ({ token, setActive, checked }) => {
     e.preventDefault();
 
     axios
-      .post("https://api-tec-ohu.herokuapp.com/api/edit-user", {
+      .post("https://api-tecinternship.herokuapp.com/api/edit-user", {
         _id: token,
         buktiPersyaratan: link,
       })

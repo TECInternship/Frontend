@@ -14,7 +14,9 @@ export default function Registration({ token }) {
   useEffect(() => {
     if (token) {
       axios
-        .get(`https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${token}`)
+        .get(
+          `https://api-tecinternship.herokuapp.com/api/get-user/?_id=${token}`
+        )
         .then((res) => {
           setEmail(res.data.email);
           setChecked(res.data.isPerwakilan);

@@ -25,22 +25,27 @@ const Register2 = ({ setActive, email }) => {
   };
 
   useEffect(() => {
-    axios
-      .get(
-        `https://api-tec-ohu.herokuapp.com/api/get-payment/?pembayar=${email}`
-      )
-      .then((res) => {
-        setMethod(res.data.method);
-        setOpsi(res.data.opsi);
-        setTeman1(res.data.teman[0].name);
-        setEmail1(res.data.teman[0].email);
-        setTeman2(res.data.teman[1].name);
-        setEmail2(res.data.teman[1].email);
-        setTeman3(res.data.teman[2].name);
-        setEmail3(res.data.teman[2].email);
-        setBukti(res.data.buktiPembayaran);
-      })
-      .catch((err) => console.log(err));
+    const doFetch = async () => {
+      if (email) {
+        await axios
+          .get(
+            `https://api-tecinternship.herokuapp.com/api/get-payment/?pembayar=${email}`
+          )
+          .then((res) => {
+            setMethod(res.data?.method);
+            setOpsi(res.data?.opsi);
+            setTeman1(res.data.teman[0]?.name);
+            setEmail1(res.data.teman[0]?.email);
+            setTeman2(res.data.teman[1]?.name);
+            setEmail2(res.data.teman[1]?.email);
+            setTeman3(res.data.teman[2]?.name);
+            setEmail3(res.data.teman[2]?.email);
+            setBukti(res.data.buktiPembayaran);
+          })
+          .catch((err) => console.log(err));
+      }
+    };
+    doFetch();
   }, []);
 
   const handleSubmit = (e) => {
@@ -49,22 +54,25 @@ const Register2 = ({ setActive, email }) => {
     if (opsi && method) {
       axios
         .get(
-          `https://api-tec-ohu.herokuapp.com/api/get-payment/?pembayar=${email}`
+          `https://api-tecinternship.herokuapp.com/api/get-payment/?pembayar=${email}`
         )
         .then((res) => {
           if (res.data) {
             axios
-              .post("https://api-tec-ohu.herokuapp.com/api/edit-payment", {
-                pembayar: email,
-                method,
-                opsi,
-                teman: [
-                  { name: teman1, email: email1 },
-                  { name: teman2, email: email2 },
-                  { name: teman3, email: email3 },
-                ],
-                buktiPembayaran: bukti,
-              })
+              .post(
+                "https://api-tecinternship.herokuapp.com/api/edit-payment",
+                {
+                  pembayar: email,
+                  method,
+                  opsi,
+                  teman: [
+                    { name: teman1, email: email1 },
+                    { name: teman2, email: email2 },
+                    { name: teman3, email: email3 },
+                  ],
+                  buktiPembayaran: bukti,
+                }
+              )
               .then(() => {
                 setActive("3");
                 // console.log(res);
@@ -73,7 +81,7 @@ const Register2 = ({ setActive, email }) => {
               .catch((err) => console.log(err));
           } else {
             axios
-              .post("https://api-tec-ohu.herokuapp.com/api/payment", {
+              .post("https://api-tecinternship.herokuapp.com/api/payment", {
                 pembayar: email,
                 method,
                 opsi,
