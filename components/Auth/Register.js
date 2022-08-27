@@ -9,47 +9,52 @@ const Register = ({ onClick }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [konfirmasi, setKonfirmasi] = useState("");
+  const [udahAda, setUdahAda] = useState(false);
   // const [nomortec, setNomorTec] = useState(0);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("https://api-tecinternship.herokuapp.com/api/get-all-users")
-  //     .then((res) => {
-  //       setNomorTec(res.data.length + 1);
-  //     })
-  //     .catch((err) => console.log(err));
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("https://api-tecinternship.herokuapp.com/api/get-all-users")
+      .then((res) => {
+        setUdahAda(res.data.find((e) => e.email === email));
+      })
+      .catch((err) => console.log(err));
+  }, [email]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (password.length >= 8) {
-      if (konfirmasi === password) {
-        axios
-          .post("https://api-tecinternship.herokuapp.com/api/register", {
-            // nomortec,
-            email,
-            password,
-          })
-          .then((res) => {
-            // localStorage.setItem("user", res.data._id);
-            fetch("/api/login", {
-              method: "post",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ token: res.data._id }),
-            });
-            router.push("/personal-data");
-            // window.location.reload();
-          })
-          // .catch((err) => alert("Invalid email!"));
-          .catch((err) => console.log(err));
+    if (udahAda) {
+      if (password.length >= 8) {
+        if (konfirmasi === password) {
+          axios
+            .post("https://api-tecinternship.herokuapp.com/api/register", {
+              // nomortec,
+              email,
+              password,
+            })
+            .then((res) => {
+              // localStorage.setItem("user", res.data._id);
+              fetch("/api/login", {
+                method: "post",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ token: res.data._id }),
+              });
+              router.push("/registration/personal-data");
+              // window.location.reload();
+            })
+            .catch((err) => alert("Invalid email!"));
+          // .catch((err) => console.log(err));
+        } else {
+          alert("Passwords did not match!");
+        }
       } else {
-        alert("Passwords did not match!");
+        alert("Password should be minimum 8 characters!");
       }
     } else {
-      alert("Password should be minimum 8 characters!");
+      alert("Email already exists!");
     }
   };
 
