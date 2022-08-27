@@ -60,7 +60,7 @@ function DropdownMenu({ logout, name }) {
               if (name) {
                 router.push("/profile");
               } else {
-                router.push("/personal-data");
+                router.push("/registration/personal-data");
               }
             }}
             leftIcon={<CgProfile className="text-2xl" />}
@@ -68,7 +68,7 @@ function DropdownMenu({ logout, name }) {
             My Profile
           </DropdownItem>
           <DropdownItem
-            onClick={() => router.push("/registration")}
+            onClick={() => router.push("/registration/payment")}
             leftIcon={<MdPayment className="text-2xl" />}
           >
             Registration
@@ -99,7 +99,7 @@ function DropdownMenu({ logout, name }) {
             <h2>Settings</h2>
           </DropdownItem>
           <DropdownItem
-            onClick={() => router.push("/personal-data")}
+            onClick={() => router.push("/registration/personal-data")}
             leftIcon={<AiOutlineProfile className="text-xl" />}
           >
             Edit Profile

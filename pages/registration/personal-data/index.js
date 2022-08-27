@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Circle from "../../components/Circle";
+import Circle from "../../../components/Circle";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
@@ -50,7 +50,7 @@ export default function PersonalData({ token }) {
       })
       .then(() => {
         if (checked) {
-          router.push("/registration");
+          router.push("/registration/payment");
         } else {
           axios
             .post("https://api-tecinternship.herokuapp.com/api/edit-payment", {
@@ -64,10 +64,9 @@ export default function PersonalData({ token }) {
               buktiPembayaran: "",
             })
             .then(() => {
-              router.push("/registration");
+              router.push("/registration/confirmation");
             })
             .catch((err) => console.log(err));
-          // setActive("3");
         }
       })
       .catch((err) => console.log(err));
@@ -128,7 +127,8 @@ export default function PersonalData({ token }) {
                     Lengkapi Data Dirimu
                   </h1>
                   <h2 className="mt-2">
-                    Lengkapi data diri untuk melakukan finalisasi akunmu.
+                    Lengkapi data diri untuk melakukan finalisasi akunmu.{" "}
+                    <br></br>Pastikan data diri yang telah anda masukkan benar.
                   </h2>
 
                   {/* Nama */}
@@ -206,10 +206,11 @@ export default function PersonalData({ token }) {
                     <input
                       type={"submit"}
                       value="NEXT"
-                      className="px-8 md:px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"
+                      className="px-8 md:px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:from-[#3ec4ae] 
+                      hover:to-[#1c6458] duration-300 border"
                     />
                     <Link href="/auth">
-                      <button className="px-8 md:px-12  py-2 rounded-xl text-md font-bold border">
+                      <button className="px-8 md:px-12  py-2 rounded-xl text-md font-bold border transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 hover:bg-gray-600 duration-300">
                         BACK
                       </button>
                     </Link>
