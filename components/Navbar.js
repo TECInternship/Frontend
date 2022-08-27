@@ -73,7 +73,7 @@ const Navbar = ({ token }) => {
           {open && <DropdownMenu logout={logout} name={name} />}
         </div>
       ) : (
-        <Link href="https://forms.gle/ZZKfhNcZYEpCWPpb8">
+        <Link href="/auth">
           <button className="flex sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-3 lg:text-xl bg-clip-padding  bg-gradient bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] bg-opacity-20 font-bold">
             Log in
           </button>

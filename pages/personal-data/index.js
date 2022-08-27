@@ -12,7 +12,6 @@ export default function PersonalData({ token }) {
   const [fakultas, setFakultas] = useState("");
   const [jurusan, setJurusan] = useState("");
   const [tahunMasuk, setTahunMasuk] = useState("");
-  const [userId, setUserId] = useState("");
   const [idline, setIdLine] = useState("");
 
   const router = useRouter();
@@ -39,7 +38,7 @@ export default function PersonalData({ token }) {
 
     axios
       .post("https://api-tec-ohu.herokuapp.com/api/edit-user", {
-        _id: userId,
+        _id: token,
         name,
         fakultas,
         jurusan,
@@ -47,7 +46,7 @@ export default function PersonalData({ token }) {
         idline,
         isPerwakilan: checked,
       })
-      .then((res) => {
+      .then(() => {
         if (checked) {
           router.push("/registration");
         } else {

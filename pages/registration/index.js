@@ -18,7 +18,11 @@ export default function Registration({ token }) {
         .then((res) => {
           setEmail(res.data.email);
           setChecked(res.data.isPerwakilan);
-          setActive("2");
+          if (res.data.isPerwakilan === true) {
+            setActive("2");
+          } else {
+            setActive("3");
+          }
         })
         .catch((err) => console.log(err));
     }
