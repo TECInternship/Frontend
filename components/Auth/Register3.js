@@ -14,7 +14,7 @@ const Register3 = ({ email, setActive, checked }) => {
   useEffect(() => {
     axios
       .get(
-        `http://206.189.199.207:4000/api/get-user/?_id=${localStorage.getItem(
+        `https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${localStorage.getItem(
           "user"
         )}`
       )
@@ -28,7 +28,7 @@ const Register3 = ({ email, setActive, checked }) => {
     e.preventDefault();
 
     axios
-      .post("http://206.189.199.207:4000/api/edit-user", {
+      .post("https://api-tec-ohu.herokuapp.com/api/edit-user", {
         _id: userId,
         buktiPersyaratan: link,
       })

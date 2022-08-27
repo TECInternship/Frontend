@@ -15,7 +15,7 @@ const Registration = () => {
     if (localStorage.getItem("user")) {
       axios
         .get(
-          `http://206.189.199.207:4000/api/get-user/?_id=${localStorage.getItem(
+          `https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${localStorage.getItem(
             "user"
           )}`
         )

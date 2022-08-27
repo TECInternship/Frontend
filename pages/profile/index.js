@@ -14,7 +14,7 @@ export default function Profile({ token }) {
     const doFetch = async () => {
       if (token) {
         await axios
-          .get(`http://206.189.199.207:4000/api/get-user/?_id=${token}`)
+          .get(`https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${token}`)
           .then((res) => {
             // setUser(res.data);
             setName(res.data.name);
