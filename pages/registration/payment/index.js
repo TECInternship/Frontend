@@ -233,7 +233,7 @@ export default function Registration({ token }) {
                       value={"SBE"}
                       className="text-black"
                     >
-                      Paket SBE Rp130.000/orang
+                      Paket SBE Rp150.000/orang
                     </option>
                   </select>
 
@@ -262,18 +262,18 @@ export default function Registration({ token }) {
                       OVO 082240108604 a.n. Putri Adelia, kode: 002
                     </option>
                     <option
-                      selected={opsi === "bni"}
-                      value={"bni"}
-                      className="text-black"
-                    >
-                      BNI 1223116685 a.n. Annisa Risty, kode: 004
-                    </option>
-                    <option
                       selected={opsi === "bca"}
                       value={"bca"}
                       className="text-black"
                     >
                       BCA 0322386441 a.n. Afiz Ahzariyusa, kode: 003
+                    </option>
+                    <option
+                      selected={opsi === "bni"}
+                      value={"bni"}
+                      className="text-black"
+                    >
+                      BNI 1223116685 a.n. Annisa Risty, kode: 004
                     </option>
                     <option
                       selected={opsi === "mandiri"}

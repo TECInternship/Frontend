@@ -65,7 +65,7 @@ export default function Profile({ token }) {
       </div>
       <div className="w-full justify-center flex items-center px-2">
         <div className="m-0">
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-4 lg:p-6 2xl:p-10 flex flex-row">
+          <div className="animate-fade bg-white/10 backdrop-blur-lg rounded-3xl p-4 lg:p-6 2xl:p-10 flex flex-row">
             <div className="flex flex-col gap-2 font-thin text-[#F8F4EE] font-WorkSans text-xl lg:text-2xl p-2">
               Nama
               <div className="font-semibold mb-3">{name}</div>
