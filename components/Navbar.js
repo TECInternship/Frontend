@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 import { CgProfile } from "react-icons/cg";
-import { BsChevronDown, BsChevronUp } from "react-icons/bs";
+import { BsChevronDown } from "react-icons/bs";
 import DropdownMenu from "./DropdownMenu";
 import { useRouter } from "next/router";
 
@@ -67,7 +67,9 @@ const Navbar = ({ token }) => {
             onClick={() => setOpen(!open)}
           >
             <CgProfile className="text-4xl" />
-            {name}
+            {name.split(" ")[0].length <= 2
+              ? name.split(" ").slice(0, 2).join(" ")
+              : name.split(" ")[0]}
             <BsChevronDown
               className={open ? "transition -rotate-180" : "transition"}
             />
