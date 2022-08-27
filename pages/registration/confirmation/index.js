@@ -116,7 +116,9 @@ export default function Registration({ token }) {
                         href="https://bit.ly/GuidebookOHU_TEC"
                         className="underline hover:cursor-pointer hover:text-blue-300"
                       >
-                        https://bit.ly/PersyaratanTEC
+                        <p className="underline hover:cursor-pointer hover:text-blue-300">
+                          https://bit.ly/PersyaratanTEC
+                        </p>
                       </Link>
                       <br />
                       1. Bukti screenshot Twibbon TEC Internship 2022 kamu yang
@@ -129,7 +131,9 @@ export default function Registration({ token }) {
                         href="https://www.instagram.com/tec.ohu/"
                         className="underline hover:cursor-pointer hover:text-blue-300"
                       >
-                        https://www.instagram.com/tec.ohu/
+                        <p className="underline hover:cursor-pointer hover:text-blue-300">
+                          https://www.instagram.com/tec.ohu/
+                        </p>
                       </Link>{" "}
                       <br></br>
                       4. Bukti follow Instagram Study Board Education{" "}
@@ -137,16 +141,18 @@ export default function Registration({ token }) {
                         href="https://www.instagram.com/studyboardeducation/"
                         className="underline hover:cursor-pointer hover:text-blue-300"
                       >
-                        https://www.instagram.com/studyboardeducation/
+                        <p className="underline hover:cursor-pointer hover:text-blue-300">
+                          https://www.instagram.com/studyboardeducation/
+                        </p>
                       </Link>
                       <br></br>
                       Tata cara bisa di cek lagi{" "}
-                      <Link
-                        href="https://bit.ly/PersyaratanTEC"
-                        className="underline hover:cursor-pointer hover:text-blue-300"
-                      >
-                        https://bit.ly/GuidebookOHU_TEC
+                      <Link href="https://bit.ly/PersyaratanTEC">
+                        <p className="underline hover:cursor-pointer hover:text-blue-300">
+                          https://bit.ly/GuidebookOHU_TEC
+                        </p>
                       </Link>
+                      <br />
                       <b>* Pastikan Instagram kamu tidak di private yaaa!*</b>
                     </p>
                   </div>
