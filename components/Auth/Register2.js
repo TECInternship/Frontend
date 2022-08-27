@@ -26,7 +26,7 @@ const Register2 = ({ setActive, email }) => {
 
   useEffect(() => {
     axios
-      .get(`http://206.189.199.207:4000/api/get-payment/?pembayar=${email}`)
+      .get(`https://api-tec-ohu.herokuapp.com/api/get-payment/?pembayar=${email}`)
       .then((res) => {
         setMethod(res.data.method);
         setOpsi(res.data.opsi);
@@ -46,11 +46,11 @@ const Register2 = ({ setActive, email }) => {
 
     if (opsi && method) {
       axios
-        .get(`http://206.189.199.207:4000/api/get-payment/?pembayar=${email}`)
+        .get(`https://api-tec-ohu.herokuapp.com/api/get-payment/?pembayar=${email}`)
         .then((res) => {
           if (res.data) {
             axios
-              .post("http://206.189.199.207:4000/api/edit-payment", {
+              .post("https://api-tec-ohu.herokuapp.com/api/edit-payment", {
                 pembayar: email,
                 method,
                 opsi,
@@ -69,7 +69,7 @@ const Register2 = ({ setActive, email }) => {
               .catch((err) => console.log(err));
           } else {
             axios
-              .post("http://206.189.199.207:4000/api/payment", {
+              .post("https://api-tec-ohu.herokuapp.com/api/payment", {
                 pembayar: email,
                 method,
                 opsi,
