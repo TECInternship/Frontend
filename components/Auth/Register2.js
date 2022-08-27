@@ -26,7 +26,9 @@ const Register2 = ({ setActive, email }) => {
 
   useEffect(() => {
     axios
-      .get(`https://api-tec-ohu.herokuapp.com/api/get-payment/?pembayar=${email}`)
+      .get(
+        `https://api-tec-ohu.herokuapp.com/api/get-payment/?pembayar=${email}`
+      )
       .then((res) => {
         setMethod(res.data.method);
         setOpsi(res.data.opsi);
@@ -46,7 +48,9 @@ const Register2 = ({ setActive, email }) => {
 
     if (opsi && method) {
       axios
-        .get(`https://api-tec-ohu.herokuapp.com/api/get-payment/?pembayar=${email}`)
+        .get(
+          `https://api-tec-ohu.herokuapp.com/api/get-payment/?pembayar=${email}`
+        )
         .then((res) => {
           if (res.data) {
             axios
@@ -98,8 +102,10 @@ const Register2 = ({ setActive, email }) => {
         <h1 className="text-2xl font-semibold">Lakukan Pembayaran</h1>
         <h2 className="mt-2 text-justify">
           Untuk menjadi intern resmi, kamu diharuskan membayar biaya registrasi.
-          <br></br>Setiap nominal yang akan dibayarkan harus menambahkan kode unik yang disesuaikan dengan platform pembayaran yang digunakan
-          Contoh : Memilih paket 1 dan melakukan transfer melalui DANA maka nominal transfer yaitu Rp50.001,00
+          <br></br>Setiap nominal yang akan dibayarkan harus menambahkan kode
+          unik yang disesuaikan dengan platform pembayaran yang digunakan Contoh
+          : Memilih paket 1 dan melakukan transfer melalui DANA maka nominal
+          transfer yaitu Rp50.001,00
         </h2>
         {/* Tipe Pembayaran */}
         <h2 className="mt-10">Tipe Pembayaran</h2>
@@ -195,7 +201,9 @@ const Register2 = ({ setActive, email }) => {
           </option>
         </select>
 
-        {(method === "Double" || method === "Triple" || method === "Quadruple") && (
+        {(method === "Double" ||
+          method === "Triple" ||
+          method === "Quadruple") && (
           <>
             {/* Nama Teman 1 */}
             <h2 className="mt-4">Nama Teman 1</h2>
