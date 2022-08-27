@@ -128,7 +128,8 @@ export default function PersonalData({ token }) {
                   </h1>
                   <h2 className="mt-2">
                     Lengkapi data diri untuk melakukan finalisasi akunmu.{" "}
-                    <br></br>Pastikan data diri yang telah anda masukkan benar.
+                    <br></br>
+                    <b>Pastikan data diri yang telah anda masukkan benar.</b>
                   </h2>
 
                   {/* Nama */}
