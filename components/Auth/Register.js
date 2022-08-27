@@ -25,6 +25,8 @@ const Register = ({ onClick }) => {
     e.preventDefault();
 
     if (udahAda) {
+      alert("Email already exists!");
+    } else {
       if (password.length >= 8) {
         if (konfirmasi === password) {
           axios
@@ -45,7 +47,10 @@ const Register = ({ onClick }) => {
               router.push("/registration/personal-data");
               // window.location.reload();
             })
-            .catch((err) => alert("Invalid email!"));
+            .catch((err) => {
+              console.log(err);
+              alert("Invalid email!");
+            });
           // .catch((err) => console.log(err));
         } else {
           alert("Passwords did not match!");
@@ -53,8 +58,6 @@ const Register = ({ onClick }) => {
       } else {
         alert("Password should be minimum 8 characters!");
       }
-    } else {
-      alert("Email already exists!");
     }
   };
 
