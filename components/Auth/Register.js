@@ -13,7 +13,7 @@ const Register = ({ onClick }) => {
 
   // useEffect(() => {
   //   axios
-  //     .get("http://206.189.199.207:4000/api/get-all-users")
+  //     .get("https://api-tec-ohu.herokuapp.com/api/get-all-users")
   //     .then((res) => {
   //       setNomorTec(res.data.length + 1);
   //     })
@@ -26,7 +26,7 @@ const Register = ({ onClick }) => {
     if (password.length >= 8) {
       if (konfirmasi === password) {
         axios
-          .post("http://206.189.199.207:4000/api/register", {
+          .post("https://api-tec-ohu.herokuapp.com/api/register", {
             // nomortec,
             email,
             password,
