@@ -8,6 +8,7 @@ import { CgProfile } from "react-icons/cg";
 import { FiLogOut } from "react-icons/fi";
 import { useRouter } from "next/router";
 import { AiOutlineProfile } from "react-icons/ai";
+import { RiLockPasswordLine } from "react-icons/ri";
 
 function DropdownMenu({ logout, name }) {
   const [activeMenu, setActiveMenu] = useState("main");
@@ -68,7 +69,7 @@ function DropdownMenu({ logout, name }) {
             My Profile
           </DropdownItem>
           <DropdownItem
-            onClick={() => router.push("/registration/payment")}
+            onClick={() => router.push("/registration/personal-data")}
             leftIcon={<MdPayment className="text-2xl" />}
           >
             Registration
@@ -99,10 +100,10 @@ function DropdownMenu({ logout, name }) {
             <h2>Settings</h2>
           </DropdownItem>
           <DropdownItem
-            onClick={() => router.push("/registration/personal-data")}
-            leftIcon={<AiOutlineProfile className="text-xl" />}
+            onClick={() => router.push("/edit-account")}
+            leftIcon={<RiLockPasswordLine className="text-xl" />}
           >
-            Edit Profile
+            Edit Password
           </DropdownItem>
           <DropdownItem
             onClick={logout}
