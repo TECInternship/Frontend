@@ -43,7 +43,7 @@ const Register = ({ onClick }) => {
             router.push("/personal-data");
             // window.location.reload();
           })
-          .catch((err) => alert("Invalid email!"));
+//           .catch((err) => alert("Invalid email!"));
       } else {
         alert("Passwords did not match!");
       }
