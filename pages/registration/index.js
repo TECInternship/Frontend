@@ -6,19 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 
-const Registration = () => {
-  const [active, setActive] = useState("1");
+export default function Registration({ token }) {
+  const [active, setActive] = useState("2");
   const [checked, setChecked] = useState(false);
   const [email, setEmail] = useState("");
 
   useEffect(() => {
-    if (localStorage.getItem("user")) {
+    if (token) {
       axios
-        .get(
-          `https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${localStorage.getItem(
-            "user"
-          )}`
-        )
+        .get(`https://api-tec-ohu.herokuapp.com/api/get-user/?_id=${token}`)
         .then((res) => {
           setEmail(res.data.email);
           setChecked(res.data.isPerwakilan);
@@ -95,8 +91,8 @@ const Registration = () => {
                 <Register2 setActive={setActive} email={email} />
               ) : active === "3" ? (
                 <Register3
+                  token={token}
                   setActive={setActive}
-                  email={email}
                   checked={checked}
                 />
               ) : (
@@ -108,6 +104,8 @@ const Registration = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Registration;
+export function getServerSideProps({ req, res }) {
+  return { props: { token: req.cookies.token || "" } };
+}
