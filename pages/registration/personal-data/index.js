@@ -14,6 +14,7 @@ export default function PersonalData({ token }) {
   const [jurusan, setJurusan] = useState("");
   const [tahunMasuk, setTahunMasuk] = useState("");
   const [idline, setIdLine] = useState("");
+  const [loaded, setLoaded] = useState(false);
 
   const router = useRouter();
 
@@ -31,6 +32,7 @@ export default function PersonalData({ token }) {
           setTahunMasuk(res.data.tahunMasuk);
           setIdLine(res.data.idline);
           setChecked(res.data.isPerwakilan);
+          setLoaded(true);
         })
         .catch((err) => console.log(err));
     }
@@ -128,7 +130,7 @@ export default function PersonalData({ token }) {
 
             <div className="animate-fade bg-white/10 backdrop-blur-lg rounded-xl shadow-xl  md:w-3/5 md:max-w-3xl">
               <div className="animate-fade h-full">
-                {name ? (
+                {loaded ? (
                   <>
                     <form
                       className="px-12 py-10 h-full"
