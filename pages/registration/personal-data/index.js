@@ -216,7 +216,7 @@ export default function PersonalData({ token }) {
                           className="w-4 h-4 bg-gray-100 rounded border-gray-300 focus:[#2F9685]"
                         />
                         <label className="ml-2">
-                          Saya merupakan perwakilan pembayaran
+                          Saya mendaftar sendiri / merupakan perwakilan pembayaran
                         </label>
                       </div>
 
