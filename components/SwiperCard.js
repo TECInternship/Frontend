@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import Image from "next/image";
 
 // Import Swiper React components
-import { Swiper, SwiperSlide, } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,7 +17,6 @@ import { EffectCoverflow, Pagination, Autoplay, Navigation } from "swiper";
 import Card from "./Card";
 
 export default function App() {
-  
   return (
     <>
       <div className="flex justify-center md:w-3/4">
@@ -42,23 +41,23 @@ export default function App() {
             slideShadows: true,
           }}
           pagination={true}
-          className="mySwiper mySwiper-button-prev mySwiper-button-next"
+          className="mySwiper"
         >
           <SwiperSlide className="flex flex-col items-center mb-9">
             <h2 className="text-3xl font-bold text-center mb-5">
-            Company Visit
+              Company Visit
             </h2>
             <Card Content={<img src="/grab.jpg" width={700} />} />
           </SwiperSlide>
           <SwiperSlide className="flex flex-col items-center ">
             <h2 className="text-3xl font-bold text-center mb-5">
-            Business Challenge
+              Business Challenge
             </h2>
             <Card Content={<img src="/panenco.png" width={700} />} />
           </SwiperSlide>
           <SwiperSlide className="flex flex-col items-center ">
             <h2 className="text-3xl font-bold text-center mb-5">TEC Night</h2>
-            <Card Content={<img src="/tecnight.jpg"  width={700}/>} />
+            <Card Content={<img src="/tecnight.jpg" width={700} />} />
           </SwiperSlide>
         </Swiper>
       </div>
