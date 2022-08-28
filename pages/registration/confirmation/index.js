@@ -98,46 +98,54 @@ export default function Registration({ token }) {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl shadow-xl py-10 md:w-3/5 md:max-w-3xl">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl shadow-xl md:w-3/5 md:max-w-3xl animate-fade">
               <div className="animate-fade h-full">
                 {loaded ? (
                   <>
                     <form className="px-12 py-10" onSubmit={handleSubmit}>
-                      <div className="text-2xl font-semibold">Konfirmasi</div>
-                      <div className="mt-2">
-                        <p>
-                          Sebagai bukti kelengkapan persyaratan, kamu diharuskan
-                          menyertakan bukti yang dikumpulkan dalam folder Google
-                          Drive.<br></br>
-                          JANGAN LUPA SIAPKAN PERSYARATAN DI BAWAH INII:
-                          <br></br>
-                          Persyaratan dapat diakses pada link berikut :{" "}
-                          <Link
-                            href="https://bit.ly/GuidebookOHU_TEC"
-                            className="underline hover:cursor-pointer hover:text-blue-300"
-                          >
-                            <p className="underline hover:cursor-pointer hover:text-blue-300">
-                              https://bit.ly/PersyaratanTEC
-                            </p>
-                          </Link>
-                          <br />
-                          1. Bukti screenshot Twibbon TEC Internship 2022 kamu
-                          yang telah di post di Instagram kamu. <br></br>
-                          2. Bukti screenshot poster TEC Internship 2022 yang
-                          telah kamu bagikan di Instagram story kamu dan tag
-                          @tec.ohu
-                          <br></br>
-                          3. Bukti screenshot follow Instagram OHU TEC 2022
-                          <Link
+                      <h1 className="text-2xl font-semibold">Konfirmasi</h1>
+                      <p className="mt-2">
+                        Sebagai bukti kelengkapan persyaratan, kamu diharuskan
+                        menyertakan bukti yang dikumpulkan dalam folder Google
+                        Drive.
+                      </p>
+                      <p>JANGAN LUPA SIAPKAN PERSYARATAN DI BAWAH INI:</p>
+                      <p>Persyaratan dapat diakses pada link berikut : </p>
+                      <a
+                        href="https://bit.ly/GuidebookOHU_TEC"
+                        className="underline hover:cursor-pointer hover:text-blue-300"
+                      >
+                        https://bit.ly/PersyaratanTEC
+                      </a>
+                      <ol>
+                        <li>
+                          <p>
+                            1. Bukti screenshot Twibbon TEC Internship 2022 kamu
+                            yang telah di post di Instagram kamu.
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            2. Bukti screenshot poster TEC Internship 2022 yang
+                            telah kamu bagikan di Instagram story kamu dan tag
+                            @tec.ohu
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            3. Bukti screenshot follow Instagram OHU TEC 2022
+                          </p>
+                          <a
                             href="https://www.instagram.com/tec.ohu/"
                             className="underline hover:cursor-pointer hover:text-blue-300"
                           >
-                            <p className="underline hover:cursor-pointer hover:text-blue-300">
-                              https://www.instagram.com/tec.ohu/
-                            </p>
-                          </Link>{" "}
-                          <br></br>
-                          4. Bukti follow Instagram Study Board Education{" "}
+                            https://www.instagram.com/tec.ohu/
+                          </a>
+                        </li>
+                        <li>
+                          <p>
+                            4. Bukti follow Instagram Study Board Education{" "}
+                          </p>
                           <Link
                             href="https://www.instagram.com/studyboardeducation/"
                             className="underline hover:cursor-pointer hover:text-blue-300"
@@ -146,20 +154,17 @@ export default function Registration({ token }) {
                               https://www.instagram.com/studyboardeducation/
                             </p>
                           </Link>
-                          <br></br>
-                          Tata cara bisa di cek lagi{" "}
-                          <Link href="https://bit.ly/PersyaratanTEC">
-                            <p className="underline hover:cursor-pointer hover:text-blue-300">
-                              https://bit.ly/GuidebookOHU_TEC
-                            </p>
-                          </Link>
-                          <br />
-                          <b>
-                            * Pastikan Instagram kamu tidak di private yaaa!*
-                          </b>
+                        </li>
+                      </ol>
+                      <br />
+                      <p>Tata cara bisa di cek di</p>
+                      <Link href="https://bit.ly/PersyaratanTEC">
+                        <p className="underline hover:cursor-pointer hover:text-blue-300">
+                          https://bit.ly/GuidebookOHU_TEC
                         </p>
-                      </div>
-
+                      </Link>
+                      <br />
+                      <b>*Pastikan Instagram kamu tidak di private yaaa!*</b>
                       {/* Nama */}
                       <h1 className="mt-10">Link Google Drive</h1>
                       <input
