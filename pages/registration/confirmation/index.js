@@ -103,7 +103,7 @@ export default function Registration({ token }) {
                 {loaded ? (
                   <>
                     <form
-                      className="px-12 py-10 break-all"
+                      className="px-12 py-10 break-words"
                       onSubmit={handleSubmit}
                     >
                       <h1 className="text-2xl font-semibold">Konfirmasi</h1>
