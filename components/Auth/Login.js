@@ -30,7 +30,7 @@ const Login = ({ onClick }) => {
         alert("Login success!");
       })
       .catch((err) => {
-        alert("Wrong password!");
+        alert("Wrong email or password!");
       });
   };
 
