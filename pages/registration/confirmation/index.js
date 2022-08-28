@@ -25,26 +25,32 @@ export default function Registration({ token }) {
   }, []);
 
   useEffect(() => {
-    axios
-      .get(`https://api-tecinternship.herokuapp.com/api/get-user/?_id=${token}`)
-      .then((res) => {
-        setLink(res.data.buktiPersyaratan);
-      })
-      .catch((err) => console.log(err));
+    if (token) {
+      axios
+        .get(
+          `https://api-tecinternship.herokuapp.com/api/get-user/?_id=${token}`
+        )
+        .then((res) => {
+          setLink(res.data.buktiPersyaratan);
+        })
+        .catch((err) => console.log(err));
+    }
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios
-      .post("https://api-tecinternship.herokuapp.com/api/edit-user", {
-        _id: token,
-        buktiPersyaratan: link,
-      })
-      .then(() => {
-        router.push("/");
-      })
-      .catch((err) => console.log(err));
+    if (token) {
+      axios
+        .post("https://api-tecinternship.herokuapp.com/api/edit-user", {
+          _id: token,
+          buktiPersyaratan: link,
+        })
+        .then(() => {
+          router.push("/");
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   return (
