@@ -158,7 +158,7 @@ export default function PersonalData({ token }) {
                       {/* Fakultas */}
                       <h1 className="mt-4">Fakultas</h1>
                       <h2 className="text-xs font-extralight">
-                        Contoh: STEI, SBM
+                        Contoh: STEI-K, SBM, FTI
                       </h2>
                       <input
                         type="text"
