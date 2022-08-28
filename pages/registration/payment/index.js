@@ -31,6 +31,7 @@ export default function Registration({ token }) {
         .then((res) => {
           setEmail(res.data.email);
           setChecked(res.data.isPerwakilan);
+          setLoaded(true);
           const doFetch = async () => {
             await axios
               .get(
@@ -46,7 +47,6 @@ export default function Registration({ token }) {
                 setTeman3(res.data.teman[2]?.name);
                 setEmail3(res.data.teman[2]?.email);
                 setBukti(res.data.buktiPembayaran);
-                setLoaded(true);
               })
               .catch((err) => console.log(err));
           };
