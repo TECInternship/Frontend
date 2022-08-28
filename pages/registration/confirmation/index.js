@@ -102,7 +102,10 @@ export default function Registration({ token }) {
               <div className="animate-fade h-full">
                 {loaded ? (
                   <>
-                    <form className="px-12 py-10" onSubmit={handleSubmit}>
+                    <form
+                      className="px-12 py-10 break-all"
+                      onSubmit={handleSubmit}
+                    >
                       <h1 className="text-2xl font-semibold">Konfirmasi</h1>
                       <p className="mt-2">
                         Sebagai bukti kelengkapan persyaratan, kamu diharuskan
