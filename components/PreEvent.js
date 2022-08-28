@@ -9,7 +9,7 @@ const PreEvent = () => {
     <section className="flex flex-col items-center mb-32 px-8 sm:px-0">
       <div className="flex justify-center items-center sm:space-x-8 flex-col sm:flex-row lg:space-y-4 mb-10">
         <div className="sm:w-1/3 mb-4">
-          <img src="/liveInteraction.jpg" alt="logo" />
+          <img src="/poster.jpg" alt="logo" />
         </div>
         <div className="text-center md:w-1/2 space-y-4 lg:text-2xl px-3 py-5 justify-center relative z-10 bg-opacity-20 bg-white/30 backdrop-blur-xl rounded-3xl shadow-2xl">
           <div className="flex flex-col">
