@@ -9,6 +9,7 @@ import { AiOutlineLoading } from "react-icons/ai";
 export default function Registration({ token }) {
   const [checked, setChecked] = useState(false);
   const [link, setLink] = useState("");
+  const [loaded, setLoaded] = useState(false);
 
   const router = useRouter();
 
@@ -20,19 +21,8 @@ export default function Registration({ token }) {
         )
         .then((res) => {
           setChecked(res.data.isPerwakilan);
-        })
-        .catch((err) => console.log(err));
-    }
-  }, []);
-
-  useEffect(() => {
-    if (token) {
-      axios
-        .get(
-          `https://api-tecinternship.herokuapp.com/api/get-user/?_id=${token}`
-        )
-        .then((res) => {
           setLink(res.data.buktiPersyaratan);
+          setLoaded(true);
         })
         .catch((err) => console.log(err));
     }
@@ -110,7 +100,7 @@ export default function Registration({ token }) {
 
             <div className="bg-white/10 backdrop-blur-lg rounded-xl shadow-xl py-10 md:w-3/5 md:max-w-3xl">
               <div className="animate-fade h-full">
-                {link ? (
+                {loaded ? (
                   <>
                     <form className="px-12 py-10" onSubmit={handleSubmit}>
                       <div className="text-2xl font-semibold">Konfirmasi</div>

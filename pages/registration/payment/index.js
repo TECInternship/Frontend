@@ -18,6 +18,7 @@ export default function Registration({ token }) {
   const [bukti, setBukti] = useState("");
   const [checked, setChecked] = useState(false);
   const [email, setEmail] = useState("");
+  const [loaded, setLoaded] = useState(false);
 
   const router = useRouter();
 
@@ -45,6 +46,7 @@ export default function Registration({ token }) {
                 setTeman3(res.data.teman[2]?.name);
                 setEmail3(res.data.teman[2]?.email);
                 setBukti(res.data.buktiPembayaran);
+                setLoaded(true);
               })
               .catch((err) => console.log(err));
           };
@@ -175,7 +177,7 @@ export default function Registration({ token }) {
 
             <div className="animate-fade bg-white/10 backdrop-blur-lg rounded-xl shadow-xl  md:w-3/5 md:max-w-3xl">
               <div className="animate-fade h-full">
-                {method ? (
+                {loaded ? (
                   <>
                     <form
                       className="px-12 py-10 h-full"
