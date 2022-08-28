@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
+import { AiOutlineLoading } from "react-icons/ai";
 
 export default function Profile({ token }) {
   const [name, setName] = useState("");
@@ -65,38 +66,37 @@ export default function Profile({ token }) {
       </div>
       <div className="w-full justify-center flex items-center px-2">
         <div className="m-0">
-          <div className="animate-fade bg-white/10 backdrop-blur-lg rounded-3xl p-4 lg:p-6 2xl:p-10 flex flex-row">
-            <div className="flex flex-col gap-2 font-thin text-[#F8F4EE] font-WorkSans text-xl lg:text-2xl p-2">
-              Nama
-              <div className="font-semibold mb-3">{name}</div>
-              Fakultas
-              <div className="font-semibold mb-3">
-                {fakultas}/{jurusan}
+          {name ? (
+            <div className="animate-fade bg-white/10 backdrop-blur-lg rounded-3xl p-4 lg:p-6 2xl:p-10 flex flex-row">
+              <div className="flex flex-col gap-2 font-thin text-[#F8F4EE] font-WorkSans text-xl lg:text-2xl p-2">
+                Nama
+                <div className="font-semibold mb-3">{name}</div>
+                Fakultas
+                <div className="font-semibold mb-3">
+                  {fakultas}/{jurusan}
+                </div>
+                Nomor TEC
+                <div className="font-semibold mb-3">{nomortec}</div>
+                Tahun Masuk ITB
+                <div className="font-semibold mb-3">{tahunMasuk}</div>
               </div>
-              Nomor TEC
-              <div className="font-semibold mb-3">{nomortec}</div>
-              Tahun Masuk ITB
-              <div className="font-semibold mb-3">{tahunMasuk}</div>
-            </div>
-            <div className=" flex flex-col justify-end object-right pl-10 space-y-60 py-0">
-              {/* <Image
-                className=""
-                src="/icon_profile.png"
-                width={75}
-                height={75}
-                alt="logo"
-              /> */}
-              <div className="flex justify-between">
-                <Image
-                  className=""
-                  src="/logo-glasses.png"
-                  width={75}
-                  height={40}
-                  alt="logo"
-                />
+              <div className=" flex flex-col justify-end object-right pl-10 space-y-60 py-0">
+                <div className="flex justify-between">
+                  <Image
+                    className=""
+                    src="/logo-glasses.png"
+                    width={75}
+                    height={40}
+                    alt="logo"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          ) : (
+            <div className="flex items-center justify-center h-full">
+              <AiOutlineLoading className="animate-spin" />
+            </div>
+          )}
         </div>
       </div>
       <div></div>
