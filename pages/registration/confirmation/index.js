@@ -115,7 +115,7 @@ export default function Registration({ token }) {
                       <p>JANGAN LUPA SIAPKAN PERSYARATAN DI BAWAH INI:</p>
                       <p>Persyaratan dapat diakses pada link berikut : </p>
                       <a
-                        href="https://bit.ly/GuidebookOHU_TEC"
+                        href="https://bit.ly/PersyaratanTEC"
                         className="underline hover:cursor-pointer hover:text-blue-300"
                       >
                         https://bit.ly/PersyaratanTEC
@@ -161,7 +161,7 @@ export default function Registration({ token }) {
                       </ol>
                       <br />
                       <p>Tata cara bisa di cek di</p>
-                      <Link href="https://bit.ly/PersyaratanTEC">
+                      <Link href="https://bit.ly/GuidebookOHU_TEC">
                         <p className="underline hover:cursor-pointer hover:text-blue-300">
                           https://bit.ly/GuidebookOHU_TEC
                         </p>
