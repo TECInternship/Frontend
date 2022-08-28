@@ -26,7 +26,8 @@ const PreEvent = () => {
               </div>
               <div className="flex justify-center items-center gap-2">
                 <SiGooglemeet />
-                <p>via Youtube Channel</p>
+
+                <p>via Youtube</p>
               </div>
             </div>
           </div>
