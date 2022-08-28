@@ -38,38 +38,43 @@ export default function PersonalData({ token }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios
-      .post("https://api-tecinternship.herokuapp.com/api/edit-user", {
-        _id: token,
-        name,
-        fakultas,
-        jurusan,
-        tahunMasuk,
-        idline,
-        isPerwakilan: checked,
-      })
-      .then(() => {
-        if (checked) {
-          router.push("/registration/payment");
-        } else {
-          axios
-            .post("https://api-tecinternship.herokuapp.com/api/edit-payment", {
-              pembayar: email,
-              method: "",
-              opsi: "",
-              teman: [
-                { name: "", email: "" },
-                { name: "", email: "" },
-              ],
-              buktiPembayaran: "",
-            })
-            .then(() => {
-              router.push("/registration/confirmation");
-            })
-            .catch((err) => console.log(err));
-        }
-      })
-      .catch((err) => console.log(err));
+    if (token) {
+      axios
+        .post("https://api-tecinternship.herokuapp.com/api/edit-user", {
+          _id: token,
+          name,
+          fakultas,
+          jurusan,
+          tahunMasuk,
+          idline,
+          isPerwakilan: checked,
+        })
+        .then(() => {
+          if (checked) {
+            router.push("/registration/payment");
+          } else {
+            axios
+              .post(
+                "https://api-tecinternship.herokuapp.com/api/edit-payment",
+                {
+                  pembayar: email,
+                  method: "",
+                  opsi: "",
+                  teman: [
+                    { name: "", email: "" },
+                    { name: "", email: "" },
+                  ],
+                  buktiPembayaran: "",
+                }
+              )
+              .then(() => {
+                router.push("/registration/confirmation");
+              })
+              .catch((err) => console.log(err));
+          }
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   return (
