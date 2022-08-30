@@ -39,6 +39,7 @@ export default function Registration({ token }) {
         })
         .then(() => {
           router.push("/");
+          alert("Registration completed!");
         })
         .catch((err) => console.log(err));
     }
