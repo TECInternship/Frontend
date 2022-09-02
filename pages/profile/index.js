@@ -10,6 +10,8 @@ export default function Profile({ token }) {
   const [jurusan, setJurusan] = useState("");
   const [tahunMasuk, setTahunMasuk] = useState("");
   const [nomortec, setNomorTEC] = useState("TECXXX");
+  const [isVerified, setIsVerified] = useState(false);
+  const [bukti, setBukti] = useState("");
 
   useEffect(() => {
     const doFetch = async () => {
@@ -24,6 +26,10 @@ export default function Profile({ token }) {
             setFakultas(res.data.fakultas);
             setJurusan(res.data.jurusan);
             setTahunMasuk(res.data.tahunMasuk);
+            setIsVerified(res.data.isVerified);
+            // setIsVerified(true);
+            setBukti(res.data.buktiPersyaratan);
+            // setBukti("");
             // setNomorTEC(res.data.nomortec);
           })
           .catch((err) => console.log(err));
@@ -70,15 +76,35 @@ export default function Profile({ token }) {
             <div className="animate-fade bg-white/10 backdrop-blur-lg rounded-3xl p-4 lg:p-6 2xl:p-10 flex flex-row">
               <div className="flex flex-col gap-2 font-thin text-[#F8F4EE] font-WorkSans text-xl lg:text-2xl p-2">
                 Nama
-                <div className="font-semibold mb-3">{name}</div>
+                <h1 className="font-semibold mb-3">{name}</h1>
                 Fakultas
-                <div className="font-semibold mb-3">
+                <h1 className="font-semibold mb-3">
                   {fakultas}/{jurusan}
-                </div>
+                </h1>
                 Nomor TEC
-                <div className="font-semibold mb-3">{nomortec}</div>
+                <h1 className="font-semibold mb-3">{nomortec}</h1>
                 Tahun Masuk ITB
-                <div className="font-semibold mb-3">{tahunMasuk}</div>
+                <h1 className="font-semibold mb-3">{tahunMasuk}</h1>
+                Status Verifikasi
+                <h1 className="font-semibold mb-3">
+                  {isVerified ? (
+                    <span className="rounded-full bg-[#24a314] px-3 py-1.5 text-[20px]">
+                      Verified
+                    </span>
+                  ) : bukti ? (
+                    <span className="rounded-full bg-[#8f6b07] px-3 py-1.5 text-[20px]">
+                      Waiting
+                    </span>
+                  ) : !isVerified & !bukti ? (
+                    <div className="group">
+                      <span className="rounded-full bg-[#e72424] px-3 py-1.5 text-[20px]">
+                        Not Verified
+                      </span>
+                    </div>
+                  ) : (
+                    <></>
+                  )}
+                </h1>
               </div>
               <div className=" flex flex-col justify-end object-right pl-10 space-y-60 py-0">
                 <div className="flex justify-between">
