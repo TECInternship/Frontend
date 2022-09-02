@@ -44,24 +44,21 @@ const Countdown = () => {
   });
   return (
     <div>
-      {countdownTime.countdownDays && (
-        <Card
-          Content={
-            <div className="flex flex-col items-center">
-              <h1 className="text-3xl font-Willywonka md:text-3xl lg:text-4xl">
-                Registration{"\u00a0\u00a0"}will{"\u00a0\u00a0"}be
-                {"\u00a0\u00a0"}closed{"\u00a0\u00a0"}in
-              </h1>
-              <h2 className="text-base md:text-xl lg:text-2xl">
-                {countdownTime.countdownDays} days{" "}
-                {countdownTime.countdownHours} hours{" "}
-                {countdownTime.countdownMinutes} minutes{" "}
-                {countdownTime.countdownSeconds} seconds{" "}
-              </h2>
-            </div>
-          }
-        />
-      )}
+      <Card
+        Content={
+          <div className="flex flex-col items-center">
+            <h1 className="text-3xl font-Willywonka md:text-3xl lg:text-4xl">
+              Registration{"\u00a0\u00a0"}will{"\u00a0\u00a0"}be
+              {"\u00a0\u00a0"}closed{"\u00a0\u00a0"}in
+            </h1>
+            <h2 className="text-base md:text-xl lg:text-2xl">
+              {countdownTime.countdownDays} days {countdownTime.countdownHours}{" "}
+              hours {countdownTime.countdownMinutes} minutes{" "}
+              {countdownTime.countdownSeconds} seconds{" "}
+            </h2>
+          </div>
+        }
+      />
     </div>
   );
 };
