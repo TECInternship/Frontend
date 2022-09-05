@@ -50,11 +50,11 @@ const Countdown = () => {
             <h1 className="text-3xl font-Willywonka md:text-3xl lg:text-4xl">
               Registration{"\u00a0\u00a0"}is{"\u00a0\u00a0"}Closed
             </h1>
-//             <h2 className="text-base md:text-xl lg:text-2xl">
-//               {countdownTime.countdownDays} days {countdownTime.countdownHours}{" "}
-//               hours {countdownTime.countdownMinutes} minutes{" "}
-//               {countdownTime.countdownSeconds} seconds{" "}
-//             </h2>
+              {/* <h2 className="text-base md:text-xl lg:text-2xl">
+              {countdownTime.countdownDays} days {countdownTime.countdownHours}{" "}
+              hours {countdownTime.countdownMinutes} minutes{" "}
+              {countdownTime.countdownSeconds} seconds{" "}
+            </h2> */}
           </div>
         }
       />
