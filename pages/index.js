@@ -27,7 +27,7 @@ export default function Home({ token }) {
           <span className="motion-safe: animate-fade flex-col translate-x-10">
             <Hero token={token} />
           </span>
-          <PreEvent />
+
           <About />
         </div>
       </main>
