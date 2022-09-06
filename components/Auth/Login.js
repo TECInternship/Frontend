@@ -66,7 +66,7 @@ const Login = ({ onClick }) => {
           />
         </div>
         <div>
-          <p className="text-gray-100">
+          {/* <p className="text-gray-100">
             Belum punya akun?{" "}
             <span
               className="underline hover:cursor-pointer hover:text-blue-300"
@@ -74,7 +74,7 @@ const Login = ({ onClick }) => {
             >
               Buat di sini
             </span>
-          </p>
+          </p> */}
         </div>
         <div className="flex flex-row-reverse text-center py-6 mb-6 gap-2">
           <input
