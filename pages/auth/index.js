@@ -55,7 +55,7 @@ export default function Home({ token }) {
                 >
                   Login
                 </button>
-                {/* <button
+                <button
                   className={`text-xl md:text-2xl font-extrabold px-6 py-2 mx-2 ${
                     activeButton === "register"
                       ? "border-b-white border-b-[3px] border-solid"
@@ -64,7 +64,7 @@ export default function Home({ token }) {
                   onClick={() => setActiveButton("register")}
                 >
                   Register
-                </button> */}
+                </button>
               </div>
               <div className="py-4 px-8">
                 {activeButton === "login" ? (
