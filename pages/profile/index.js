@@ -9,7 +9,7 @@ export default function Profile({ token }) {
   const [fakultas, setFakultas] = useState("");
   const [jurusan, setJurusan] = useState("");
   const [tahunMasuk, setTahunMasuk] = useState("");
-  const [nomortec, setNomorTEC] = useState("TECXXX");
+  const [nomortec, setNomorTEC] = useState("-");
   const [isVerified, setIsVerified] = useState(false);
   const [bukti, setBukti] = useState("");
 
@@ -21,16 +21,24 @@ export default function Profile({ token }) {
             `https://api-tecinternship.herokuapp.com/api/get-user/?_id=${token}`
           )
           .then((res) => {
-            // setUser(res.data);
             setName(res.data.name);
             setFakultas(res.data.fakultas);
             setJurusan(res.data.jurusan);
             setTahunMasuk(res.data.tahunMasuk);
-            setIsVerified(res.data.isVerified);
-            // setIsVerified(true);
             setBukti(res.data.buktiPersyaratan);
-            // setBukti("");
-            // setNomorTEC(res.data.nomortec);
+            axios
+              .get(
+                `https://api-tecinternship.herokuapp.com/api/get-verified-user/?email=${res.data.email}`
+              )
+              .then((res) => {
+                if (res.data) {
+                  if (res.data.nomortec.length > 1) {
+                    setIsVerified(true);
+                  }
+                  setNomorTEC(res.data.nomortec);
+                }
+              })
+              .catch((err) => console.log(err));
           })
           .catch((err) => console.log(err));
       }
