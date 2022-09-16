@@ -5,6 +5,10 @@
     font-family: 'Willywonka';
     src: url('/font/WillyWonka.ttf');
 }
+@font-face {
+    font-family: 'BreeSerif';
+    src: url('/font/BreeSerif.ttf');
+}
 
 html,
 body {
@@ -41,7 +45,7 @@ html {
 
 body {
     color: white;
-    background: linear-gradient(45deg, rgba(80, 9, 11, 0), #702222, #B75056);
+    background: rgba(226, 54, 54, .6);
 }
 
 input:focus {
