@@ -80,7 +80,7 @@ const Login = ({ onClick }) => {
           <input
             type="submit"
             value="LOGIN"
-            className="px-12 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:from-[#3ec4ae] 
+            className="px-12 py-2 rounded-xl text-md font-bold bg-[#518cca] cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:from-[#3ec4ae] 
           hover:to-[#1c6458] duration-300 border"
           />
           <Link href="/">

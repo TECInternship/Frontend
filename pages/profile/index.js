@@ -46,16 +46,7 @@ export default function Profile({ token }) {
     doFetch();
   }, []);
   return (
-    <main className="h-screen w-screen bg-scroll bg-no-repeat bg-cover max-h-screen flex">
-      <Image
-        className="object-center object-cover pointer-events-none"
-        src="/info1.png"
-        alt="bg"
-        layout="fill"
-        // objectFit='cover'
-        // objectPosition="center"
-      />
-
+    <main className="h-screen w-screen max-h-screen flex">
       <div className="flex justify-between absolute w-full px-8 py-10">
         <div className="flex gap-2 cursor-pointer">
           <Link href={"/"}>
@@ -82,7 +73,7 @@ export default function Profile({ token }) {
         <div className="m-0">
           {name ? (
             <div className="animate-fade bg-white/10 backdrop-blur-lg rounded-3xl p-4 lg:p-6 2xl:p-10 flex flex-row">
-              <div className="flex flex-col gap-2 font-thin text-[#F8F4EE] font-WorkSans text-xl lg:text-2xl p-2">
+              <div className="flex flex-col gap-2 font-thin text-[#F8F4EE]  text-xl lg:text-2xl p-2">
                 Nama
                 <h1 className="font-semibold mb-3">{name}</h1>
                 Fakultas

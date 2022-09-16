@@ -43,20 +43,13 @@ const Navbar = ({ token }) => {
   }, []);
 
   return (
-    <div className="flex justify-between absolute w-full px-8">
+    <div className="flex justify-between absolute w-full px-16 items-center font-BreeSerif">
       <div className="flex gap-2">
         <Image
           className=""
-          src="/tecputih.png"
-          width={50}
-          height={50}
-          alt="logo"
-        />
-        <Image
-          className=""
-          src="/text-logo.png"
-          width={140}
-          height={50}
+          src="/assets_intern/logo.png"
+          width={75}
+          height={75}
           alt="logo"
         />
       </div>
@@ -78,7 +71,7 @@ const Navbar = ({ token }) => {
         </div>
       ) : (
         <Link href="/auth">
-          <button className="flex sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-3 lg:text-xl bg-clip-padding  bg-gradient bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] bg-opacity-20 font-bold">
+          <button className="flex sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-3 lg:text-xl bg-[#518cca] font-bold">
             Log in
           </button>
         </Link>
