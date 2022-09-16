@@ -68,12 +68,12 @@ function DropdownMenu({ logout, name }) {
           >
             My Profile
           </DropdownItem>
-          {/* <DropdownItem
-            onClick={() => router.push("/registration/personal-data")}
+          <DropdownItem
+            onClick={() => router.push("/presensi")}
             leftIcon={<MdPayment className="text-2xl" />}
           >
-            Registration
-          </DropdownItem> */}
+            Presensi
+          </DropdownItem>
           <DropdownItem
             leftIcon={<BiCog className="text-2xl" />}
             rightIcon={<BsChevronRight />}
