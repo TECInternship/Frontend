@@ -47,23 +47,14 @@ export default function Profile({ token }) {
   }, []);
   return (
     <main className="h-screen w-screen max-h-screen flex">
-      <div className="flex justify-between absolute w-full px-8 py-10">
+      <div className="flex justify-between absolute w-full px-16 py-10">
         <div className="flex gap-2 cursor-pointer">
           <Link href={"/"}>
             <Image
               className=""
-              src="/tecputih.png"
-              width={50}
-              height={50}
-              alt="logo"
-            />
-          </Link>
-          <Link href={"/"}>
-            <Image
-              className=""
-              src="/text-logo.png"
-              width={140}
-              height={50}
+              src="/assets_intern/logo.png"
+              width={65}
+              height={65}
               alt="logo"
             />
           </Link>
@@ -109,9 +100,9 @@ export default function Profile({ token }) {
                 <div className="flex justify-between">
                   <Image
                     className=""
-                    src="/logo-glasses.png"
-                    width={75}
-                    height={40}
+                    src="/assets_intern/logo.png"
+                    width={65}
+                    height={65}
                     alt="logo"
                   />
                 </div>

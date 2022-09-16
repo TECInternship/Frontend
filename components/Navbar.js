@@ -48,8 +48,8 @@ const Navbar = ({ token }) => {
         <Image
           className=""
           src="/assets_intern/logo.png"
-          width={75}
-          height={75}
+          width={65}
+          height={65}
           alt="logo"
         />
       </div>
@@ -71,7 +71,7 @@ const Navbar = ({ token }) => {
         </div>
       ) : (
         <Link href="/auth">
-          <button className="flex sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-3 lg:text-xl bg-[#518cca] font-bold">
+          <button className="flex sticky top-0 z-50 items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-2 lg:text-xl bg-[#f78f3f] font-bold">
             Log in
           </button>
         </Link>
