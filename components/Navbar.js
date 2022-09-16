@@ -54,7 +54,7 @@ const Navbar = ({ token }) => {
         />
       </div>
       {token ? (
-        <div className="flex gap-2">
+        <div className="flex gap-2 items-center">
           <button
             className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
             onClick={() => setOpen(!open)}
