@@ -8,10 +8,8 @@ const About = () => {
   return (
     <>
       <section className="flex flex-col items-center mb-32 px-8 sm:px-0">
-        <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
-          Who{"\u00a0\u00a0"}We{"\u00a0\u00a0"}Are
-        </h1>
-        <p className="md:w-3/4 space-y-4 lg:text-2xl px-3 py-5 justify-center relative z-10 bg-opacity-20 bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl">
+        <h1 className="text-4xl lg:text-5xl mb-5 font-bold">Who We Are</h1>
+        <p className="md:w-3/4 lg:text-2xl p-8 justify-center relative z-10 bg-opacity-20 bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl">
           <b>TEC</b>, abreviasi dari <b>Techno Entrepreneur Club</b>, merupakan{" "}
           <b>satu-satunya unit bisnis </b>yang menghimpun mahasiswa ITB yang
           memiliki minat <b>kewirausahaan</b>. TEC ITB menjadi wadah pembinaan
@@ -22,15 +20,13 @@ const About = () => {
       </section>
 
       <section className="flex flex-col items-center mb-32">
-        <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
-          What{"\u00a0\u00a0"}We{"\u00a0\u00a0"}Do
-        </h1>
+        <h1 className="text-4xl lg:text-5xl mb-5 font-bold">What We Do</h1>
         <SwiperCard />
       </section>
 
       <section className="flex flex-col items-center justify-center mb-32">
-        <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
-          What{"\u00a0\u00a0"}You{"\u00a0\u00a0"}Will{"\u00a0\u00a0"}Get
+        <h1 className="text-4xl lg:text-5xl mb-5 font-bold">
+          What You Will Get
         </h1>
         <div className="flex flex-col gap-4 sm:flex-row w-2/5 md:gap-20 sm:w-2/3 lg:w-1/2 justify-items-center text-base italic text-center lg:text-xl">
           <div className="">
@@ -49,9 +45,7 @@ const About = () => {
       </section>
 
       <section className="flex flex-col items-center mb-32">
-        <h1 className="text-4xl lg:text-5xl mb-5 font-Willywonka">
-          TEC{"\u00a0\u00a0"}Alumni
-        </h1>
+        <h1 className="text-4xl lg:text-5xl mb-5 font-bold">TEC Alumni</h1>
         <Alumni />
       </section>
     </>

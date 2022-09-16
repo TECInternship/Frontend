@@ -44,7 +44,7 @@ function DropdownMenu({ logout, name }) {
 
   return (
     <div
-      className="absolute top-[60px] right-0 mr-8 w-[195px] border rounded-xl overflow-hidden transition-height cursor-pointer backdrop-blur-sm shadow-lg bg-opacity-20"
+      className="absolute top-[70px] right-0 mr-16 w-[195px] border rounded-xl overflow-hidden transition-height cursor-pointer backdrop-blur-sm shadow-lg bg-opacity-20"
       style={{ height: menuHeight }}
       ref={dropdownRef}
     >
@@ -68,12 +68,12 @@ function DropdownMenu({ logout, name }) {
           >
             My Profile
           </DropdownItem>
-          <DropdownItem
+          {/* <DropdownItem
             onClick={() => router.push("/registration/personal-data")}
             leftIcon={<MdPayment className="text-2xl" />}
           >
             Registration
-          </DropdownItem>
+          </DropdownItem> */}
           <DropdownItem
             leftIcon={<BiCog className="text-2xl" />}
             rightIcon={<BsChevronRight />}

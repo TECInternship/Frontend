@@ -14,7 +14,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'BreeSerif', sans-serif;
     caret-color: transparent;
 }
 
@@ -46,6 +46,8 @@ html {
 body {
     color: white;
     background: rgba(226, 54, 54, .6);
+    background-image: url(../public/assets_intern/bg-texture.png);
+    background-size: cover;
 }
 
 input:focus {
