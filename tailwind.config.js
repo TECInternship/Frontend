@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Willywonka: "'Willywonka'",
+        BreeSerif: "'BreeSerif'",
         WorkSans: "'Work Sans', sans-serif",
       },
       keyframes: {
