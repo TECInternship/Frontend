@@ -14,8 +14,52 @@ export default function Home({ token }) {
 
   return (
     <div className="">
-      <main className="flex h-screen w-screen justify-center max-h-screen relative bg-[url('../public/assets/Background.png')] bg-no-repeat bg-cover bg-center bg-fixed">
-        {/* <div className="bg-white h-36"> hahsah */}
+      <main className="flex h-screen w-screen justify-center max-h-screen relative bg-[url('../public/assets_intern/bg-presensi.png')] bg-no-repeat bg-cover bg-center bg-fixed">
+        <div className="hover:animate-bounce absolute hidden md:block top-0 left-[-100px] opacity-30">
+            <Image
+                className=""
+                src="/assets_intern/laba2.png"
+                alt="logo"
+                width={300}
+                height={400}
+            />
+        </div>
+        <div className="hover:animate-bounce absolute hidden md:block invisible md:visible top-0 left-[80px] opacity-30">
+            <Image
+                className=""
+                src="/assets_intern/laba2.png"
+                alt="logo"
+                width={250}
+                height={250}
+            />
+        </div>
+        <div className="hover:animate-bounce absolute hidden md:block invisible md:visible top-0 left-[230px] opacity-30">
+            <Image
+                className=""
+                src="/assets_intern/laba2.png"
+                alt="logo"
+                width={250}
+                height={250}
+            />
+        </div>
+        <div className="hover:animate-bounce absolute hidden md:block invisible lg:visible top-0 left-[340px] opacity-30">
+            <Image
+                className=""
+                src="/assets_intern/laba2.png"
+                alt="logo"
+                width={300}
+                height={400}
+            />
+        </div>
+        <div className="absolute hidden md:block w-[300px] h-[500px] md:w-[300px] md:h-[500px] xl:w-[300px] xl:h-[500px] 2xl:w-[300px] 2xl:h-[500px] top-0 right-[0px] opacity-40">
+            <Image
+                className=""
+                src="/assets_intern/spider web vert.png"
+                alt="logo"
+                width={300}
+                height={300}
+            />
+        </div>
         <div className="absolute left-2 top-2 px-16 py-10 z-10">
           <div className="flex gap-2 cursor-pointer">
             <Link href={"/"}>
@@ -35,7 +79,7 @@ export default function Home({ token }) {
           <div className="mx-auto space-y-8 sm:mt-0 ">
             {/* <Card Content={<img className="mx-auto hidden sm:flex" src={Icon.src} />} /> */}
             <div className="bg-white/30 backdrop-blur-xl rounded-3xl w-auto max-w-full shadow-2xl">
-              <div className=" text-center text-gray-100 pt-4">
+              <div className="text-center text-gray-100 pt-4">
                 <button
                   className={`text-xl md:text-2xl font-extrabold px-6 py-2 mx-2 ${
                     activeButton === "login"
