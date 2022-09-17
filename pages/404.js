@@ -26,11 +26,11 @@ const NotFound = () => {
         <div className="max-w-7xl md:w-xl lg:w-5xl ">
           <div className="flex  h-screen justify-center items-center">
             <div className="sm:w-1/3 w-2/3 mr-8">
-              <img src="/logo.png" alt="logo" />
+              <img src="/assets_intern/logo.png" alt="logo" />
             </div>
-            <div className="font-Willywonka text-6xl">
+            <div className=" text-6xl">
               <h1>Coming Soon..</h1>
-              <div className="font-Willywonka text-4xl space-y-2">
+              <div className=" text-4xl space-y-2">
                 <h1>Stay tuned on our Social Media</h1>
               </div>
 

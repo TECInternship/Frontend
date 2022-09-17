@@ -43,25 +43,18 @@ const Navbar = ({ token }) => {
   }, []);
 
   return (
-    <div className="flex justify-between absolute w-full px-8">
+    <div className="flex justify-between absolute w-full px-16 items-center font-BreeSerif">
       <div className="flex gap-2">
         <Image
           className=""
-          src="/tecputih.png"
-          width={50}
-          height={50}
-          alt="logo"
-        />
-        <Image
-          className=""
-          src="/text-logo.png"
-          width={140}
-          height={50}
+          src="/assets_intern/logo.png"
+          width={65}
+          height={65}
           alt="logo"
         />
       </div>
       {token ? (
-        <div className="flex gap-2">
+        <div className="flex gap-2 items-center">
           <button
             className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
             onClick={() => setOpen(!open)}
@@ -78,7 +71,7 @@ const Navbar = ({ token }) => {
         </div>
       ) : (
         <Link href="/auth">
-          <button className="flex sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-3 lg:text-xl bg-clip-padding  bg-gradient bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] bg-opacity-20 font-bold">
+          <button className="flex sticky top-0 z-50 items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-2 lg:text-xl bg-[#f78f3f] font-bold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-[#7b9c4b] duration-300">
             Log in
           </button>
         </Link>

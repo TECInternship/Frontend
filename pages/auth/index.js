@@ -14,25 +14,16 @@ export default function Home({ token }) {
 
   return (
     <div className="">
-      <main className="flex h-screen w-screen justify-center max-h-screen relative bg-[url('../public/assets/bg2.png')] bg-no-repeat bg-cover bg-left-bottom bg-fixed">
+      <main className="flex h-screen w-screen justify-center max-h-screen relative bg-[url('../public/assets/Background.png')] bg-no-repeat bg-cover bg-center bg-fixed">
         {/* <div className="bg-white h-36"> hahsah */}
-        <div className="absolute left-2 top-2 px-8 py-10 z-10">
+        <div className="absolute left-2 top-2 px-16 py-10 z-10">
           <div className="flex gap-2 cursor-pointer">
             <Link href={"/"}>
               <Image
                 className=""
-                src="/tecputih.png"
-                width={50}
-                height={50}
-                alt="logo"
-              />
-            </Link>
-            <Link href={"/"}>
-              <Image
-                className=""
-                src="/text-logo.png"
-                width={140}
-                height={50}
+                src="/assets_intern/logo.png"
+                width={65}
+                height={65}
                 alt="logo"
               />
             </Link>

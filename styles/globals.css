@@ -5,12 +5,16 @@
     font-family: 'Willywonka';
     src: url('/font/WillyWonka.ttf');
 }
+@font-face {
+    font-family: 'BreeSerif';
+    src: url('/font/BreeSerif.ttf');
+}
 
 html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'BreeSerif', sans-serif;
     caret-color: transparent;
 }
 
@@ -41,7 +45,9 @@ html {
 
 body {
     color: white;
-    background: linear-gradient(45deg, rgba(80, 9, 11, 0), #702222, #B75056);
+    background: rgba(226, 54, 54, .6);
+    background-image: url(../public/assets_intern/bg-texture.png);
+    background-size: cover;
 }
 
 input:focus {
