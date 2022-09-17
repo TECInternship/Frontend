@@ -46,7 +46,7 @@ export default function Profile({ token }) {
     doFetch();
   }, []);
   return (
-    <main className="h-screen w-screen max-h-screen flex">
+    <main className="h-screen w-screen max-h-screen flex relative bg-[url('../public/assets_intern/bg.png')] bg-no-repeat bg-cover bg-center bg-fixed">
       <div className="flex justify-between absolute w-full px-16 py-10">
         <div className="flex gap-2 cursor-pointer">
           <Link href={"/"}>
@@ -59,8 +59,45 @@ export default function Profile({ token }) {
             />
           </Link>
         </div>
+        <div className=" absolute invisible md:visible md:top-0 md:right-8 flex">
+          <Image
+            className=""
+            src="/assets_intern/laba.png"
+            alt="logo"
+            width={250}
+            height={150}
+          />
+        </div>
+        <div className=" absolute invisible md:visible md:top-0 md:right-36 flex">
+          <Image
+            className=""
+            src="/assets_intern/laba2.png"
+            alt="logo"
+            width={250}
+            height={250}
+          />
+        </div>
+        <div className=" absolute invisible md:visible md:top-0 md:left-14 flex">
+          <Image
+            className=""
+            src="/assets_intern/laba.png"
+            alt="logo"
+            width={250}
+            height={150}
+          />
+        </div>
+        <div className=" absolute invisible md:visible md:top-0 md:left-20 flex">
+          <Image
+            className=""
+            src="/assets_intern/laba2.png"
+            alt="logo"
+            width={250}
+            height={250}
+          />
+        </div>
       </div>
-      <div className="w-full justify-center flex items-center px-2">
+      <div className="w-full justify-center flex relative items-center m-4 md:px-2">
+      
         <div className="m-0">
           {name ? (
             <div className="animate-fade bg-white/10 backdrop-blur-lg rounded-3xl p-4 lg:p-6 2xl:p-10 flex flex-row">
@@ -114,6 +151,7 @@ export default function Profile({ token }) {
             </div>
           )}
         </div>
+        
       </div>
       <div></div>
     </main>

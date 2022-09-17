@@ -80,7 +80,7 @@ const Login = ({ onClick }) => {
           <input
             type="submit"
             value="LOGIN"
-            className="px-12 py-2 rounded-xl text-md font-bold bg-[#f78f3f] cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-[#f78f3f] duration-300 border"
+            className="px-12 py-2 rounded-xl text-md font-bold bg-[#f78f3f] cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-[#7b9c4b] duration-300 border"
           />
           <Link href="/">
             <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 hover:bg-gray-600 duration-300">
