@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Home({ token }) {
@@ -7,15 +8,20 @@ export default function Home({ token }) {
     
     return (
     <div className="">
+        {/* help tambahin navbar donk cep, gw gangerti napa kaga bisa */}
         <main className="flex h-screen w-screen justify-center max-h-screen relative md:bg-[url('../public/assets_intern/bg-presensi.png')] bg-no-repeat bg-cover bg-center bg-fixed">
-            {/* <div className=" absolute w-[600px] h-[600px] md:w-[1000px] md:h-[800px] xl:w-[1920px] xl:h-[1200px] bottom-0 opacity-50 flex">
-                <Image
-                    className=""
-                    src="/assets_intern/city.png"
-                    alt="logo"
-                    width={2500}
-                    height={1200}
-                />
+            {/* <div className="absolute left-2 top-2 px-16 py-10 z-10">
+                <div className="flex gap-2 cursor-pointer">
+                    <Link href={"/"}>
+                        <Image
+                        className=""
+                        src="/assets_intern/logo.png"
+                        width={65}
+                        height={65}
+                        alt="logo"
+                        />
+                    </Link>
+                </div>
             </div> */}
             <div className=" absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] xl:w-[550px] xl:h-[550px] 2xl:w-[700px] 2xl:h-[700px] top-0 left-1 opacity-50 flex">
                 <Image
