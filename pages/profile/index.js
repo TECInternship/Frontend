@@ -111,7 +111,7 @@ export default function Profile({ token }) {
                 <h1 className="font-semibold mb-3">{nomortec}</h1>
                 Tahun Masuk ITB
                 <h1 className="font-semibold mb-3">{tahunMasuk}</h1>
-                Status Verifikasi
+                {/* Status Verifikasi
                 <h1 className="font-semibold mb-3">
                   {isVerified ? (
                     <span className="rounded-full bg-[#24a314] px-3 py-1.5 text-[20px]">
@@ -130,7 +130,7 @@ export default function Profile({ token }) {
                   ) : (
                     <></>
                   )}
-                </h1>
+                </h1> */}
               </div>
               <div className=" flex flex-col justify-end object-right pl-10 space-y-60 py-0">
                 <div className="flex justify-between">
