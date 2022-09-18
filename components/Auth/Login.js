@@ -34,6 +34,10 @@ const Login = ({ onClick }) => {
       });
   };
 
+  const editPassword = (e) => {
+    router.push("/edit-password");
+  };
+
   return (
     <div className="animate-fade">
       <form className="space-y-4" onSubmit={handleSubmit}>
@@ -66,20 +70,20 @@ const Login = ({ onClick }) => {
           />
         </div>
         <div>
-          {/* <p className="text-gray-100">
-            Belum punya akun?{" "}
+          <p className="text-gray-100">
+            Lupa password?{" "}
             <span
               className="underline hover:cursor-pointer hover:text-blue-300"
-              onClick={onClick}
+              onClick={editPassword}
             >
-              Buat di sini
+              Ganti password
             </span>
-          </p> */}
+          </p>
         </div>
         <div className="flex flex-row-reverse text-center py-6 mb-6 gap-2">
           <input
             type="submit"
-            value="LOGIN"
+            value="Login"
             className="px-12 py-2 rounded-xl text-md font-bold bg-[#F57614] cursor-pointer transition ease-in-out hover:bg-[#F78F3F] duration-300 border"
           />
           <Link href="/">
