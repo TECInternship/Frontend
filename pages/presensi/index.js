@@ -37,7 +37,7 @@ export default function Home({ token }) {
             <div className="w-5/6 h-5/6 xl:w-full xl:h-full flex mx-auto pb-12 relative">
               <img src="/assets/portal-presensi-aktif.png" alt="" />
               <div className="text-center absolute bottom-0 left-0 right-0 content-center text-3xl xl:text-4xl">
-                <button className="py-2 px-6 bg-red-800 rounded-xl hover:bg-red-900">
+                <button className="py-2 px-6 bg-[#F57614] rounded-xl transition ease-in-out hover:bg-[#F78F3F]">
                   <Link
                     href="https://docs.google.com/forms/d/e/1FAIpQLSfRvuVC_ygNLTGpp9JK0Oj47dZzHm0XjKmlE-jLJ8WDFODYaw/viewform?usp=sf_link"
                     target="_blank"
@@ -52,7 +52,10 @@ export default function Home({ token }) {
             <div className="w-5/6 h-5/6 xl:w-full xl:h-full flex mx-auto pb-12 relative">
               <img src="/assets/portal-presensi.png" alt="" />
               <div className="text-center absolute bottom-0 left-0 right-0 content-center text-3xl xl:text-4xl">
-                <button className="py-2 px-6 bg-[#504A4A] rounded-xl hover:bg-[#383434]">
+                <button
+                  className="py-2 px-6 bg-[#504A4A] rounded-xl hover:bg-[#383434] disabled:hover:bg-[#504A4A] cursor-not-allowed"
+                  disabled
+                >
                   Day 2
                 </button>
               </div>
@@ -62,7 +65,10 @@ export default function Home({ token }) {
             <div className="w-5/6 h-5/6 xl:w-full xl:h-full flex mx-auto pb-12 relative mb-10 md:mb-0">
               <img src="/assets/portal-presensi.png" alt="" />
               <div className="text-center absolute bottom-0 left-0 right-0 content-center text-3xl xl:text-4xl">
-                <button className="py-2 px-6 bg-[#504A4A] rounded-xl hover:bg-[#383434]">
+                <button
+                  className="py-2 px-6 bg-[#504A4A] rounded-xl hover:bg-[#383434] disabled:hover:bg-[#504A4A] cursor-not-allowed"
+                  disabled
+                >
                   Day 3
                 </button>
               </div>
