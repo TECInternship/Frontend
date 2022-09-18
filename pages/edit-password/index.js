@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import Login from "../../components/Auth/Login";
-import Register from "../../components/Auth/Register";
+import EditPassword from "../../components/Auth/EditPassword";
 import Icon from "../../public/assets/User_fill.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -94,25 +93,11 @@ export default function Home({ token }) {
                   }`}
                   onClick={() => setActiveButton("login")}
                 >
-                  Login
-                </button>
-                <button
-                  className={`text-xl md:text-2xl font-extrabold px-6 py-2 mx-2 ${
-                    activeButton === "register"
-                      ? "border-b-white border-b-[3px] border-solid"
-                      : ""
-                  }`}
-                  onClick={() => setActiveButton("register")}
-                >
-                  Register
+                  Edit Password
                 </button>
               </div>
               <div className="py-4 px-8">
-                {activeButton === "login" ? (
-                  <Login onClick={() => setActiveButton("register")} />
-                ) : (
-                  <Register onClick={() => setActiveButton("login")} />
-                )}
+                <EditPassword token={token} />
               </div>
             </div>
           </div>

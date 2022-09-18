@@ -100,7 +100,7 @@ function DropdownMenu({ logout, name }) {
             <h2>Settings</h2>
           </DropdownItem>
           <DropdownItem
-            onClick={() => router.push("/edit-account")}
+            onClick={() => router.push("/edit-password")}
             leftIcon={<RiLockPasswordLine className="text-xl" />}
           >
             Edit Password
