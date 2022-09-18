@@ -9,7 +9,7 @@ const Hero = ({ token }) => {
       <div className="sm:space-x-8 lg:space-x-0 flex justify-center items-center flex-col sm:flex-row lg:flex-col lg:space-y-4 mb-10">
         <div className="space-y-4">
           <div className="flex flex-col items-center mb-16">
-            <h1 className="text-4xl font-BreeSerif md:text-5xl lg:text-6xl mb-4 tracking-widest">
+            <h1 className="text-center text-4xl font-BreeSerif md:text-5xl lg:text-6xl mb-4 tracking-widest">
               WELCOME TO TEC INTERNSHIP
             </h1>
             <h2 className="text-base md:text-xl lg:text-4xl font-BreeSerif tracking-widest">
