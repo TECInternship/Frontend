@@ -45,7 +45,7 @@ html {
 
 body {
     color: white;
-    background: rgba(226, 54, 54, .6);
+    /* background: rgba(226, 54, 54, .6); */
     background-image: url(../public/assets_intern/bg-texture.png);
     background-size: cover;
 }
