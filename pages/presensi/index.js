@@ -13,7 +13,7 @@ export default function Presensi({ token }) {
 
   return (
     <div className="">
-      <main className="flex h-screen w-screen justify-center max-h-screen relative md:bg-[url('../public/assets_intern/bg-presensi.png')] bg-no-repeat bg-cover bg-center bg-fixed">
+      <main className="flex h-screen w-screen justify-center max-h-screen relative md:bg-[url('../public/assets_intern/bg-texture1.png')] bg-no-repeat bg-cover bg-center bg-fixed">
         <div className="absolute left-2 top-2 px-16 py-10 z-10">
           <div className="flex gap-2 cursor-pointer">
             <Link href={"/"}>

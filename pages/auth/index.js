@@ -14,7 +14,7 @@ export default function Home({ token }) {
 
   return (
     <div className="">
-      <main className="flex h-screen w-screen justify-center max-h-screen relative bg-[url('../public/assets_intern/bg-presensi.png')] bg-no-repeat bg-cover bg-center bg-fixed">
+      <main className="flex h-screen w-screen justify-center max-h-screen relative bg-[url('../public/assets_intern/bg-texture1.png')] bg-no-repeat bg-cover bg-center bg-fixed">
         <div className="hover:animate-bounce absolute hidden md:block top-0 left-[-100px] opacity-30">
             <Image
                 className=""
