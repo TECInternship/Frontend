@@ -43,7 +43,7 @@ const Navbar = ({ token }) => {
   }, []);
 
   return (
-    <div className="flex justify-between absolute w-full px-16 items-center font-BreeSerif">
+    <div className="flex justify-between absolute w-full px-8 md:px-16 items-center font-BreeSerif">
       <div className="flex gap-2">
         <Image
           className=""

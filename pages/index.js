@@ -26,25 +26,25 @@ export default function Home({ token }) {
           <Image
             className=""
             src="/assets_intern/spiderweb.png"
-            alt="logo"
+            alt="web"
             width={700}
             height={700}
           />
         </div>
-        <div className=" absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] xl:w-[600px] xl:h-[600px] mt-[150px] -right-40 opacity-20 flex -z-50">
+        <div className=" absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] xl:w-[600px] xl:h-[600px] mt-[150px] right-0 opacity-20 flex -z-50">
           <Image
             className=""
             src="/assets_intern/garis.png"
-            alt="logo"
+            alt="garis"
             width={700}
             height={700}
           />
         </div>
-        <div className=" absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] xl:w-[600px] xl:h-[600px] mt-[350px] -left-40 opacity-20 flex -z-50 rotate-180">
+        <div className=" absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] xl:w-[600px] xl:h-[600px] mt-[350px] left-0 opacity-20 flex -z-50 rotate-180">
           <Image
             className=""
             src="/assets_intern/garis.png"
-            alt="logo"
+            alt="garis"
             width={700}
             height={700}
           />
