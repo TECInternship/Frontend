@@ -59,7 +59,7 @@ export default function Profile({ token }) {
             />
           </Link>
         </div>
-        <div className=" absolute invisible md:visible md:top-0 md:right-8 flex">
+        <div className=" absolute invisible md:visible md:top-0 md:right-8 flex opacity-30">
           <Image
             className=""
             src="/assets_intern/laba.png"
@@ -68,7 +68,7 @@ export default function Profile({ token }) {
             height={150}
           />
         </div>
-        <div className=" absolute invisible md:visible md:top-0 md:right-36 flex">
+        <div className=" absolute invisible md:visible md:top-0 md:right-36 flex opacity-30">
           <Image
             className=""
             src="/assets_intern/laba2.png"
@@ -77,7 +77,7 @@ export default function Profile({ token }) {
             height={250}
           />
         </div>
-        <div className=" absolute invisible md:visible md:top-0 md:left-14 flex">
+        <div className=" absolute invisible md:visible md:top-0 md:left-14 flex opacity-30">
           <Image
             className=""
             src="/assets_intern/laba.png"
@@ -86,7 +86,7 @@ export default function Profile({ token }) {
             height={150}
           />
         </div>
-        <div className=" absolute invisible md:visible md:top-0 md:left-20 flex">
+        <div className=" absolute invisible md:visible md:top-0 md:left-20 flex opacity-30">
           <Image
             className=""
             src="/assets_intern/laba2.png"
@@ -97,7 +97,6 @@ export default function Profile({ token }) {
         </div>
       </div>
       <div className="w-full justify-center flex relative items-center m-4 md:px-2">
-      
         <div className="m-0 p-10">
           {name ? (
             <div className="animate-fade bg-white/10 backdrop-blur-lg rounded-3xl p-4 lg:p-6 md:p-8 2xl:p-10 flex flex-row">
@@ -151,7 +150,6 @@ export default function Profile({ token }) {
             </div>
           )}
         </div>
-        
       </div>
       <div></div>
     </main>

@@ -22,6 +22,33 @@ export default function Home({ token }) {
       </Head>
 
       <main className="flex flex-col items-center">
+        <div className=" absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] xl:w-[450px] xl:h-[450px] top-0 left-1 opacity-20 flex -z-50">
+          <Image
+            className=""
+            src="/assets_intern/spiderweb.png"
+            alt="logo"
+            width={700}
+            height={700}
+          />
+        </div>
+        <div className=" absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] xl:w-[600px] xl:h-[600px] mt-[150px] -right-40 opacity-20 flex -z-50">
+          <Image
+            className=""
+            src="/assets_intern/garis.png"
+            alt="logo"
+            width={700}
+            height={700}
+          />
+        </div>
+        <div className=" absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] xl:w-[600px] xl:h-[600px] mt-[350px] -left-40 opacity-20 flex -z-50 rotate-180">
+          <Image
+            className=""
+            src="/assets_intern/garis.png"
+            alt="logo"
+            width={700}
+            height={700}
+          />
+        </div>
         <Navbar token={token} />
         <div className="max-w-7xl md:w-xl lg:w-5xl">
           <span className="motion-safe: animate-fade flex-col translate-x-10">

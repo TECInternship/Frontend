@@ -1,5 +1,6 @@
 import React from "react";
 import { FaTiktok, FaInstagram, FaTwitter } from "react-icons/fa";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -17,9 +18,13 @@ const Footer = () => {
             <FaTiktok />
           </a>
         </div>
-        
       </div>
-      <div className="flex flex-col justify-center items-center space-y-3">&copy; Copyright OHU TEC 2022</div>
+      {/* <div className="relative w-screen opacity-20 flex -z-50 bottom-0">
+        <img className="w-full" src="/assets_intern/city.png" alt="logo" />
+      </div> */}
+      <div className="flex flex-col justify-center items-center space-y-3">
+        &copy; Copyright OHU TEC 2022
+      </div>
     </div>
   );
 };
