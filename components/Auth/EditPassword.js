@@ -43,7 +43,11 @@ const Register = ({ token }) => {
               )
               .then((res) => {
                 alert("Password changed!");
-                router.push("/auth");
+                if (token) {
+                  router.push("/");
+                } else {
+                  router.push("/auth");
+                }
               })
               .catch((err) => {
                 console.log(err);
@@ -76,8 +80,12 @@ const Register = ({ token }) => {
               required
               value={email}
               placeholder="Masukkan email"
-              className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
-              onChange={(e) => setEmail(e.target.value)}
+              className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none cursor-not-allowed"
+              onChange={(e) => {
+                if (!token) {
+                  setEmail(e.target.value);
+                }
+              }}
               disabled={token}
             />
           </div>
