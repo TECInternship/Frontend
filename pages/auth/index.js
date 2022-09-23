@@ -60,7 +60,7 @@ export default function Home({ token }) {
                 height={300}
             />
         </div>
-        <div className="absolute left-2 top-2 px-16 py-10 z-10">
+        <div className="absolute left-2 top-2 p-8 md:px-16 md:py-10 z-10">
           <div className="flex gap-2 cursor-pointer">
             <Link href={"/"}>
               <Image

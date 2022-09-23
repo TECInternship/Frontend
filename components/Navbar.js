@@ -44,7 +44,7 @@ const Navbar = ({ token }) => {
 
   return (
     <div className="flex justify-between absolute w-full px-16 items-center font-BreeSerif">
-      <div className="flex gap-2">
+      <div className="flex gap-2 ">
         <Image
           className=""
           src="/assets_intern/logo.png"
