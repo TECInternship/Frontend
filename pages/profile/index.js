@@ -54,7 +54,7 @@ export default function Profile({ token }) {
         <link rel="icon" href="/assets_intern/logo.png" />
       </Head>
       <main className="h-screen w-screen max-h-screen flex relative bg-[url('../public/assets_intern/bg-texture1.png')] bg-no-repeat bg-cover bg-center bg-fixed">
-        <div className="flex justify-between absolute w-full px-16 py-10">
+        <div className="flex justify-between absolute w-full p-8 md:px-16 md:py-10">
           <div className="flex gap-2 cursor-pointer">
             <Link href={"/"}>
               <Image
