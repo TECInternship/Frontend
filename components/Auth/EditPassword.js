@@ -80,7 +80,7 @@ const Register = ({ token }) => {
               required
               value={email}
               placeholder="Masukkan email"
-              className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none cursor-not-allowed"
+              className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
               onChange={(e) => {
                 if (!token) {
                   setEmail(e.target.value);
