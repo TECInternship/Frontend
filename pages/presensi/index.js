@@ -10,7 +10,7 @@ export default function Home({ token }) {
     <div className="">
       {/* help tambahin navbar donk cep, gw gangerti napa kaga bisa */}
 
-      <main className="flex  h-screen w-screen justify-center max-h-screen relative md:bg-[url('../public/assets_intern/bg-presensi.png')] bg-no-repeat bg-cover bg-center bg-fixed">
+      <main className="flex h-screen w-screen justify-center max-h-screen relative md:bg-[url('../public/assets_intern/bg-presensi.png')] bg-no-repeat bg-cover bg-center bg-fixed">
         {/* <div className="absolute left-2 top-2 px-16 py-10 z-10">
                 <div className="flex gap-2 cursor-pointer">
                     <Link href={"/"}>
@@ -37,16 +37,14 @@ export default function Home({ token }) {
             </Link>
           </div>
           <div className="invisible md:visible absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] xl:w-[550px] xl:h-[550px] 2xl:w-[700px] 2xl:h-[700px] top-0 left-1 opacity-50 flex">
-          <Link href={"/"}>
             <Image
-            className=""
-            src="/assets_intern/spiderweb.png"
-            alt="logo1"
-            width={700}
-            height={600}
-              />
-              </Link>
-        </div>
+              className=""
+              src="/assets_intern/spiderweb.png"
+              alt="logo1"
+              width={700}
+              height={600}
+            />
+          </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:gap-x-[100px] 2xl:gap-x-[150px] gap-y-[50px] items-center mb-20 mt-20 mx-10">
