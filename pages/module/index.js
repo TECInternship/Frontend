@@ -25,12 +25,12 @@ const index = () => {
                     />
                 </div>
             </div>
-            <section>
+            <div className = "container">
                 <div className = "text-5xl mt-20 text-center">MY MODULES</div>
                 <form>
                     <div className = "relative">
-                        <input type="search" className = "mt-5 pl-4 pr-12 text-3xl align-middle bg-slate-500 w-[750px] h-[60px] opacity-90 rounded-2xl border-none focus:border-slate-300 focus:border" placeholder="Insert Keyword" />
-                        <div className = "flex absolute right-2 inset-y-0 pt-5 items-center pl-3 pointer-events-none opacity-100">
+                        <input type="search" className = "relative mt-5 pl-4 pr-12 text-3xl align-middle mx-auto flex bg-slate-500 w-[750px] h-[60px] opacity-90 rounded-2xl border-none focus:border-slate-300 focus:border" placeholder="Insert Keyword" />
+                        <div className = "flex flex-col absolute inset-y-0 pt-5 right-2 items-center pl-3 pointer-events-none opacity-100">
                             <Image
                             className=""
                             src="/assets_intern/search.png"
@@ -41,14 +41,14 @@ const index = () => {
                         </div>
                     </div>
                 </form>
-                <div className = "mt-8 pl-6 rounded-2xl h-[150px] bg-slate-500">
+                <div className = "relative mt-8 pl-6 rounded-2xl h-[150px] bg-slate-500">
                     <h1 className = "text-4xl pt-2">MODULE I</h1>
                     <p className = "text-md mt-2">Description</p>
-                    <button>
+                    <button className = "bg-[#58BF75] hover:bg-[#2F8647] rounded-xl py-1 px-6 text-xl absolute bottom-3 right-5">
                         Open
                     </button>
                 </div>
-            </section>
+            </div>
         </main>
     </div>
   )
