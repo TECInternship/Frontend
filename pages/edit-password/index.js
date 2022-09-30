@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import Login from "../../components/Auth/Login";
-import Register from "../../components/Auth/Register";
+import EditPassword from "../../components/Auth/EditPassword";
 import Icon from "../../public/assets/User_fill.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,6 +20,42 @@ export default function Home({ token }) {
         <link rel="icon" href="/assets_intern/logo.png" />
       </Head>
       <main className="flex h-screen w-screen justify-center max-h-screen relative bg-[url('../public/assets_intern/bg-texture1.png')] bg-no-repeat bg-cover bg-center bg-fixed">
+        <div className="hover:animate-bounce absolute hidden md:block top-0 left-[-100px] opacity-30">
+          <Image
+            className=""
+            src="/assets_intern/laba2.png"
+            alt="logo"
+            width={300}
+            height={400}
+          />
+        </div>
+        <div className="hover:animate-bounce absolute hidden md:block invisible md:visible top-0 left-[80px] opacity-30">
+          <Image
+            className=""
+            src="/assets_intern/laba2.png"
+            alt="logo"
+            width={250}
+            height={250}
+          />
+        </div>
+        <div className="hover:animate-bounce absolute hidden md:block invisible md:visible top-0 left-[230px] opacity-30">
+          <Image
+            className=""
+            src="/assets_intern/laba2.png"
+            alt="logo"
+            width={250}
+            height={250}
+          />
+        </div>
+        <div className="hover:animate-bounce absolute hidden md:block invisible lg:visible top-0 left-[340px] opacity-30">
+          <Image
+            className=""
+            src="/assets_intern/laba2.png"
+            alt="logo"
+            width={300}
+            height={400}
+          />
+        </div>
         <div className="absolute hidden md:block w-[300px] h-[500px] md:w-[300px] md:h-[500px] xl:w-[300px] xl:h-[500px] 2xl:w-[300px] 2xl:h-[500px] top-0 right-[0px] opacity-40">
           <Image
             className=""
@@ -58,15 +93,11 @@ export default function Home({ token }) {
                   }`}
                   onClick={() => setActiveButton("login")}
                 >
-                  Login
+                  Edit Password
                 </button>
               </div>
               <div className="py-4 px-8">
-                {activeButton === "login" ? (
-                  <Login onClick={() => setActiveButton("register")} />
-                ) : (
-                  <Register onClick={() => setActiveButton("login")} />
-                )}
+                <EditPassword token={token} />
               </div>
             </div>
           </div>

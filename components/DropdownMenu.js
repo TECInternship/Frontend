@@ -68,12 +68,12 @@ function DropdownMenu({ logout, name }) {
           >
             My Profile
           </DropdownItem>
-          <DropdownItem
+          {/* <DropdownItem
             onClick={() => router.push("/presensi")}
             leftIcon={<MdPayment className="text-2xl" />}
           >
             Presensi
-          </DropdownItem>
+          </DropdownItem> */}
           <DropdownItem
             leftIcon={<BiCog className="text-2xl" />}
             rightIcon={<BsChevronRight />}
@@ -100,7 +100,7 @@ function DropdownMenu({ logout, name }) {
             <h2>Settings</h2>
           </DropdownItem>
           <DropdownItem
-            onClick={() => router.push("/edit-account")}
+            onClick={() => router.push("/edit-password")}
             leftIcon={<RiLockPasswordLine className="text-xl" />}
           >
             Edit Password

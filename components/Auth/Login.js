@@ -34,6 +34,10 @@ const Login = ({ onClick }) => {
       });
   };
 
+  const editPassword = (e) => {
+    router.push("/edit-password");
+  };
+
   return (
     <div className="animate-fade">
       <form className="space-y-4" onSubmit={handleSubmit}>
@@ -47,7 +51,7 @@ const Login = ({ onClick }) => {
           <input
             type="email"
             placeholder="Masukkan email"
-            className="mt-1 w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+            className="mt-1 w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none placeholder:text-gray-500"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -61,26 +65,26 @@ const Login = ({ onClick }) => {
           <input
             type="password"
             placeholder="Masukkan password"
-            className="mt-1 w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+            className="mt-1 w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none placeholder:text-gray-500"
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <div>
-          {/* <p className="text-gray-100">
-            Belum punya akun?{" "}
+          <p className="text-gray-100">
+            Lupa password?{" "}
             <span
               className="underline hover:cursor-pointer hover:text-blue-300"
-              onClick={onClick}
+              onClick={editPassword}
             >
-              Buat di sini
+              Ganti password
             </span>
-          </p> */}
+          </p>
         </div>
         <div className="flex flex-row-reverse text-center py-6 mb-6 gap-2">
           <input
             type="submit"
-            value="LOGIN"
-            className="px-12 py-2 rounded-xl text-md font-bold bg-[#F57614] cursor-pointer transition ease-in-out hover:bg-[#F78F3F] duration-300 border"
+            value="Login"
+            className="px-12 py-2 rounded-xl text-md font-bold bg-[#BD142B] hover:bg-[#7E1918] cursor-pointer transition ease-in-out duration-300 border"
           />
           <Link href="/">
             <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer transition ease-in-out hover:bg-gray-600 duration-300">
