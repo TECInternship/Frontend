@@ -24,10 +24,10 @@ const index = () => {
                 />
             </div>
             <div className = "container">
-                <div className = "text-5xl mt-20 text-center">MY MODULES</div>
+                <div className = "text-5xl mt-20 text-center ">MY MODULES</div>
                 <form>
-                    <div className = "relative">
-                        <input type="search" className = "static mt-5 pl-4 pr-12 text-2xl md:text-3xl align-middle mx-auto flex bg-slate-500 w-[300px] h-[60px] md:w-[550px] 2xl:w-[750px] opacity-90 rounded-2xl border-none focus:border-slate-300 focus:border" placeholder="Insert Keyword" />
+                    <div className = "relative " >
+                        <input type="search" className = "static mt-5 pl-4 pr-12 text-2xl md:text-3xl align-middle mx-auto flex bg-slate-500 w-[300px] h-[60px] md:w-[550px] 2xl:w-[750px] opacity-90 rounded-2xl border-none focus:border-slate-300 focus:border bg-opacity-20 bg-white backdrop-blur-xlshadow-2xl" placeholder="Insert Keyword" />
                             {/* <div className = "static inset-y-4 right-0">
                                 <Image
                                 className=""
@@ -39,24 +39,24 @@ const index = () => {
                             </div> */}
                     </div>
                 </form>
-                <div className = "relative mt-8 pl-6 rounded-2xl mx-10 h-[150px] bg-slate-500">
+                <div className = "relative mt-8 pl-6  mx-10 h-[150px] bg-opacity-20 bg-white/10 hover:bg-black/10 backdrop-blur-xl rounded-3xl shadow-2xl">
                     <h1 className = "text-4xl pt-2">MODULE I</h1>
                     <p className = "text-md mt-2">Description</p>
-                    <button className = "bg-[#58BF75] hover:bg-[#2F8647] rounded-xl py-1 px-6 text-xl absolute bottom-3 right-5">
+                    <button className = "bg-[#58BF75] hover:bg-[#3aa257] rounded-xl py-1 px-6 text-xl absolute bottom-3 right-5">
                         Open
                     </button>
                 </div>
-                <div className = "relative mt-8 pl-6 rounded-2xl mx-10 h-[150px] bg-slate-500">
+                <div className = "relative mt-8 pl-6 mx-10 h-[150px] bg-opacity-20 bg-white/10 hover:bg-black/10 backdrop-blur-xl rounded-3xl shadow-2xl">
                     <h1 className = "text-4xl pt-2">MODULE II</h1>
                     <p className = "text-md mt-2">Description</p>
-                    <button className = "bg-[#58BF75] hover:bg-[#2F8647] rounded-xl py-1 px-6 text-xl absolute bottom-3 right-5">
+                    <button className = "bg-[#58BF75] hover:bg-[#3aa257] rounded-xl py-1 px-6 text-xl absolute bottom-3 right-5">
                         Open
                     </button>
                 </div>
-                <div className = "relative mt-8 pl-6 rounded-2xl mx-10 mb-5 h-[150px] bg-slate-500">
+                <div className = "relative mt-8 pl-6 mx-10 mb-5 h-[150px] bg-opacity-20 bg-white/10 hover:bg-black/10 backdrop-blur-xl rounded-3xl shadow-2xl">
                     <h1 className = "text-4xl pt-2">MODULE II</h1>
                     <p className = "text-md mt-2">Description</p>
-                    <button className = "bg-[#58BF75] hover:bg-[#2F8647] rounded-xl py-1 px-6 text-xl absolute bottom-3 right-5">
+                    <button className = "bg-[#58BF75] hover:bg-[#3aa257] rounded-xl py-1 px-6 text-xl absolute bottom-3 right-5">
                         Open
                     </button>
                 </div>
