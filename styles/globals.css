@@ -5,6 +5,7 @@
     font-family: 'Willywonka';
     src: url('/font/WillyWonka.ttf');
 }
+
 @font-face {
     font-family: 'BreeSerif';
     src: url('/font/BreeSerif.ttf');
@@ -28,15 +29,16 @@ a {
 }
 
 :root {
-    --bg:  #242526;
+    --bg: #242526;
     --bg-accent: #484a4d;
     --text-color: #dadce1;
     --nav-size: 60px;
     --border: 1px solid #474a4d;
     --border-radius: 8px;
-    --speed: 500ms; 
-  }
-  
+    --speed: 500ms;
+}
+
+
 /* @media (prefers-color-scheme: dark) { */
 
 html {
@@ -56,68 +58,74 @@ input:focus {
 
 .menu {
     width: 100%;
-  }
-  
-  .menu-item {
+}
+
+.menu-item {
     height: 50px;
     display: flex;
     align-items: center;
     border-radius: var(--border-radius);
     transition: background var(--speed);
     padding: 0.5rem;
-  }
-  
-  .menu-item .icon-button {
+}
+
+.menu-item .icon-button {
     margin-right: 0.5rem;
-  }
-  
-  
-  .menu-item .icon-button:hover {
+}
+
+.menu-item .icon-button:hover {
     filter: none;
-  }
-  
-  .menu-item:hover {
+}
+
+.menu-item:hover {
     background-color: #525357;
-  }
-  
-  .icon-right {
+}
+
+.icon-right {
     margin-left: auto;
-  }
+}
+
 
 /* CSSTransition classes  */
+
 .menu-primary-enter {
     position: absolute;
     transform: translateX(-110%);
-  }
-  .menu-primary-enter-active {
+}
+
+.menu-primary-enter-active {
     transform: translateX(0%);
     transition: all var(--speed) ease;
-  }
-  .menu-primary-exit {
+}
+
+.menu-primary-exit {
     position: absolute;
-  }
-  .menu-primary-exit-active {
+}
+
+.menu-primary-exit-active {
     transform: translateX(-110%);
     transition: all var(--speed) ease;
-  }
-  
-  
-  .menu-secondary-enter {
+}
+
+.menu-secondary-enter {
     transform: translateX(110%);
-  }
-  .menu-secondary-enter-active {
+}
+
+.menu-secondary-enter-active {
     transform: translateX(0%);
     transition: all var(--speed) ease;
-  }
-  .menu-secondary-exit {
-  
-  }
-  .menu-secondary-exit-active {
+}
+
+.menu-secondary-exit {}
+
+.menu-secondary-exit-active {
     transform: translateX(110%);
     transition: all var(--speed) ease;
-  }
+}
 
-  /* Icon Button */
+
+/* Icon Button */
+
 .icon-button {
     --button-size: calc(var(--nav-size) * 0.5);
     width: var(--button-size);
@@ -130,8 +138,12 @@ input:focus {
     align-items: center;
     justify-content: center;
     transition: filter 300ms;
-  }
-  
-  .icon-button:hover {
+}
+
+.icon-button:hover {
     filter: brightness(1.2);
-  }
+}
+
+input::placeholder {
+    color: white;
+}
