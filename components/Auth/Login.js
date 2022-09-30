@@ -51,7 +51,7 @@ const Login = ({ onClick }) => {
           <input
             type="email"
             placeholder="Masukkan email"
-            className="mt-1 w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+            className="mt-1 w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none placeholder:text-gray-500"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -65,7 +65,7 @@ const Login = ({ onClick }) => {
           <input
             type="password"
             placeholder="Masukkan password"
-            className="mt-1 w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+            className="mt-1 w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none placeholder:text-gray-500"
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
@@ -84,7 +84,7 @@ const Login = ({ onClick }) => {
           <input
             type="submit"
             value="Login"
-            className="px-12 py-2 rounded-xl text-md font-bold bg-[#F57614] cursor-pointer transition ease-in-out hover:bg-[#F78F3F] duration-300 border"
+            className="px-12 py-2 rounded-xl text-md font-bold bg-[#BD142B] hover:bg-[#7E1918] cursor-pointer transition ease-in-out duration-300 border"
           />
           <Link href="/">
             <button className="px-12 py-2 rounded-xl text-md font-bold border cursor-pointer transition ease-in-out hover:bg-gray-600 duration-300">

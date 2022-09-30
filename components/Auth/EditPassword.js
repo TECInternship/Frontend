@@ -80,7 +80,7 @@ const Register = ({ token }) => {
               required
               value={email}
               placeholder="Masukkan email"
-              className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+              className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none placeholder:text-gray-500"
               onChange={(e) => {
                 if (!token) {
                   setEmail(e.target.value);
@@ -100,7 +100,7 @@ const Register = ({ token }) => {
               type="password"
               required
               placeholder="Masukkan password"
-              className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+              className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none placeholder:text-gray-500"
               onChange={(e) => setOldPassword(e.target.value)}
             />
           </div>
@@ -115,7 +115,7 @@ const Register = ({ token }) => {
               type="password"
               required
               placeholder="Masukkan password"
-              className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+              className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none placeholder:text-gray-500"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
@@ -130,7 +130,7 @@ const Register = ({ token }) => {
               type="password"
               required
               placeholder="Konfirmasi password baru"
-              className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
+              className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none placeholder:text-gray-500"
               onChange={(e) => setKonfirmasi(e.target.value)}
             />
           </div>
@@ -144,7 +144,7 @@ const Register = ({ token }) => {
             <input
               type="submit"
               value="Submit"
-              className="px-12 py-2 rounded-xl text-md font-bold bg-[#F57614] cursor-pointer transition ease-in-out hover:bg-[#F78F3F] duration-300 border"
+              className="px-12 py-2 rounded-xl text-md font-bold bg-[#BD142B] hover:bg-[#7E1918] cursor-pointer transition ease-in-out duration-300 border"
             />
           </div>
         </form>
