@@ -22,10 +22,10 @@ export default function Home({ token }) {
       </Head>
 
       <main className="flex flex-col items-center">
-        <div className=" absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] xl:w-[450px] xl:h-[450px] top-0 left-1 opacity-50 flex -z-50">
+        <div className=" absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] xl:w-[600px] xl:h-[600px] -top-[220px] -left-[205px] opacity-30 flex -z-50">
           <Image
             className=""
-            src="/assets_intern/spiderweb.png"
+            src="/assets_intern/perisai.png"
             alt="web"
             width={700}
             height={700}

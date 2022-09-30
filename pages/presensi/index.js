@@ -23,8 +23,20 @@ export default function Presensi({ token }) {
       </Head>
       <main className="flex flex-col items-center min-h-screen">
         <Navbar token={token} />
-
-        <div className="min-h-screen flex items-center">
+        <div className=" absolute right-0 top-0 opacity-50 flex -z-50 sm:w-[400px] md:w-[600px]">
+          <img className="" src="/assets_intern/perisai-kanan.png" alt=""></img>
+        </div>
+        {/* <div className=" absolute w-[200px] h-[200px] md:w-[450px] md:h-[450px] xl:w-[2000px] xl:h-[500px] bottom-0 -right-[150px] opacity-50 flex">
+          <Image
+            className=""
+            src="/assets_intern/teralis.png"
+            alt="web"
+            width={1500}
+            height={500}
+          />
+        </div> */}
+        <div className="text-5xl mt-36 text-center">PRESENSI DAY</div>
+        <div className="">
           {token ? (
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:gap-x-[100px] 2xl:gap-x-[150px] gap-y-[50px] items-center mb-20 mt-20 mx-10">
               <LingkaranAbsen active={false} day={1} />
