@@ -43,7 +43,7 @@ const Navbar = ({ token }) => {
   }, []);
 
   return (
-    <div className="flex justify-between absolute w-full px-8 md:px-16 items-center font-BreeSerif">
+    <div className="flex justify-between absolute w-full px-8 md:px-16 items-center font-BreeSerif mt-10 md:mt-0">
       <div className="flex gap-2 cursor-pointer">
         <Link href={"/"}>
           <Image
@@ -61,19 +61,19 @@ const Navbar = ({ token }) => {
             href="/"
             className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
           >
-            Home
+            <span className="hidden md:flex cursor-pointer">Home</span>
           </Link>
           <Link
             href="/learning-modules"
             className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
           >
-            Materi
+            <span className="hidden md:flex cursor-pointer">Materi</span>
           </Link>
           <Link
             href="/presensi"
             className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
           >
-            Presensi
+            <span className="hidden md:flex cursor-pointer">Presensi</span>
           </Link>
           <button
             className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"

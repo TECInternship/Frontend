@@ -22,7 +22,7 @@ export default function LearningModules({ token }) {
             height={445}
           />
         </div>
-        <div className="flex absolute w-[230px] h-[230px] md:w-[325px] md:h-[325px] xl:w-[375px] xl:h-[375px] 2xl:w-[445px] 2xl:h-[445px] bottom-5 right-5 opacity-50">
+        <div className="flex absolute w-[230px] h-[230px] md:w-[325px] md:h-[325px] xl:w-[375px] xl:h-[375px] 2xl:w-[445px] 2xl:h-[445px] -bottom-16 right-5 opacity-50">
           <Image
             className=""
             src="/assets_intern/modul_kanan bawah.png"
@@ -33,7 +33,7 @@ export default function LearningModules({ token }) {
         </div>
         <Navbar token={token} />
         <div className="container">
-          <div className="text-5xl mt-20 text-center mb-16">
+          <div className="text-5xl mt-36 text-center mb-16">
             LEARNING MODULES
           </div>
           {/* <form>

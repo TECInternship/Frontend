@@ -55,6 +55,15 @@ export default function Profile({ token }) {
         <link rel="icon" href="/assets_intern/logo.png" />
       </Head>
       <main className="flex flex-col items-center min-h-screen">
+        <div className=" absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] xl:w-[600px] xl:h-[600px] -top-[220px] -left-[205px] opacity-30 flex -z-50">
+          <Image
+            className=""
+            src="/assets_intern/perisai.png"
+            alt="web"
+            width={700}
+            height={700}
+          />
+        </div>
         <Navbar token={token} />
         <div className="min-h-screen justify-center flex relative items-center m-4 md:px-2">
           <div className="m-0 p-10">
