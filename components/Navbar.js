@@ -43,8 +43,8 @@ const Navbar = ({ token }) => {
   }, []);
 
   return (
-    <div className="flex justify-between absolute w-full px-16 items-center font-BreeSerif">
-      <div className="flex gap-2 ">
+    <div className="flex justify-between absolute w-full px-8 md:px-16 items-center font-BreeSerif">
+      <div className="flex gap-2">
         <Image
           className=""
           src="/assets_intern/logo.png"
@@ -54,7 +54,25 @@ const Navbar = ({ token }) => {
         />
       </div>
       {token ? (
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-12 items-center">
+          <Link
+            href="/"
+            className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
+          >
+            Home
+          </Link>
+          <Link
+            href="/learning-modules"
+            className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
+          >
+            Materi
+          </Link>
+          <Link
+            href="/presensi"
+            className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
+          >
+            Presensi
+          </Link>
           <button
             className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
             onClick={() => setOpen(!open)}
@@ -71,7 +89,7 @@ const Navbar = ({ token }) => {
         </div>
       ) : (
         <Link href="/auth">
-          <button className="flex sticky top-0 z-50 items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-2 lg:text-xl bg-[#F57614] font-bold transition ease-in-out hover:bg-[#F78F3F] duration-300">
+          <button className="flex sticky top-0 z-50 items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-2 lg:text-xl bg-[#BD142B] hover:bg-[#7E1918] font-bold transition ease-in-out duration-300">
             Log in
           </button>
         </Link>

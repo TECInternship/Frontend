@@ -78,7 +78,6 @@ const Register = ({ onClick }) => {
               placeholder="Masukkan email"
               className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
               onChange={(e) => setEmail(e.target.value)}
-              disabled
             />
           </div>
           <div className="">
@@ -94,7 +93,6 @@ const Register = ({ onClick }) => {
               placeholder="Masukkan password"
               className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
               onChange={(e) => setPassword(e.target.value)}
-              disabled
             />
           </div>
           <div className="flex flex-col">
@@ -110,7 +108,6 @@ const Register = ({ onClick }) => {
               placeholder="Konfirmasi password"
               className="w-full h-10 rounded-xl text-gray-700 bg-white bg-opacity-75 pl-4 shadow-lg focus:outline-none"
               onChange={(e) => setKonfirmasi(e.target.value)}
-              disabled
             />
           </div>
           <div>
@@ -136,7 +133,6 @@ const Register = ({ onClick }) => {
               className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 hover:from-[#3ec4ae] 
             hover:to-[#1c6458] duration-300 px-10 py-2 rounded-xl text-md font-bold bg-gradient-to-br from-[#9ADFD3] to-[#2F9685] cursor-pointer"
               value={"REGISTER"}
-              disabled
             />
           </div>
         </form>
