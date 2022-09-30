@@ -21,42 +21,6 @@ export default function Home({ token }) {
         <link rel="icon" href="/assets_intern/logo.png" />
       </Head>
       <main className="flex h-screen w-screen justify-center max-h-screen relative bg-[url('../public/assets_intern/bg-texture1.png')] bg-no-repeat bg-cover bg-center bg-fixed">
-        <div className="hover:animate-bounce absolute hidden md:block top-0 left-[-100px] opacity-30">
-          <Image
-            className=""
-            src="/assets_intern/laba2.png"
-            alt="logo"
-            width={300}
-            height={400}
-          />
-        </div>
-        <div className="hover:animate-bounce absolute hidden md:block invisible md:visible top-0 left-[80px] opacity-30">
-          <Image
-            className=""
-            src="/assets_intern/laba2.png"
-            alt="logo"
-            width={250}
-            height={250}
-          />
-        </div>
-        <div className="hover:animate-bounce absolute hidden md:block invisible md:visible top-0 left-[230px] opacity-30">
-          <Image
-            className=""
-            src="/assets_intern/laba2.png"
-            alt="logo"
-            width={250}
-            height={250}
-          />
-        </div>
-        <div className="hover:animate-bounce absolute hidden md:block invisible lg:visible top-0 left-[340px] opacity-30">
-          <Image
-            className=""
-            src="/assets_intern/laba2.png"
-            alt="logo"
-            width={300}
-            height={400}
-          />
-        </div>
         <div className="absolute hidden md:block w-[300px] h-[500px] md:w-[300px] md:h-[500px] xl:w-[300px] xl:h-[500px] 2xl:w-[300px] 2xl:h-[500px] top-0 right-[0px] opacity-40">
           <Image
             className=""
@@ -95,16 +59,6 @@ export default function Home({ token }) {
                   onClick={() => setActiveButton("login")}
                 >
                   Login
-                </button>
-                <button
-                  className={`text-xl md:text-2xl font-extrabold px-6 py-2 mx-2 ${
-                    activeButton === "register"
-                      ? "border-b-white border-b-[3px] border-solid"
-                      : ""
-                  }`}
-                  onClick={() => setActiveButton("register")}
-                >
-                  Register
                 </button>
               </div>
               <div className="py-4 px-8">
