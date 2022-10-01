@@ -75,6 +75,12 @@ const Navbar = ({ token }) => {
           >
             <span className="hidden md:flex cursor-pointer">Presensi</span>
           </Link>
+          <Link
+            href="/tugas"
+            className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
+          >
+            <span className="hidden md:flex cursor-pointer">Tugas</span>
+          </Link>
           <button
             className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
             onClick={() => setOpen(!open)}
