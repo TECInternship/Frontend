@@ -41,10 +41,11 @@ export default function Presensi({ token }) {
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:gap-x-[100px] 2xl:gap-x-[150px] gap-y-[50px] items-center mb-20 mt-20 mx-10">
               <LingkaranAbsen active={false} day={1} />
               <LingkaranAbsen active={false} day={2} />
+              <LingkaranAbsen active={false} day={3} />
               <LingkaranAbsen
                 active={true}
-                day={3}
-                link={"https://bit.ly/PresensiAwalTECademyDay3"}
+                day={4}
+                link={"https://bit.ly/PresensiAwalTECademyDay4"}
               />
             </div>
           ) : (
