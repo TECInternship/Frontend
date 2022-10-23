@@ -35,10 +35,10 @@ export default function LearningModules({ token }) {
         <div className="container">
           <div className="text-5xl mt-36 text-center mb-16">TUGAS</div>
           <TugasCard
-            title={"Day 3 - Simpati, Empati, dan Solusi"}
-            description={"Deadline: 5 Oktober 2022"}
-            submissionLink={"https://forms.gle/38opnugHiVhbWbh39"}
-            detailLink={"/"}
+            title={"Learning Module: Organizational Comgagement"}
+            description={"Deadline: 25 Oktober 2022 pukul 22.00"}
+            link1={"/tugas"}
+            link2={"https://bit.ly/LMComgagementQuiz"}
           />
         </div>
       </main>
