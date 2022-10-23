@@ -53,7 +53,9 @@ export default function LearningModules({ token }) {
           <ModuleCard
             title={"Learning Module 2"}
             description={"Organizational Comgagement"}
-            link={"https://docs.google.com/document/d/1PzXH3AH1w4s_lw5gvAQp3S2jS4FnETt2kL148zqXHeU/edit"}
+            link={
+              "https://drive.google.com/file/d/1iiwi9xEUwYqWfmm_VMXsRNga_TNXABUG/view?usp=sharing"
+            }
           />
           {/* <ModuleCard title={"MODULE II"} description={""} />
           <ModuleCard title={"MODULE I"} description={""} /> */}
