@@ -8,14 +8,16 @@ const TugasCard = ({ title, description, detailLink, submissionLink }) => {
         <h1 className="text-4xl">{title}</h1>
         <p className="text-md mt-2">{description}</p>
         <div className="mb-20 sm:mb-10">
-          <button className="bg-transparent border transition ease-in-out hover:bg-gray-600 duration-300 rounded-xl py-1 px-[44px] text-xl absolute right-5 bottom-14 sm:bottom-3 sm:right-48">
-            <Link href={detailLink} target="blank">
-              Details
-            </Link>
-          </button>
-          <button className="bg-[#BD142B] hover:bg-[#7E1918] border transition ease-in-out duration-300 rounded-xl py-1 px-6 text-xl absolute bottom-3 right-5">
+          {detailLink && (
+            <button className="bg-transparent border transition ease-in-out hover:bg-gray-600 duration-300 rounded-xl py-1 px-[44px] text-xl absolute right-5 bottom-14 sm:bottom-3 sm:right-48">
+              <Link href={detailLink} target="blank">
+                Details
+              </Link>
+            </button>
+          )}
+          <button className="bg-[#008140] hover:bg-[#00B526] border transition ease-in-out duration-300 rounded-xl py-1 px-6 text-xl absolute bottom-3 right-5">
             <Link href={submissionLink} target="blank">
-              Submission
+              {detailLink ? "Submit" : "Open"}
             </Link>
           </button>
         </div>
