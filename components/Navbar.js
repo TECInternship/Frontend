@@ -97,7 +97,7 @@ const Navbar = ({ token }) => {
         </div>
       ) : (
         <Link href="/auth">
-          <button className="flex sticky top-0 z-50 items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-2 lg:text-xl bg-[#BD142B] hover:bg-[#7E1918] font-bold transition ease-in-out duration-300">
+          <button className="flex sticky top-0 z-50 items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-2 lg:text-xl bg-[#008140] hover:bg-[#00B526] font-bold transition ease-in-out duration-300">
             Log in
           </button>
         </Link>

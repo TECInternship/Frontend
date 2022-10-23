@@ -1,4 +1,6 @@
+import Router, { useRouter } from "next/router";
 import React from "react";
+import { AiOutlineLoading } from "react-icons/ai";
 
 const LingkaranAbsen = ({ active, day, link }) => {
   return (
@@ -11,7 +13,7 @@ const LingkaranAbsen = ({ active, day, link }) => {
         )}
         <div className="text-center absolute bottom-0 left-0 right-0 content-center text-3xl xl:text-4xl">
           <button
-            className="py-2 px-6 bg-[#BD142B] transition ease-in-out duration-300 hover:bg-[#7E1918] rounded-xl disabled:bg-[#504A4A]"
+            className="py-2 px-6 disabled:bg-[#BD142B] transition ease-in-out duration-300 border disabled:cursor-not-allowed rounded-xl bg-[#008140] hover:bg-[#00B526]"
             disabled={!active}
           >
             <a href={link}>Day {day}</a>
