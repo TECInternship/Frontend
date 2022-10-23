@@ -8,13 +8,12 @@ const ModuleCard = ({ title, description, link }) => {
         <h1 className="text-4xl">{title}</h1>
         <p className="text-md mt-2">{description}</p>
         <div className="mb-10">
-          <button className="bg-[#58BF75] hover:bg-[#3aa257] rounded-xl py-1 px-6 text-xl absolute bottom-3 right-5">
+          <button className="bg-[#BD142B] hover:bg-[#7E1918] transition ease-in-out duration-300 border rounded-xl py-1 px-6 text-xl absolute bottom-3 right-5">
             <Link href={link} target="blank">
               Open
             </Link>
           </button>
         </div>
-
       </div>
     </>
   );

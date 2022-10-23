@@ -33,14 +33,12 @@ export default function LearningModules({ token }) {
         </div>
         <Navbar token={token} />
         <div className="container">
-          <div className="text-5xl mt-36 text-center mb-16">
-            TUGAS
-          </div>
+          <div className="text-5xl mt-36 text-center mb-16">TUGAS</div>
           <TugasCard
-            title={"Day 2 - Simpati, Empati, dan Solusi"}
-            description={"Deadline: 20 November 2022"}
-            link1={"/"}
-            link2={"/"}
+            title={"Day 3 - Simpati, Empati, dan Solusi"}
+            description={"Deadline: 5 Oktober 2022"}
+            submissionLink={"https://forms.gle/38opnugHiVhbWbh39"}
+            detailLink={"/"}
           />
         </div>
       </main>
