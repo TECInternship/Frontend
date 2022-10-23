@@ -50,6 +50,11 @@ export default function LearningModules({ token }) {
             description={"Simpati, Empati, dan Solusi"}
             link={"https://bit.ly/LearningModuleDay3"}
           />
+          <ModuleCard
+            title={"Learning Module 2"}
+            description={"Simpati, Empati, dan Solusi"}
+            link={"https://bit.ly/LearningModuleDay3"}
+          />
           {/* <ModuleCard title={"MODULE II"} description={""} />
           <ModuleCard title={"MODULE I"} description={""} /> */}
         </div>
