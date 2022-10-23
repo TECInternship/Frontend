@@ -42,10 +42,11 @@ export default function Presensi({ token }) {
               <LingkaranAbsen active={false} day={1} />
               <LingkaranAbsen active={false} day={2} />
               <LingkaranAbsen active={false} day={3} />
+              <LingkaranAbsen active={false} day={4} />
               <LingkaranAbsen
                 active={true}
-                day={4}
-                link={"https://bit.ly/PresensiAwalTECademyDay4"}
+                day={5}
+                link={"https://bit.ly/PresensiAwalTECademyDay5"}
               />
             </div>
           ) : (

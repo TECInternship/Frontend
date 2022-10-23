@@ -11,7 +11,7 @@ const LingkaranAbsen = ({ active, day, link }) => {
         )}
         <div className="text-center absolute bottom-0 left-0 right-0 content-center text-3xl xl:text-4xl">
           <button
-            className="py-2 px-6 bg-[#BD142B] hover:bg-[#7E1918] rounded-xl disabled:bg-[#504A4A]"
+            className="py-2 px-6 bg-[#BD142B] transition ease-in-out duration-300 hover:bg-[#7E1918] rounded-xl disabled:bg-[#504A4A]"
             disabled={!active}
           >
             <a href={link}>Day {day}</a>
