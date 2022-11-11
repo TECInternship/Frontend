@@ -57,6 +57,13 @@ export default function LearningModules({ token }) {
               "https://drive.google.com/file/d/1iiwi9xEUwYqWfmm_VMXsRNga_TNXABUG/view?usp=sharing"
             }
           />
+          <ModuleCard
+            title={"Learning Module 3"}
+            description={"Product Life Cycle"}
+            link={
+              "https://drive.google.com/file/d/1lcv8lRbdX9f4qQlNxsFTNTEpfNUzk-Qi/view?usp=sharing"
+            }
+          />
           {/* <ModuleCard title={"MODULE II"} description={""} />
           <ModuleCard title={"MODULE I"} description={""} /> */}
         </div>
