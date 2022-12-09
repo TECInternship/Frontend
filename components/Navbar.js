@@ -96,11 +96,12 @@ const Navbar = ({ token }) => {
           {open && <DropdownMenu logout={logout} name={name} />}
         </div>
       ) : (
-        <Link href="/auth">
-          <button className="flex sticky top-0 z-50 items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-2 lg:text-xl bg-[#008140] hover:bg-[#00B526] font-bold transition ease-in-out duration-300">
-            Log in
-          </button>
-        </Link>
+        // <Link href="/auth">
+        //   <button className="flex sticky top-0 z-50 items-center backdrop-blur-sm shadow-lg rounded-3xl px-4 py-2 md:px-6 md:py-2 lg:text-xl bg-[#008140] hover:bg-[#00B526] font-bold transition ease-in-out duration-300">
+        //     Log in
+        //   </button>
+        // </Link>
+        <div className="flex gap-12 items-center">
         <Link
             href="/"
             className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
@@ -109,22 +110,11 @@ const Navbar = ({ token }) => {
           </Link>
           <Link
             href="/learning-modules"
-            className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
+            className="flex gap-2 sticky top-0 z-50 h-[500px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
           >
             <span className="hidden md:flex cursor-pointer">Materi</span>
           </Link>
-          <Link
-            href="/presensi"
-            className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
-          >
-            <span className="hidden md:flex cursor-pointer">Presensi</span>
-          </Link>
-          <Link
-            href="/tugas"
-            className="flex gap-2 sticky top-0 z-50 h-[50px] items-center backdrop-blur-sm shadow-lg rounded-full p-4 py-2 md:px-3 md:py-6 bg-opacity-20 border"
-          >
-            <span className="hidden md:flex cursor-pointer">Tugas</span>
-          </Link>
+            </div>
       )}
     </div>
   );
